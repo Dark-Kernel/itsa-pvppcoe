@@ -21,6 +21,16 @@
     ]
   },
   {
+    "title": "TECHNICAL Team",
+    "leader": { "name": "Sumit Patel", "post": "Technical Head", "imageUrl": "/team/TECHNICAL/Sumit[TH].png" },
+    "members": [
+      { "name": "Varad Khandare", "post": "Technical Member", "imageUrl": "/team/TECHNICAL/Varad[TM].png" },
+      { "name": "Yash Dhavde", "post": "Technical Member", "imageUrl": "/team/TECHNICAL/Yash[TM].png" },
+      { "name": "Vedant Yadav", "post": "Technical Member", "imageUrl": "/team/TECHNICAL/Vedant[TM].png" },
+      { "name": "Harsh Alkar", "post": "Technical Member", "imageUrl": "/team/TECHNICAL/Harsh[TM].png" }
+    ]
+  },
+  {
     "title": "DOCUMENTATION Team",
     "leader": { "name": "Devesh Naik", "post": "Documentation Head", "imageUrl": "/team/DOCUMENTATION/Devesh[DH].png" },
     "members": [
@@ -39,16 +49,6 @@
       { "name": "Anurag Dharmadhikari", "post": "Infra & Security Member", "imageUrl": "/team/INFRA & SECURITY/Anurag[IM].png" },
       { "name": "Om Kandalgaonkar", "post": "Infra & Security Member", "imageUrl": "/team/INFRA & SECURITY/Om[IM].png" },
       { "name": "Vinay Panvelkar", "post": "Infra & Security Member", "imageUrl": "/team/INFRA & SECURITY/Vinay[IM].png" }
-    ]
-  },
-  {
-    "title": "TECHNICAL Team",
-    "leader": { "name": "Sumit Patel", "post": "Technical Head", "imageUrl": "/team/TECHNICAL/Sumit[TH].png" },
-    "members": [
-      { "name": "Varad Khandare", "post": "Technical Member", "imageUrl": "/team/TECHNICAL/Varad[TM].png" },
-      { "name": "Yash Dhavde", "post": "Technical Member", "imageUrl": "https://shorturl.at/U7eaz" },
-      { "name": "Vedant Yadav", "post": "Technical Member", "imageUrl": "/team/TECHNICAL/Vedant[TM].png" },
-      { "name": "Harsh Alkar", "post": "Technical Member", "imageUrl": "/team/TECHNICAL/Harsh[TM].png" }
     ]
   },
   {

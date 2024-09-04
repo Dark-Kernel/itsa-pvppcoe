@@ -7,10 +7,9 @@ const MemberCard = ({ name, post, imageUrl }) => (
   <div className="bg-background text-foreground rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 w-full h-full flex flex-col">
     <div className="p-4 lg:p-6 flex-grow flex flex-col justify-between">
       <div>
-        <img
-          src={imageUrl || "/api/placeholder/150/150"}
+        <img src={imageUrl || "/api/placeholder/150/150"}
           alt={name}
-          className="w-20 h-20 sm:w-24 sm:h-24 lg:w-32 lg:h-32 xl:w-40 xl:h-40 mx-auto rounded-full object-cover border-4 border-blue-500"
+          className="w-20 h-20 sm:w-24 sm:h-24 lg:w-32 lg:h-32 xl:w-40 xl:h-40 mx-auto rounded-full object-cover object-top border-4 border-blue-500"
         />
         <h3 className="mt-2 sm:mt-4 lg:mt-6 text-base sm:text-lg lg:text-xl xl:text-2xl font-semibold text-white text-center line-clamp-2">
           {name}
