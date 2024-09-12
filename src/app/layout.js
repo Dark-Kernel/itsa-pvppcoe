@@ -9,6 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <link rel="icon" href="/img/itsa2.ico" sizes="any" />
       <body className={inter.className}>
       <NavBar />
       {children}

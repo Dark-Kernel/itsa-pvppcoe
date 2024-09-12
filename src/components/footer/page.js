@@ -1,9 +1,3 @@
-// import { Container, Row, Col } from "react-bootstrap";
-// import { MailchimpForm } from "../mailchimpform/page";
-// import logo from "/img/logo.svg";
-// import navIcon1 from "../../../assets/img/nav-icon1.svg";
-// import navIcon2 from "../../../assets/img/nav-icon2.svg";
-// import navIcon3 from "../../../assets/img/nav-icon3.svg";
 
 const Footer = () => {
   return (
@@ -25,12 +19,14 @@ const Footer = () => {
           <div className="w-full sm:w-1/2 text-center sm:text-right">
             <div className="social-icon">
               <a href="#" className="inline-block mr-2">
+                    { /*  replace with contact svg here */ }
                 <img src="/img/nav-icon1.svg" alt="Icon" />
               </a>
-              <a href="#" className="inline-block mr-2">
+              <a href="mailto:techgyanothon@pvppcoe.ac.in" className="inline-block mr-2">
+                    { /*  replace with email svg here */ }
                 <img src="/img/nav-icon2.svg" alt="Icon" />
               </a>
-              <a href="#" className="inline-block">
+              <a href="https://www.instagram.com/itsa_vppcoe/" className="inline-block">
                 <img src="/img/nav-icon3.svg" alt="Icon" />
               </a>
             </div>
