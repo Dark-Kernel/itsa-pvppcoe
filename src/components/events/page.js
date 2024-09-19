@@ -22,9 +22,9 @@ const EventCard = ({ image, title, date, time, instagramLink }) => (
           >
             <Instagram size={16} />
           </a>
-          <button className="bg-blue-500 text-white px-3 py-1 text-sm rounded hover:bg-blue-600 transition">
+          <a href={report} target="_blank" rel="noopener noreferrer" className="bg-blue-500 text-white px-3 py-1 text-sm rounded hover:bg-blue-600 transition">
             Read More
-          </button>
+          </a>
         </div>
       </div>
     </div>
