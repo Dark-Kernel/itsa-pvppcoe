@@ -43,6 +43,22 @@
             "instagramLink": "https://www.instagram.com/reel/C-Nz5JVIbci/?igsh=MTFzeXE5Nms0NHVnNg=="
         },
         {
+            "title": "Tech Salute",
+            "date": "25 January 2024",
+            "image": "/posters/techsalute.jpg",
+            "time": "1:00 PM",
+            "desc": "A special Technical Event _TechSalute_ ✨in celebration of Republic Day and to celebrate the spirit of innovation and collaboration.✨",
+            "instagramLink": "https://www.instagram.com/p/C2cRoBcv6yG/"
+        },
+        {
+            "title": "Teacher's Day",
+            "date": "05 September 2023",
+            "image": "/posters/teachers-day-23.jpg",
+            "time": "1:00 PM",
+            "desc": "✨📚 ITSA celebrated this Teacher's Day in the most unique way possible!✨📚",
+            "instagramLink": "https://www.instagram.com/itsa_vppcoe/p/Cwx7zCZvkrJ/"
+        },
+        {
             "title": "TechVenture",
             "date": "15 July 2023",
             "image": "/posters/techventure.jpg",
@@ -59,14 +75,6 @@
             "instagramLink": "https://www.instagram.com/reel/C-Nz5JVIbci/?igsh=MTFzeXE5Nms0NHVnNg=="
         },
         {
-            "title": "Techgyanothon",
-            "date": "28 March 2023",
-            "image": "/posters/techgyanothon-23.jpg",
-            "time": "9:00 AM",
-            "desc": "Group of techical events held by ITSA committee",
-            "instagramLink": "https://www.instagram.com/p/CqQI-OdvSmN/"
-        },
-        {
             "title": "TECHNICAL ARTICLE COMPETITION",
             "date": "12 April 2023",
             "image": "/posters/tech-article.jpg",
@@ -75,20 +83,12 @@
             "instagramLink": "https://www.instagram.com/reel/C-Nz5JVIbci/?igsh=MTFzeXE5Nms0NHVnNg=="
         },
         {
-            "title": "Teacher's Day",
-            "date": "05 September 2023",
-            "image": "/posters/teachers-day-23.jpg",
-            "time": "1:00 PM",
-            "desc": "✨📚 ITSA celebrated this Teacher's Day in the most unique way possible!✨📚",
-            "instagramLink": "https://www.instagram.com/itsa_vppcoe/p/Cwx7zCZvkrJ/"
-        },
-        {
-            "title": "Tech Salute",
-            "date": "25 January 2024",
-            "image": "/posters/techsalute.jpg",
-            "time": "1:00 PM",
-            "desc": "A special Technical Event _TechSalute_ ✨in celebration of Republic Day and to celebrate the spirit of innovation and collaboration.✨",
-            "instagramLink": "https://www.instagram.com/p/C2cRoBcv6yG/"
+            "title": "Techgyanothon",
+            "date": "28 March 2023",
+            "image": "/posters/techgyanothon-23.jpg",
+            "time": "9:00 AM",
+            "desc": "Group of techical events held by ITSA committee",
+            "instagramLink": "https://www.instagram.com/p/CqQI-OdvSmN/"
         }
     ]
 }
