@@ -12,7 +12,7 @@ const Footer = () => {
               >
                 ITSA<br/> 
               </a>
-               <p className="font-sans"> Vansant Dada Patil Pratisthan's College of Engineering <br/>
+               <p className="font-sans text-white"> Vansant Dada Patil Pratisthan's College of Engineering <br/>
                 Sion, Mumbai, 400022. </p>
             </p>
           </div>

@@ -63,13 +63,15 @@ const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) => (
                 <div
-                  className={isVisible ? "animate__animated animate__fadeIn" : ""}
+                  className={
+                    isVisible ? "animate__animated animate__fadeIn" : ""
+                  }
                 >
-                  <span className="inline-block font-bold text-xl tracking-wide py-2 px-2.5 mb-4 bg-gradient-to-r from-[rgba(170,54,124,0.5)] to-[rgba(74,47,189,0.5)] border border-white border-opacity-50">
+                  <span className="text-white inline-block font-bold text-xl tracking-wide py-2 px-2.5 mb-4 bg-gradient-to-r from-[rgba(170,54,124,0.5)] to-[rgba(74,47,189,0.5)] border border-white border-opacity-50">
                     Welcome to ITSA website
                   </span>
-                  <h1 className="text-[65px] font-bold tracking-wide leading-none mb-5 block">
-                    {`Hi! We're ITSA`}{' '}
+                  <h1 className="text-white text-[55px] lg:text-[65px] font-bold tracking-wide leading-none mb-5 block">
+                    {`Hi! We're ITSA`}{" "}
                     <span
                       className="txt-rotate"
                       dataPeriod="1000"
@@ -88,10 +90,10 @@ const Banner = () => {
                     type specimen book.
                   </p>
                   <button
-                    onClick={() => console.log('connect')}
+                    onClick={() => console.log("connect")}
                     className="text-white font-bold text-xl mt-[60px] tracking-wide flex items-center"
                   >
-                    Let's Connect{' '}
+                    Let's Connect{" "}
                     <ArrowRightCircle
                       size={25}
                       className="ml-2.5 transition-all duration-300 ease-in-out hover:ml-6"
@@ -105,15 +107,17 @@ const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) => (
                 <div
-                  className={isVisible ? "animate__animated animate__zoomIn" : ""}
+                  className={
+                    isVisible ? "animate__animated animate__zoomIn" : ""
+                  }
                 >
                   <Image
                     src="/img/header-img.svg"
                     alt="Header Img"
-                    width={500}  // Set appropriate width
+                    width={500} // Set appropriate width
                     height={500} // Set appropriate height
                     className="animate-updown"
-                    priority   // Priority for loading optimization
+                    priority // Priority for loading optimization
                   />
                 </div>
               )}
