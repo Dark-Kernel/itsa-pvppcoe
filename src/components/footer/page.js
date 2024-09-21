@@ -5,7 +5,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap items-center">
           <div className="w-full sm:w-1/2">
-            <p>
+            <section>
               <a
                 href="#"
                 className="text-[#B8B8B8] hover:text-white font-semibold text-lg"
@@ -14,7 +14,7 @@ const Footer = () => {
               </a>
                <p className="font-sans text-white"> Vansant Dada Patil Pratisthan's College of Engineering <br/>
                 Sion, Mumbai, 400022. </p>
-            </p>
+            </section>
           </div>
           <div className="w-full sm:w-1/2 text-center sm:text-right">
             <div className="social-icon">

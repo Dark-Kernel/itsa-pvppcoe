@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { ChevronDown, Instagram } from "lucide-react";
 
-const EventCard = ({ image, title, date, time, instagramLink }) => (
+const EventCard = ({ image, title, date, time, instagramLink, report }) => (
   <div className="bg-white border-2 border-solid border-color7 text-foreground rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl flex flex-col h-full">
     <img src={image} alt={title} className="w-full h-50 object-cover" />
     <div className="p-4 flex flex-col flex-grow">
@@ -20,9 +20,9 @@ const EventCard = ({ image, title, date, time, instagramLink }) => (
           >
             <Instagram size={16} />
           </a>
-          <button className="bg-blue-500 text-white px-3 py-1 text-sm rounded hover:bg-blue-600 transition">
+          <a  href={report} target="_blank" rel="noopener noreferrer" className="bg-blue-500 text-white px-3 py-1 text-sm rounded hover:bg-blue-600 transition">
             Read More
-          </button>
+          </a>
         </div>
       </div>
     </div>
