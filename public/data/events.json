@@ -1,6 +1,14 @@
 {
     "events": [
         {
+            "title": "Teacher's Day Celebration",
+            "date": "05 September 2024",
+            "image": "/posters/quick_fire.jpg",
+            "time": "11:00 AM",
+            "instagramLink": "https://www.instagram.com/reel/C_sGzPCvmy6/?igsh=c3luejR2NGg4bGdo",
+            "report": "https://docs.google.com/document/d/1DUkDKCXnbGCI-Ud7UMMKw2cnMOMMlD8jHLk4dGG8ENA/edit?usp=sharing"
+        },
+        {
             "title": "Quick-Fire Quiz",
             "date": "04 September 2024",
             "image": "/posters/quick_fire.jpg",
