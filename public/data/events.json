@@ -1,12 +1,28 @@
 {
     "events": [
         {
+            "title": "API:101 Postman Workshop",
+            "date": "05 September 2024",
+            "image": "/posters/api_101.jpg",
+            "time": "11:00 AM",
+            "instagramLink": "",
+            "report": ""
+        },
+        {
+            "title": "FE Orientation",
+            "date": "05 September 2024",
+            "image": "/posters/fe_orientation.jpg",
+            "time": "11:00 AM",
+            "instagramLink": "",
+            "report": ""
+        },
+        {
             "title": "Teacher's Day Celebration",
             "date": "05 September 2024",
-            "image": "/posters/quick_fire.jpg",
+            "image": "/posters/teachers_day.jpg",
             "time": "11:00 AM",
             "instagramLink": "https://www.instagram.com/reel/C_sGzPCvmy6/?igsh=c3luejR2NGg4bGdo",
-            "report": "https://docs.google.com/document/d/1DUkDKCXnbGCI-Ud7UMMKw2cnMOMMlD8jHLk4dGG8ENA/edit?usp=sharing"
+            "report": ""
         },
         {
             "title": "Quick-Fire Quiz",
@@ -14,7 +30,7 @@
             "image": "/posters/quick_fire.jpg",
             "time": "03:45 PM",
             "instagramLink": "https://www.instagram.com/p/C_P8PFtoQQa/?igsh=MTJ0aGJiYnRuYXY4",
-            "report": "https://docs.google.com/document/d/1DUkDKCXnbGCI-Ud7UMMKw2cnMOMMlD8jHLk4dGG8ENA/edit?usp=sharing"
+            "report": ""
         },
         {
             "title": "Design Maestro's",
@@ -30,7 +46,7 @@
             "image": "/posters/word_smith.jpg",
             "time": "02:00 PM",
             "instagramLink": "https://www.instagram.com/p/C_P8UbDoRm0/?igsh=MTc2cDdleDl5bHozZw==",
-            "report": "https://docs.google.com/document/d/1DUkDKCXnbGCI-Ud7UMMKw2cnMOMMlD8jHLk4dGG8ENA/edit?usp=sharing"
+            "report": ""
         },
         {
             "title": "ITSA Inauguration",
