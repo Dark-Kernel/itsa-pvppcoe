@@ -83,11 +83,12 @@ const Banner = () => {
                     </span>
                   </h1>
                   <p className="text-[#B8B8B8] text-lg tracking-wide leading-relaxed w-[96%]">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
+                    We are thrilled to introduce the Information Technology Students Association (ITSA), a vibrant student 
+                    organization dedicated to fostering collaboration, creativity, and professional growth within the Information 
+                    Technology department. Our diverse teams—Technical, Documentation, Creativity, Publicity, and Infrastructure—work 
+                    seamlessly together to create a dynamic environment where students can thrive.
+                    Join us in our mission to empower the next generation of IT professionals and make 
+                    a lasting impact on our community. Together, we can inspire, innovate, and achieve greatness!
                   </p>
                   <button
                     onClick={() => console.log("connect")}
