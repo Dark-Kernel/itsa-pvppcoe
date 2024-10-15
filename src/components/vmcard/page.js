@@ -43,7 +43,7 @@ const VMCard = () => {
               <p className="text-gray-400 text-sm md:text-base mb-4 text-center">
                 {item.vision}
               </p>
-              {item.mainTitle === 'IT Department' && window.innerWidth > 640 && <br />}
+              {item.mainTitle === 'IT Department' && <br />}
               <h2 className="text-white font-bold text-xl md:text-2xl mb-4 text-center">
                 {item.mainTitle} Mission
               </h2>
