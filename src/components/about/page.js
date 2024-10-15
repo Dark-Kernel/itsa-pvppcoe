@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import VMCard from "../vmcard/page";
 
 const About = () => {
   return (
@@ -14,7 +15,7 @@ const About = () => {
             <h1 className="text-white text-6xl font-bold mb-5">About ITSA</h1>
             <p className="text-[#B8B8B8] text-lg leading-relaxed max-w-4xl mb-8">
               ITSA (Information Technology Student Association) is an initiative
-              by students of the Information Technology Department, Vansant Dada
+              by students of the Information Technology Department, Vasant Dada
               Patil Pratisthan's College of Engineering. We aim to foster a
               community where technology enthusiasts collaborate, learn, and
               grow. ITSA has been instrumental in organizing events, seminars,
@@ -33,6 +34,7 @@ const About = () => {
               technologists and innovators.
             </p>
           </div>
+          <VMCard />
         </div>
       </section>
     </>
@@ -40,4 +42,3 @@ const About = () => {
 };
 
 export default About;
-
