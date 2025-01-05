@@ -74,7 +74,7 @@ const EventsPage = () => {
         });
 
   return (
-    <div className="min-h-screen bg-transparent p-4 sm:p-8 pt-[260px] pb-[100px] bg-[url('/img/banner-bg-extended-vertical.png')]">
+    <div className="min-h-screen bg-transparent p-4 sm:p-8 bg-[url('/img/banner-bg-extended-vertical.png')]">
       <div className="max-w-6xl mx-auto pt-[5rem]">
         <div className="flex flex-col space-y-4 sm:flex-row sm:justify-between sm:items-center mb-8">
           <h1 className="text-3xl sm:text-4xl font-bold font-sans text-white">
