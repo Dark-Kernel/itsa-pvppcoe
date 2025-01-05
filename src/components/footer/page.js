@@ -12,24 +12,22 @@ const Footer = () => {
               >
                 ITSA<br/> 
               </a>
-               <p className="font-sans text-white"> Vansant Dada Patil Pratisthan's College of Engineering <br/>
+               <p className="font-sans text-white"> Vasantada Patil Pratisthan's College of Engineering <br/>
                 Sion, Mumbai, 400022. </p>
             </section>
           </div>
           <div className="w-full sm:w-1/2 text-center sm:text-right">
-            <div className="social-icon">
+            {/* <div className="social-icon">
               <a href="#" className="inline-block mr-2">
-                    { /*  replace with contact svg here */ }
                 <img src="/img/nav-icon1.svg" alt="Icon" />
               </a>
               <a href="mailto:techgyanothon@pvppcoe.ac.in" className="inline-block mr-2">
-                    { /*  replace with email svg here */ }
                 <img src="/img/nav-icon2.svg" alt="Icon" />
               </a>
               <a href="https://www.instagram.com/itsa_vppcoe/" className="inline-block">
                 <img src="/img/nav-icon3.svg" alt="Icon" />
               </a>
-            </div>
+            </div> */}
             <p className="font-normal text-sm text-[#B8B8B8] tracking-wider mt-5">
               Copyright 2024. All Rights Reserved
             </p>
