@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic';  // Use dynamic import for third-party libra
 import Image from 'next/image';       // Use Next.js Image component for optimized image loading
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
+import UpcomingEvents from '../../components/upcomingevent/page';
 
 const TrackVisibility = dynamic(() => import('react-on-screen'), { ssr: false });
 
@@ -54,7 +55,7 @@ const Banner = () => {
 
   return (
     <section
-      className="pt-[260px] pb-[100px] bg-[url('/img/banner-bg-extended-vertical.png')] bg-top bg-cover bg-no-repeat"
+      className="pt-[140px] bg-[url('/img/banner-bg-extended-vertical.png')] bg-top bg-cover bg-no-repeat"
       id="home"
     >
       <div className="container mx-auto px-4">
@@ -92,7 +93,7 @@ const Banner = () => {
                   </p>
                   <button
                     onClick={() => (window.location.href = "/letsconnect")}
-                    className="text-white font-bold text-xl mt-[60px] tracking-wide flex items-center"
+                    className="text-white font-bold text-xl mt-[60px] tracking-wide flex items-center mb-6"
                   >
                     Let's Connect{" "}
                     <ArrowRightCircle
@@ -126,7 +127,8 @@ const Banner = () => {
             </TrackVisibility>
           </div>
         </div>
-      </div>
+      </div><hr />
+      <UpcomingEvents />
     </section>
   );
 };
