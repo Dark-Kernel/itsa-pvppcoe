@@ -34,7 +34,7 @@ const LetsConnect = () => {
             {/* Let's Connect Section */}
             <div className="bg-gray-800 bg-opacity-40 backdrop-blur-md rounded-lg p-8 max-w-4xl mx-auto mb-12">
                 <h1 className="text-white text-3xl font-bold mb-4 text-center">Let's Connect</h1>
-                <p className="mb-4 text-center">We would love to hear from you! Connect with us through the options below:</p>
+                <p className="text-white mb-4 text-center">We would love to hear from you! Connect with us through the options below:</p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {/* Email Card */}
@@ -42,8 +42,8 @@ const LetsConnect = () => {
                         <div className="w-20 h-20 rounded-full mb-2 flex items-center justify-center">
                             <span className="material-icons text-4xl"><img src="/img/mail.png" alt="Icon" /></span>
                         </div>
-                        <h2 className="text-xl font-semibold mb-2">Email Us</h2>
-                        <p className="text-center mb-4">Feel free to reach out via email anytime.</p>
+                        <h2 className="text-white text-xl font-semibold mb-2">Email Us</h2>
+                        <p className="text-white text-center mb-4">Feel free to reach out via email anytime.</p>
                         <a
                             href="mailto:techgyanathon@pvppcoe.ac.in"
                             className="mt-auto flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
@@ -58,8 +58,8 @@ const LetsConnect = () => {
                         <div className="w-20 h-20 rounded-full mb-2 flex items-center justify-center">
                             <span className="material-icons text-4xl"><img src="/img/instagram.png" alt="Icon" /></span>
                         </div>
-                        <h2 className="text-xl font-semibold mb-2">Follow us on Instagram</h2>
-                        <p className="text-center mb-4">Stay updated with our latest events and posts.</p>
+                        <h2 className="text-white text-xl font-semibold mb-2">Follow us on Instagram</h2>
+                        <p className="text-white text-center mb-4">Stay updated with our latest events and posts.</p>
                         <a
                             href="https://www.instagram.com/itsa_vppcoe/"
                             target="_blank"
@@ -76,8 +76,8 @@ const LetsConnect = () => {
                         <div className="w-20 h-20 rounded-full mb-2 flex items-center justify-center">
                             <span className="material-icons text-4xl"><img src="/img/linkedin.png" alt="Icon" /></span>
                         </div>
-                        <h2 className="text-xl font-semibold mb-2">Connect on LinkedIn</h2>
-                        <p className="text-center mb-4">Join our professional network and connect with us.</p>
+                        <h2 className="text-white text-xl font-semibold mb-2">Connect on LinkedIn</h2>
+                        <p className="text-white text-center mb-4">Join our professional network and connect with us.</p>
                         <a
                             href="https://www.linkedin.com/company/96393125/admin/"
                             target="_blank"
@@ -106,7 +106,7 @@ const LetsConnect = () => {
                                 className="rounded-full w-20 h-20 object-cover mb-4"
                             />
                             <p className="text-white font-bold text-lg lg:text-xl text-center">{item.abbreviation}</p>
-                            <p className="text-gray text-xs text-center mb-1">{item.name}</p>
+                            <p className="text-gray-100 text-xs text-center mb-1">{item.name}</p>
                             <p className="text-gray-100 lg:text-xl text-center">{item.coordinator}</p>
                         </div>
                     ))}

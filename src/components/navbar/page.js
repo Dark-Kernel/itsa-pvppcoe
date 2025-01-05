@@ -187,7 +187,7 @@ const NavBar = () => {
             </div>
           </div>
           <div>
-            <Link href="#connect">
+            <Link href="/letsconnect" onClick={() => onUpdateActiveLink("letsconnect")}>
                 <button className="w-full font-bold text-white border border-white px-[34px] py-[18px] text-lg relative bg-transparent transition-all duration-300 ease-in-out overflow-hidden group">
                   <span className="relative z-10">Let's Connect</span>
                   <div className="absolute inset-0 bg-white w-0 transition-all duration-300 ease-in-out group-hover:w-full"></div>
