@@ -4,25 +4,25 @@ import React from 'react';
 const LetsConnect = () => {
     const data = [
         { 
-            logo: 'https://static.skillshare.com/uploads/parentClasses/ccba485f5eaea584e9f5eebf88293600/ee71dec0', 
+            logo: '/img/itsa2.png', 
             name: 'Information Technology Student Association', 
             abbreviation: 'ITSA', 
             coordinator: 'Prof. Nilesh Mali' 
         },
         { 
-            logo: 'https://static.skillshare.com/uploads/parentClasses/ccba485f5eaea584e9f5eebf88293600/ee71dec0', 
+            logo: '/img/CSI.jpg', 
             name: 'Computer Society of India', 
             abbreviation: 'CSI', 
             coordinator: 'Prof. Priyanka Manke' 
         },
         { 
-            logo: 'https://static.skillshare.com/uploads/parentClasses/ccba485f5eaea584e9f5eebf88293600/ee71dec0', 
+            logo: '/img/ISTE.jpg', 
             name: 'Indian Society for Technical Education', 
             abbreviation: 'ISTE', 
             coordinator: 'Prof. Pravin Patil' 
         },
         { 
-            logo: 'https://static.skillshare.com/uploads/parentClasses/ccba485f5eaea584e9f5eebf88293600/ee71dec0', 
+            logo: '/img/IACC.jpg', 
             name: 'International Advanced Computing Community', 
             abbreviation: 'IACC', 
             coordinator: 'Prof. Vedika Avhad' 
@@ -97,7 +97,7 @@ const LetsConnect = () => {
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                     {data.map((item, index) => (
                         <div
-                            className="bg-gray-800 rounded-lg p-4 flex flex-col items-center shadow-md"
+                            className="bg-gray-800 rounded-lg p-4 flex flex-col items-center shadow-md transition-transform duration-300 hover:scale-105"
                             key={index}
                         >
                             <img

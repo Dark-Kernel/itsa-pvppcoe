@@ -93,7 +93,7 @@ const NavBar = () => {
               </Link>
             </div>
             <div className="hidden md:flex items-center">
-              <Link href="#connect">
+              <Link href="/letsconnect">
                   <button className="font-bold text-white border border-white px-[34px] py-[18px] text-lg ml-[18px] relative bg-transparent transition-all duration-300 ease-in-out overflow-hidden group">
                     <span className="relative z-10 group-hover:text-black transition-all duration-300 ease-in-out">
                       Let's Connect

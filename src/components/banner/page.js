@@ -91,13 +91,14 @@ const Banner = () => {
                     a lasting impact on our community. Together, we can inspire, innovate, and achieve greatness!
                   </p>
                   <button
-                    onClick={() => console.log("connect")}
+                    onClick={() => (window.location.href = "/letsconnect")}
                     className="text-white font-bold text-xl mt-[60px] tracking-wide flex items-center"
                   >
                     Let's Connect{" "}
                     <ArrowRightCircle
                       size={25}
                       className="ml-2.5 transition-all duration-300 ease-in-out hover:ml-6"
+                      href="/letsconnect"
                     />
                   </button>
                 </div>
