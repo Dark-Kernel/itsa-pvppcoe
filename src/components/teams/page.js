@@ -63,12 +63,12 @@ const TeamSection = ({ title, leader, members }) => {
 
 const TeamGrid = ({ teams }) => {
   return (
-    <div className="min-h-screen bg-gray-900 py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8 pt-[260px] pb-[100px] bg-[url('/img/banner-bg-extended-vertical.png')]">
-      <div className="max-w-7xl mx-auto pt-[5rem]">
-        <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-white text-center mb-6 sm:mb-8 lg:mb-10">
+    <div className="min-h-screen bg-gray-900 py-4 sm:py-8 lg:py-16 px-4 sm:px-6 lg:px-8 pt-[260px] pb-[100px] bg-[url('/img/banner-bg-extended-vertical.png')]">
+      <div className="max-w-7xl mx-auto lg:pt-[5rem]">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-white text-center mb-4 sm:mb-4 lg:mb-6">
           ITSA Team 2024-25
         </h1>
-        <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-extrabold text-white text-center mb-8 sm:mb-12 lg:mb-16">
+        <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-extrabold text-white text-center mb-4 sm:mb-8 lg:mb-12">
           Meet our Team
         </h2>
         {teams.map((team, index) => (
