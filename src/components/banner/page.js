@@ -127,8 +127,9 @@ const Banner = () => {
             </TrackVisibility>
           </div>
         </div>
-      </div><hr />
-      <UpcomingEvents />
+      </div>
+      {/* <hr />
+      <UpcomingEvents /> */}
     </section>
   );
 };
