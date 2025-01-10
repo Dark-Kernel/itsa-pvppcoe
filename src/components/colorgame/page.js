@@ -153,7 +153,7 @@ export default function ColorGame() {
   }
 
   return (
-    <div className="font-sans flex flex-col items-center justify-center p-20 bg-gray-300 border-4 border-color0">
+    <div className="font-sans text-black flex flex-col items-center justify-center p-20 bg-gray-300 border-4 border-color0">
       {!gameStarted ? (
         <div className="font-sans flex flex-col items-center justify-center p-20 bg-gray-300 border-4 border-color0">
           <h1 className="text-4xl font-bold mb-4 text-center">Color Match Challenge</h1>
