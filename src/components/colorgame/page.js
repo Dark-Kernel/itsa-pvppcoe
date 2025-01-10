@@ -8,9 +8,9 @@ const colorImages = [
   { path: '/colors/Random1.png', hex: '#FF33CC' },
   { path: '/colors/Random2.png', hex: '#009999' },
   { path: '/colors/Random3.png', hex: '#660066' },
-  // { path: '/colors/Saffron.png', hex: '#FF671F' },
-  // { path: '/colors/Green.png', hex: '#046A38' },
-  // { path: '/colors/Blue.png', hex: '#06038D' },
+  { path: '/colors/Saffron.png', hex: '#FF671F' },
+  { path: '/colors/Green.png', hex: '#046A38' },
+  { path: '/colors/Blue.png', hex: '#06038D' },
 ]
 
 export default function ColorGame() {
@@ -27,6 +27,74 @@ export default function ColorGame() {
   const [startTime, setStartTime] = useState(null)
   const [elapsedTime, setElapsedTime] = useState(0)
   const [teamName, setTeamName] = useState('')
+
+  // Load saved game state when component mounts
+  useEffect(() => {
+    const savedState = localStorage.getItem('colorGameState')
+    if (savedState) {
+      const state = JSON.parse(savedState)
+      setGameStarted(state.gameStarted)
+      setCurrentRound(state.currentRound)
+      setCurrentChance(state.currentChance)
+      setRoundResults(state.roundResults)
+      setCurrentColorImage(state.currentColorImage)
+      setGameOver(state.gameOver)
+      setStartTime(state.startTime)
+      setElapsedTime(state.elapsedTime)
+      setTeamName(state.teamName)
+    }
+  }, [])
+
+  // Save game state whenever it changes
+  useEffect(() => {
+    if (gameStarted) {
+      const gameState = {
+        gameStarted,
+        currentRound,
+        currentChance,
+        roundResults,
+        currentColorImage,
+        gameOver,
+        startTime,
+        elapsedTime,
+        teamName
+      }
+      localStorage.setItem('colorGameState', JSON.stringify(gameState))
+    }
+  }, [gameStarted, currentRound, currentChance, roundResults, currentColorImage, gameOver, startTime, elapsedTime, teamName])
+
+  // Timer logic
+  useEffect(() => {
+    let timer
+    if (gameStarted && !gameOver) {
+      timer = setInterval(() => {
+        setElapsedTime(Math.floor((Date.now() - startTime) / 1000))
+      }, 1000)
+    }
+    return () => clearInterval(timer)
+  }, [gameStarted, gameOver, startTime])
+
+  function getRandomColorImage() {
+    return colorImages[Math.floor(Math.random() * colorImages.length)]
+  }
+
+  function initializeGame() {
+    if (!teamName.trim()) {
+      setError("Please enter a Team name before starting the game.")
+      return
+    }
+    setError('')
+    setGameStarted(true)
+    setGameOver(false)
+    setCurrentRound(1)
+    setCurrentChance(1)
+    setRoundResults([])
+    setStartTime(Date.now())
+    setElapsedTime(0)
+    const newColorImage = getRandomColorImage()
+    setCurrentColorImage(newColorImage)
+    localStorage.removeItem('colorGameState') // Clear previous game state
+  }
 
   useEffect(() => {
     let timer
