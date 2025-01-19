@@ -211,7 +211,7 @@ export default function ColorGame() {
             <li>HEX values for (RGB), where 00 is the darkest and FF is the brightest.</li>
           </ul>
           <div className="mb-3">
-            <label htmlFor="team-name" className="font-semibold block mb-2 lg:text-lg">Enter Your TeamName / Name 🧑‍💻:</label>
+            <label htmlFor="team-name" className="font-semibold block mb-2 lg:text-lg">Enter Your TeamName 🧑‍💻:</label>
             <input
               type="text"
               id="team-name"
@@ -245,8 +245,9 @@ export default function ColorGame() {
           {/* <button onClick={initializeGame} className="mt-6 p-3 text-lg bg-green-500 text-white rounded hover:bg-green-600 transition-colors">Play Again</button> */}
         </div>
       ) : (
-        <div className='font-sans flex flex-col items-center justify-center p-5 md:p-10 lg:p-20 bg-gray-300 border-4 border-color0'>
-          <h1 className="text-xl lg:text-4xl font-bold mb-4">🎨Color Match Game🎨</h1>
+        <div className='font-sans flex flex-col items-center justify-center p-5 md:p-10 lg:p-15 bg-gray-300 border-4 border-color0'>
+          <h1 className="text-lg lg:text-4xl font-bold mb-4 text-center lg:px-2">🚀TechCraft : Technical Event🚀</h1>
+          <h1 className="text-xl lg:text-4xl font-bold mb-4">🎨HEX Game🎨</h1>
           <h2 className="text-lg lg:text-2xl font-semibold mb-4 text-center">Team Name 🧑‍💻: {teamName}</h2>
           {/* <p className="mb-6">Try to match the color displayed in the image! You have 3 rounds, with 3 chances per round.</p> */}
 

@@ -128,8 +128,8 @@ const Banner = () => {
           </div>
         </div>
       </div>
-      {/* <hr />
-      <UpcomingEvents /> */}
+      <hr />
+      <UpcomingEvents />
     </section>
   );
 };
