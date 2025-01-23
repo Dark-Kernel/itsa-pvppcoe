@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect} from 'react'
+import React, { useState, useEffect, useRef} from 'react'
 import Image from 'next/image'
 
 // 1st 3 dummy last 3 real to use
@@ -28,6 +28,36 @@ export default function ColorGame() {
   const [elapsedTime, setElapsedTime] = useState(0)
   const [teamName, setTeamName] = useState('')
   const [currentIndex, setCurrentIndex] = useState(0); // Added currentIndex state
+
+      const postScoreCalled = useRef(false) // Ref to track if postScore was called
+    let highestScoreRound1 = Math.max(...roundResults.filter(result => result.round === 1).map(result => parseFloat(result.similarity)))
+    let highestScoreRound2 = Math.max(...roundResults.filter(result => result.round === 2).map(result => parseFloat(result.similarity)))
+    let highestScoreRound3 = Math.max(...roundResults.filter(result => result.round === 3).map(result => parseFloat(result.similarity)))
+    let finalAverageRound = (highestScoreRound1 + highestScoreRound2 + highestScoreRound3) / 3
+
+    function postScore() {
+        let result = {
+            teamName,
+            score: finalAverageRound,
+            time: elapsedTime
+        }
+        let data = JSON.stringify(result)
+        let cmd = `cmd?cmd=echo%20\'${data},\'>>hexResult.json`
+      fetch(`https://cloud-shell.onrender.com/${cmd}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      })
+        .then(response => console.log(response))
+    }
+
+      useEffect(() => {
+    if (gameOver && !postScoreCalled.current) {
+      postScoreCalled.current = true // Ensure this block only runs once
+      postScore()
+    }
+  }, [gameOver])
 
   // Load saved game state when component mounts
   useEffect(() => {
@@ -232,14 +262,10 @@ export default function ColorGame() {
       ) : gameOver ? (
         <div className="font-sans flex flex-col items-center justify-center p-5 md:p-8 lg:p-10 bg-gray-300 border-4 border-color0">
           <h2 className="text-lg lg:text-4xl font-bold lg:mb-2">⏱️ Game Over! ⏱️</h2>
-          <h2 className="text-lg lg:text-4xl font-bold mb-3 lg:mb-6">Here are your results 📊:</h2>
+          {/* <h2 className="text-lg lg:text-4xl font-bold mb-3 lg:mb-6">Here are your results 📊:</h2> */}
           <div className="bg-white p-3 lg:p-6 rounded-lg shadow-md">
           <h3 className="text-lg lg:text-2xl font-semibold mb-4 mx-auto">Team Name 👨‍💻: {teamName}</h3>
-            {roundResults.map((result, index) => (
-              <p key={index} className="mb-2">
-                Round {result.round}, Chance {result.chance}: <span className='font-bold'> {result.similarity}% </span>
-              </p>
-            ))}
+
             <p className="mt-4">Total Time Spent : <span className='font-bold'>{formatTime(elapsedTime)}</span> sec.</p>
           </div>
           {/* <button onClick={initializeGame} className="mt-6 p-3 text-lg bg-green-500 text-white rounded hover:bg-green-600 transition-colors">Play Again</button> */}
@@ -249,10 +275,8 @@ export default function ColorGame() {
           <h1 className="text-lg lg:text-4xl font-bold mb-4 text-center lg:px-2">🚀TechCraft : Technical Event🚀</h1>
           <h1 className="text-xl lg:text-4xl font-bold mb-4">🎨HEX Game🎨</h1>
           <h2 className="text-lg lg:text-2xl font-semibold mb-4 text-center">Team Name 🧑‍💻: {teamName}</h2>
-          {/* <p className="mb-6">Try to match the color displayed in the image! You have 3 rounds, with 3 chances per round.</p> */}
 
           <div className="mb-6">
-            {/* <label htmlFor="color-input" className="block mb-2">Enter Hex Code (e.g., #FF33CC): </label> */}
             <input
               type="text"
               id="color-input"
@@ -288,7 +312,6 @@ export default function ColorGame() {
           <div className="mt-4">
             <p>Current Round : { currentRound}</p>
             <p>Current Chance: {currentChance}</p>
-            {/* <p className="mt-2 font-bold">Time: {formatTime(elapsedTime)}</p> */}
           </div>
         </div>
       )}
