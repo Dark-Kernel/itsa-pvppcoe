@@ -27,7 +27,7 @@ export default function RandomInvertedNumbers() {
 
     // Add remaining random digits to the final array to fill up 200 total numbers
     let allNumbers = [...invertedDigits]
-    while (allNumbers.length < 200) {
+    while (allNumbers.length < 150) {
       const randomNum = remainingDigits[Math.floor(Math.random() * remainingDigits.length)]
       allNumbers.push(randomNum)
     }
@@ -45,7 +45,7 @@ export default function RandomInvertedNumbers() {
         {numbers.map((num, index) => (
           <div
             key={index}
-            className={`flex justify-center items-center w-16 h-16 bg-blue-200 rounded-lg text-xl ${invertedDigits.includes(num) ? "font-bold" : ""}`}
+            className={`flex justify-center items-center w-16 h-16 bg-blue-200 rounded-lg text-xl ${invertedDigits.includes(num) ? "font-bold text-3xl" : ""}`}
           >
             {num}
           </div>
