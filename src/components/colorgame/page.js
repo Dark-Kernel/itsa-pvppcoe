@@ -1,16 +1,20 @@
 'use client'
 
-import React, { useState, useEffect, useRef} from 'react'
-import Image from 'next/image'
+import React, { useState, useEffect, useRef } from "react"
+import Image from "next/image"
 
 // 1st 3 dummy last 3 real to use
 const colorImages = [
-  { path: '/colors/Random1.png', hex: '#FF33CC' },
-  { path: '/colors/Random2.png', hex: '#009999' },
-  { path: '/colors/Random3.png', hex: '#660066' },
+  // { path: "/colors/Pink.png", hex: "#FF33CC" },
+  { path: "/colors/Mblue.png", hex: "#009999" },
+  { path: "/colors/Purple.png", hex: "#660066" },
   // { path: '/colors/Saffron.png', hex: '#FF671F' },
   // { path: '/colors/Green.png', hex: '#046A38' },
   // { path: '/colors/Blue.png', hex: '#06038D' },
+  // { path: '/colors/Lgreen.png', hex: '#82BF48' },
+  { path: '/colors/Lblue.png', hex: '#00FFFF' },
+  // { path: '/colors/Red.png', hex: '#FF190B' },
+  { path: '/colors/Yellow.png', hex: '#FFFF00' },
 ]
 
 export default function ColorGame() {
@@ -21,38 +25,43 @@ export default function ColorGame() {
   const [currentChance, setCurrentChance] = useState(1)
   const [roundResults, setRoundResults] = useState([])
   const [currentColorImage, setCurrentColorImage] = useState(null)
-  const [userInput, setUserInput] = useState('')
-  const [error, setError] = useState('')
+  const [userInput, setUserInput] = useState("")
+  const [error, setError] = useState("")
   const [gameOver, setGameOver] = useState(false)
   const [startTime, setStartTime] = useState(null)
   const [elapsedTime, setElapsedTime] = useState(0)
-  const [teamName, setTeamName] = useState('')
-  const [currentIndex, setCurrentIndex] = useState(0); // Added currentIndex state
+  const [teamName, setTeamName] = useState("")
+  const [usedColors, setUsedColors] = useState([]) // Added usedColors state
 
-      const postScoreCalled = useRef(false) // Ref to track if postScore was called
-    let highestScoreRound1 = Math.max(...roundResults.filter(result => result.round === 1).map(result => parseFloat(result.similarity)))
-    let highestScoreRound2 = Math.max(...roundResults.filter(result => result.round === 2).map(result => parseFloat(result.similarity)))
-    let highestScoreRound3 = Math.max(...roundResults.filter(result => result.round === 3).map(result => parseFloat(result.similarity)))
-    let finalAverageRound = (highestScoreRound1 + highestScoreRound2 + highestScoreRound3) / 3
+  const postScoreCalled = useRef(false) // Ref to track if postScore was called
+  const highestScoreRound1 = Math.max(
+    ...roundResults.filter((result) => result.round === 1).map((result) => Number.parseFloat(result.similarity)),
+  )
+  const highestScoreRound2 = Math.max(
+    ...roundResults.filter((result) => result.round === 2).map((result) => Number.parseFloat(result.similarity)),
+  )
+  const highestScoreRound3 = Math.max(
+    ...roundResults.filter((result) => result.round === 3).map((result) => Number.parseFloat(result.similarity)),
+  )
+  const finalAverageRound = (highestScoreRound1 + highestScoreRound2 + highestScoreRound3) / 3
 
-    function postScore() {
-        let result = {
-            teamName,
-            score: finalAverageRound,
-            time: elapsedTime
-        }
-        let data = JSON.stringify(result)
-        let cmd = `cmd?cmd=echo%20\'${data},\'>>hexResult.json`
-      fetch(`https://cloud-shell.onrender.com/${cmd}`, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        }
-      })
-        .then(response => console.log(response))
+  function postScore() {
+    const result = {
+      teamName,
+      score: finalAverageRound,
+      time: elapsedTime,
     }
+    const data = JSON.stringify(result)
+    const cmd = `cmd?cmd=echo%20\'${data},\'>>hexResult.json`
+    fetch(`https://cloud-shell.onrender.com/${cmd}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then((response) => console.log(response))
+  }
 
-      useEffect(() => {
+  useEffect(() => {
     if (gameOver && !postScoreCalled.current) {
       postScoreCalled.current = true // Ensure this block only runs once
       postScore()
@@ -61,7 +70,7 @@ export default function ColorGame() {
 
   // Load saved game state when component mounts
   useEffect(() => {
-    const savedState = localStorage.getItem('colorGameState')
+    const savedState = localStorage.getItem("colorGameState")
     if (savedState) {
       const state = JSON.parse(savedState)
       setGameStarted(state.gameStarted)
@@ -73,7 +82,7 @@ export default function ColorGame() {
       setStartTime(state.startTime)
       setElapsedTime(state.elapsedTime)
       setTeamName(state.teamName)
-      setCurrentIndex(state.currentIndex) //Added to load currentIndex from local storage
+      setUsedColors(state.usedColors || []) //Added to load usedColors from local storage
     }
   }, [])
 
@@ -90,18 +99,29 @@ export default function ColorGame() {
         startTime,
         elapsedTime,
         teamName,
-        currentIndex // Added currentIndex to gameState
+        usedColors, // Added usedColors to gameState
       }
-      localStorage.setItem('colorGameState', JSON.stringify(gameState))
+      localStorage.setItem("colorGameState", JSON.stringify(gameState))
     }
-  }, [gameStarted, currentRound, currentChance, roundResults, currentColorImage, gameOver, startTime, elapsedTime, teamName, currentIndex])
+  }, [
+    gameStarted,
+    currentRound,
+    currentChance,
+    roundResults,
+    currentColorImage,
+    gameOver,
+    startTime,
+    elapsedTime,
+    teamName,
+    usedColors,
+  ])
 
   function initializeGame() {
     if (!teamName.trim()) {
       setError("Please enter a Team name before starting the game.")
       return
     }
-    setError('')
+    setError("")
     setGameStarted(true)
     setGameOver(false)
     setCurrentRound(1)
@@ -109,10 +129,10 @@ export default function ColorGame() {
     setRoundResults([])
     setStartTime(Date.now())
     setElapsedTime(0)
-    setCurrentIndex(0); // Reset currentIndex
+    setUsedColors([]) // Reset usedColors
     const newColorImage = getRandomColorImage()
     setCurrentColorImage(newColorImage)
-    localStorage.removeItem('colorGameState') // Clear previous game state
+    localStorage.removeItem("colorGameState") // Clear previous game state
   }
 
   // Timer logic
@@ -128,9 +148,16 @@ export default function ColorGame() {
 
   // Fetch color logic
   function getRandomColorImage() {
-    const newColorImage = colorImages[currentIndex];
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % colorImages.length);
-    return newColorImage;
+    const availableColors = colorImages.filter((color) => !usedColors.includes(color))
+    if (availableColors.length === 0) {
+      // Reset used colors if all have been used
+      setUsedColors([])
+      return getRandomColorImage()
+    }
+    const randomIndex = Math.floor(Math.random() * availableColors.length)
+    const selectedColor = availableColors[randomIndex]
+    setUsedColors((prev) => [...prev, selectedColor])
+    return selectedColor
   }
 
   function isValidHex(hex) {
@@ -138,9 +165,9 @@ export default function ColorGame() {
   }
 
   function hexToRgb(hex) {
-    const r = parseInt(hex.slice(1, 3), 16)
-    const g = parseInt(hex.slice(3, 5), 16)
-    const b = parseInt(hex.slice(5, 7), 16)
+    const r = Number.parseInt(hex.slice(1, 3), 16)
+    const g = Number.parseInt(hex.slice(3, 5), 16)
+    const b = Number.parseInt(hex.slice(5, 7), 16)
     return { r, g, b }
   }
 
@@ -152,9 +179,9 @@ export default function ColorGame() {
   }
 
   function checkColor() {
-    setError('')
+    setError("")
 
-    if (!userInput.startsWith('#')) {
+    if (!userInput.startsWith("#")) {
       setError("HEX color must start with '#'")
       return
     }
@@ -166,20 +193,20 @@ export default function ColorGame() {
 
     const userColorRGB = hexToRgb(userInput)
     const finalColorRGB = hexToRgb(currentColorImage.hex)
-    
+
     const distance = colorDistance(userColorRGB, finalColorRGB)
     const similarity = Math.max(0, (1 - distance / Math.sqrt(255 * 255 * 3)) * 100)
-    
-    setRoundResults(prevResults => [
+
+    setRoundResults((prevResults) => [
       ...prevResults,
       {
         round: currentRound,
         chance: currentChance,
-        similarity: similarity.toFixed(2)
-      }
+        similarity: similarity.toFixed(2),
+      },
     ])
 
-    alert(`The color is ${similarity.toFixed(2)}% similar.`);
+    alert(`The color is ${similarity.toFixed(2)}% similar.`)
 
     if (similarity === 100) {
       moveToNextRound("Right! The color match perfectly.")
@@ -187,7 +214,7 @@ export default function ColorGame() {
       if (currentChance >= chancesPerRound) {
         moveToNextRound(`Moving to next round.`)
       } else {
-        setCurrentChance(prevChance => prevChance + 1)
+        setCurrentChance((prevChance) => prevChance + 1)
       }
     }
   }
@@ -196,7 +223,7 @@ export default function ColorGame() {
     if (currentRound >= rounds) {
       setGameOver(true)
     } else {
-      setCurrentRound(prevRound => prevRound + 1)
+      setCurrentRound((prevRound) => prevRound + 1)
       setCurrentChance(1)
       const newColorImage = getRandomColorImage()
       setCurrentColorImage(newColorImage)
@@ -207,22 +234,26 @@ export default function ColorGame() {
   function handleInputChange(e) {
     const input = e.target.value
     setUserInput(input)
-    
+
     // Real-time validation
-    if (input && !input.startsWith('#')) {
+    if (input && !input.startsWith("#")) {
       setError("Hex color must start with '#'")
     } else if (input && !/^#[0-9A-Fa-f]{0,6}$/.test(input)) {
       setError("Invalid hex color format")
     } else {
-      setError('')
+      setError("")
     }
   }
 
   function formatTime(seconds) {
     const minutes = Math.floor(seconds / 60)
     const remainingSeconds = seconds % 60
-    return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`
+    return `${minutes}:${remainingSeconds.toString().padStart(2, "0")}`
   }
+
+
+
+
 
   return (
     <div className="font-sans text-black flex flex-col items-center justify-center p-8 lg:m-2 sm:m-0 bg-gray-300 border-4 border-color0">
