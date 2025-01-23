@@ -18,6 +18,11 @@ const Banner = () => {
   const toRotate = ["Team", "Dev"];
   const period = 2000;
 
+  // Get the current hour EVENT RENDERER
+  // const currentHour = new Date().getHours();
+  // // Check if the current hour is before 1 PM (13 in 24-hour format)
+  // const shouldRenderComponent = currentHour < 20;
+
   useEffect(() => {
     const ticker = setInterval(() => {
       tick();
@@ -128,8 +133,16 @@ const Banner = () => {
           </div>
         </div>
       </div>
-      <hr />
-      <UpcomingEvents />
+      {/* <div>
+      {shouldRenderComponent ? (
+        <div> */}
+        <hr />
+        <UpcomingEvents />
+        {/* </div>
+      ) : (<div></div>
+      )}
+    </div> */}
+      
     </section>
   );
 };
