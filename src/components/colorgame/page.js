@@ -3,17 +3,16 @@
 import React, { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 
-// 1st 3 dummy last 3 real to use
 const colorImages = [
-  // { path: "/colors/Pink.png", hex: "#FF33CC" },
+  { path: "/colors/Pink.png", hex: "#FF33CC" },
   { path: "/colors/Mblue.png", hex: "#009999" },
   { path: "/colors/Purple.png", hex: "#660066" },
-  // { path: '/colors/Saffron.png', hex: '#FF671F' },
-  // { path: '/colors/Green.png', hex: '#046A38' },
-  // { path: '/colors/Blue.png', hex: '#06038D' },
-  // { path: '/colors/Lgreen.png', hex: '#82BF48' },
+  { path: '/colors/Saffron.png', hex: '#FF671F' },
+  { path: '/colors/Green.png', hex: '#046A38' },
+  { path: '/colors/Blue.png', hex: '#06038D' },
+  { path: '/colors/Lgreen.png', hex: '#82BF48' },
   { path: '/colors/Lblue.png', hex: '#00FFFF' },
-  // { path: '/colors/Red.png', hex: '#FF190B' },
+  { path: '/colors/Red.png', hex: '#FF190B' },
   { path: '/colors/Yellow.png', hex: '#FFFF00' },
 ]
 

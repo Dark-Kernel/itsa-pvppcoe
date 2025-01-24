@@ -136,8 +136,8 @@ const Banner = () => {
       {/* <div>
       {shouldRenderComponent ? (
         <div> */}
-        <hr />
-        <UpcomingEvents />
+        {/* <hr /> */}
+        {/* <UpcomingEvents /> */}
         {/* </div>
       ) : (<div></div>
       )}
