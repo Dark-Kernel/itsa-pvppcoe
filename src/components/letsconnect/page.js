@@ -32,7 +32,7 @@ const LetsConnect = () => {
     return (
         <section className="pt-[100px] pb-[50px] bg-[url('/img/banner-bg-extended-vertical.png')] bg-top bg-cover bg-no-repeat">
             {/* Let's Connect Section */}
-            <div className="bg-gray-800 bg-opacity-40 backdrop-blur-md rounded-lg p-8 max-w-4xl mx-auto mb-12">
+            <div className="bg-gray-800 bg-opacity-0 backdrop-blur-md rounded-lg p-8 max-w-4xl mb-12 mx-3 lg:mx-auto">
                 <h1 className="text-white text-3xl font-bold mb-4 text-center">Let's Connect</h1>
                 <p className="text-white mb-4 text-center">We would love to hear from you! Connect with us through the options below:</p>
 
@@ -92,8 +92,8 @@ const LetsConnect = () => {
             </div>
 
             {/* Professional Bodies Section */}
-            <div className="bg-gray-800 bg-opacity-30 backdrop-blur-lg w-full max-w-7xl p-7 rounded-lg shadow-lg mx-auto">
-                <h1 className="text-white font-bold text-2xl text-center mb-4">Our Professional Working Bodies</h1>
+            <div className="bg-gray-800 bg-opacity-30 backdrop-blur-lg w-fill max-w-7xl p-6 rounded-lg shadow-lg mx-3 lg:mx-auto">
+                <h1 className="text-white font-bold text-xl lg:text-2xl text-center mb-4">Our Professional Working Bodies</h1>
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                     {data.map((item, index) => (
                         <div

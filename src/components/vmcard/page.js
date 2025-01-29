@@ -26,28 +26,28 @@ const VMCard = () => {
   ];
 
   return (
-    <div className="bg-opacity-0 min-h-fit flex items-center justify-center p-6">
+    <div className="bg-opacity-0 min-h-fit flex items-center justify-center p-1 lg:p-4">
       <div className="bg-gray-800 bg-opacity-40 container mx-1 p-4 rounded-lg shadow-lg">
-        <h1 className="text-white font-bold text-xl md:text-2xl text-center mb-6">
+        <h1 className="text-white font-bold text-md md:text-2xl text-center mb-6">
         VASANTDADA PATIL PRATISHTHAN'S COLLEGE OF ENGINEERING AND VISUAL ARTS
         </h1>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           {data.map((item, index) => (
             <div
-              className="bg-gray-700 bg-opacity-50 rounded-lg p-4 flex flex-col shadow-md"
+              className="bg-gray-800 bg-opacity-70 rounded-lg p-4 flex flex-col shadow-md"
               key={index}
             >
-              <h2 className="text-white font-bold text-xl md:text-2xl mb-4 text-center">
+              <h2 className="text-white font-bold text-md md:text-2xl mb-4 text-center">
                 {item.mainTitle} Vision
               </h2>
-              <p className="text-gray-400 text-sm md:text-base mb-4 text-center">
+              <p className="text-gray-400 text-sm md:text-base mb-4 text-justify lg:text-center">
                 {item.vision}
               </p>
               {item.mainTitle === 'IT Department' && <br />}
-              <h2 className="text-white font-bold text-xl md:text-2xl mb-4 text-center">
+              <h2 className="text-white font-bold text-md md:text-2xl mb-4 text-center">
                 {item.mainTitle} Mission
               </h2>
-              <ul className="text-gray-400 text-sm md:text-base list-disc pl-5">
+              <ul className="text-gray-400 text-sm md:text-base list-disc pl-3 lg:pl-5 text-justify">
                 {item.mission.map((missionPoint, i) => (
                   <li key={i}>{missionPoint}</li>
                 ))}

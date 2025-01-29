@@ -17,10 +17,10 @@ const EventCard = ({ image, title, date, time, fhsh, instagramLink, report }) =>
             href={instagramLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center bg-pink-500 text-white w-8 h-8 rounded-full hover:bg-pink-600 transition"
+            className="inline-flex items-center justify-center bg-pink-500 text-white w-8 h-8 rounded-lg hover:bg-pink-600 transition"
             aria-label="Instagram"
           >
-            <Instagram size={16} />
+            <Instagram size={20} />
           </a>
           <a
             href={report}
@@ -28,7 +28,7 @@ const EventCard = ({ image, title, date, time, fhsh, instagramLink, report }) =>
             rel="noopener noreferrer"
             className="bg-blue-500 text-white px-3 py-2 text-sm rounded hover:bg-blue-600 transition"
           >
-            Read More
+            📄Read More
           </a>
         </div>
       </div>
@@ -90,13 +90,13 @@ const EventsPage = () => {
               onClick={() => setSelectedFilter("All")}
             >All</button> */}
             <button
-              className={`lg:px-4 lg:py-2 p-2 rounded transition ${selectedFilter === "FH-2024" ? "bg-gray-300 text-gray-800" : "bg-gray-200 text-gray-600 hover:bg-gray-300"}`}
+              className={`lg:px-4 lg:py-2 p-2 rounded transition ${selectedFilter === "FH-2024" ? "bg-gray-300 text-gray-900 font-bold" : "bg-gray-200 text-gray-600 hover:bg-gray-300"}`}
               onClick={() => setSelectedFilter("FH-2024")}
             >
               FH-2024
             </button>
             <button
-              className={`lg:px-4 lg:py-2 p-2 rounded transition ${selectedFilter === "SH-2024" ? "bg-gray-600 text-gray-800" : "bg-gray-200 text-gray-600 hover:bg-gray-300"}`}
+              className={`lg:px-4 lg:py-2 p-2 rounded transition ${selectedFilter === "SH-2024" ? "bg-gray-300 text-gray-900 font-bold" : "bg-gray-200 text-gray-600 hover:bg-gray-300"}`}
               onClick={() => setSelectedFilter("SH-2024")}
             >
               SH-2024
