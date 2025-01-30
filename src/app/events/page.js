@@ -55,7 +55,7 @@ const EventsPage = () => {
   }, [])
 
   const months = [
-    "All",
+    "Sort By",
     "January",
     "February",
     "March",
@@ -72,6 +72,7 @@ const EventsPage = () => {
 
   const filteredEvents = events.filter((event) => {
     if (selectedFilter === "All") return true
+    if (selectedFilter === "Sort By") return true
     if (selectedFilter === "FH-2024" || selectedFilter === "SH-2024") {
       return event.fhsh === selectedFilter
     }
@@ -85,10 +86,10 @@ const EventsPage = () => {
         <div className="flex flex-col space-y-4 sm:flex-row sm:justify-between sm:items-center mb-6">
           <h1 className="text-2xl sm:text-4xl font-bold font-sans text-white">✨ITSA 2024-25✨: Events</h1>
           <div className="flex flex-row space-y-0 space-x-4 text-white bg-backround">
-            {/* <button
-              className={`px-4 py-2 rounded transition ${selectedFilter === "All" ? "bg-gray-300 text-gray-800" : "bg-gray-200 text-gray-600 hover:bg-gray-300"}`}
+            <button
+              className={`px-4 py-2 rounded transition ${selectedFilter === "All" ? "bg-gray-300 text-gray-900 font-bold" : "bg-gray-200 text-gray-600 hover:bg-gray-300"}`}
               onClick={() => setSelectedFilter("All")}
-            >All</button> */}
+            >All</button>
             <button
               className={`lg:px-4 lg:py-2 p-2 rounded transition ${selectedFilter === "FH-2024" ? "bg-gray-300 text-gray-900 font-bold" : "bg-gray-200 text-gray-600 hover:bg-gray-300"}`}
               onClick={() => setSelectedFilter("FH-2024")}
