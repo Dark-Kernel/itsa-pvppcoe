@@ -86,7 +86,7 @@ const EventsPage = () => {
   const filteredEvents = events.filter((event) => {
     if (selectedFilter === "All") return true
     if (selectedFilter === "Sort By") return true
-    if (selectedFilter === "FH-2024" || selectedFilter === "SH-2024") {
+    if (selectedFilter === "FH-2024" || selectedFilter === "SH-2024" || selectedFilter === "FH-2025") {
       return event.fhsh === selectedFilter
     }
     const eventMonth = new Date(event.date).toLocaleString("default", { month: "long" })
@@ -96,18 +96,18 @@ const EventsPage = () => {
   return (
     <div className="min-h-screen bg-transparent p-4 sm:p-8 bg-[url('/img/banner-bg-extended-vertical.png')]">
       <div className="max-w-6xl mx-auto pt-[4.5rem]">
-        <div className="flex flex-col space-y-4 sm:flex-row sm:justify-between sm:items-center mb-6">
+        <div className="flex flex-col space-y-4 sm:flex-row sm:justify-between sm:items-center mb-4">
           <h1 className="text-2xl sm:text-4xl font-bold font-sans text-white">✨ITSA 2024-25✨: Events</h1>
-          <div className="flex flex-row space-y-0 space-x-4 text-white bg-backround">
+          <div className="grid grid-cols-2 gap-2 lg:flex lg:flex-row lg:space-y-0 lg:space-x-4 text-white bg-backround">
             <button
-              className={`px-4 py-2 rounded transition ${selectedFilter === "All" ? "bg-gray-300 text-gray-900 font-bold" : "bg-gray-200 text-gray-600 hover:bg-gray-300"}`}
+              className={`lg:px-4 lg:py-2 p-2 rounded transition ${selectedFilter === "All" ? "bg-gray-300 text-gray-900 font-bold" : "bg-gray-200 text-gray-600 hover:bg-gray-300"}`}
               onClick={() => setSelectedFilter("All")}
             >All</button>
             <button
-              className={`lg:px-4 lg:py-2 p-2 rounded transition ${selectedFilter === "FH-2024" ? "bg-gray-300 text-gray-900 font-bold" : "bg-gray-200 text-gray-600 hover:bg-gray-300"}`}
-              onClick={() => setSelectedFilter("FH-2024")}
+              className={`lg:px-4 lg:py-2 p-2 rounded transition ${selectedFilter === "FH-2025" ? "bg-gray-300 text-gray-900 font-bold" : "bg-gray-200 text-gray-600 hover:bg-gray-300"}`}
+              onClick={() => setSelectedFilter("FH-2025")}
             >
-              FH-2024
+              FH-2025
             </button>
             <button
               className={`lg:px-4 lg:py-2 p-2 rounded transition ${selectedFilter === "SH-2024" ? "bg-gray-300 text-gray-900 font-bold" : "bg-gray-200 text-gray-600 hover:bg-gray-300"}`}
@@ -115,7 +115,13 @@ const EventsPage = () => {
             >
               SH-2024
             </button>
-            <div className="relative">
+            <button
+              className={`lg:px-4 lg:py-2 p-2 rounded transition ${selectedFilter === "FH-2024" ? "bg-gray-300 text-gray-900 font-bold" : "bg-gray-200 text-gray-600 hover:bg-gray-300"}`}
+              onClick={() => setSelectedFilter("FH-2024")}
+            >
+              FH-2024
+            </button>
+            {/* <div className="relative">
               <select
                 className="w-full sm:w-auto appearance-none bg-gray-200 text-gray-600 rounded lg:px-4 lg:pr-6 lg:py-2 p-2 pr-8 hover:bg-gray-300 transition"
                 value={selectedFilter}
@@ -131,7 +137,7 @@ const EventsPage = () => {
                 className="absolute text-black right-2 top-1/2 transform -translate-y-1/2 pointer-events-none"
                 size={20}
               />
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
