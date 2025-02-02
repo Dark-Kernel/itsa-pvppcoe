@@ -1,40 +1,53 @@
 "use client"
 import React, { useState, useEffect } from "react"
 import { ChevronDown, Instagram } from "lucide-react"
+import PDFModal from "../../components/PDFModal/page"
 
-const EventCard = ({ image, title, date, time, fhsh, instagramLink, report }) => (
-  <div className="bg-white border-2 border-solid border-color7 text-foreground rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl flex flex-col h-full">
-    <img src={image} alt={title} className="w-full h-50 object-cover" />
-    <div className="p-4 flex flex-col flex-grow">
-      <h3 className="text-xl font-semibold mb-2 text-gray-600">{title}</h3>
-      <p className="text-gray-600 font-semibold mb-2">
-        {date} <span className="font-normal">({fhsh})</span>
-      </p>
-      <div className="mt-auto flex justify-between items-center">
-        <span className="text-gray-500 font-semibold text-sm">{time}</span>
-        <div className="flex items-center space-x-2">
-          <a
-            href={instagramLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center bg-pink-500 text-white w-8 h-8 rounded-lg hover:bg-pink-600 transition"
-            aria-label="Instagram"
-          >
-            <Instagram size={20} />
-          </a>
-          <a
-            href={report}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-blue-500 text-white px-3 py-2 text-sm rounded hover:bg-blue-600 transition"
-          >
-            📄Read More
-          </a>
+const EventCard = ({ image, title, date, time, fhsh, instagramLink, report, description }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  return (
+    <>
+      <div className="bg-white border-2 border-solid border-color7 text-foreground rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl flex flex-col h-full">
+        <img src={image} alt={title} className="w-full h-50 object-cover" />
+        <div className="p-4 flex flex-col flex-grow">
+          <h3 className="text-xl font-semibold mb-2 text-gray-600">{title}</h3>
+          <p className="text-gray-600 font-semibold mb-2">
+            {date} <span className="font-normal">({fhsh})</span>
+          </p>
+          <div className="mt-auto flex justify-between items-center">
+            <span className="text-gray-500 font-semibold text-sm">{time}</span>
+            <div className="flex items-center space-x-2">
+              <a
+                href={instagramLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center bg-pink-500 text-white w-8 h-8 rounded-lg hover:bg-pink-600 transition"
+                aria-label="Instagram"
+              >
+                <Instagram size={20} />
+              </a>
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className="bg-blue-500 text-white px-3 py-2 text-sm rounded hover:bg-blue-600 transition"
+              >
+                📄Read More
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-)
+
+      <PDFModal
+      isOpen={isModalOpen}
+      onClose={() => setIsModalOpen(false)}
+      pdfPath={report}
+      documentTitle={title}
+      description={description}
+      />
+    </>
+  );
+};
 
 const EventsPage = () => {
   const [selectedFilter, setSelectedFilter] = useState("All")
