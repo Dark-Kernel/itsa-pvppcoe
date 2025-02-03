@@ -19,13 +19,13 @@ const PDFModal = ({ isOpen, onClose, pdfPath, documentTitle, description }) => {
       <div className="bg-white rounded-lg flex flex-col relative h-[85vh] w-[95%] md:w-[595px] lg:w-[595px] xl:w-[595px] z-10">
         {/* Header */}
         <div className="p-4 border-b flex items-center justify-between relative">
-          <h2 className="text-xl font-semibold text-center w-full">{documentTitle || "View Document"}</h2>
+          <h2 className="text-xl text-black font-semibold text-center w-full">{documentTitle || "View Document"}</h2>
           <button
             onClick={handleClose}
             className="absolute right-1 top-1 p-1 hover:bg-gray-100 rounded-full transition-colors"
             aria-label="Close modal"
           >
-            <X className="w-7 h-7" />
+            <X className="w-7 h-7 text-black" />
           </button>
         </div>
 
@@ -40,7 +40,7 @@ const PDFModal = ({ isOpen, onClose, pdfPath, documentTitle, description }) => {
         {description && (
           <div className="p-4 border-t bg-gray-50">
             <div className="prose max-w-none">
-              <p className="text-gray-700 text-sm sm:text-base">{description}</p>
+              <p className="text-gray-900 text-sm sm:text-base">{description}</p>
             </div>
           </div>
         )}

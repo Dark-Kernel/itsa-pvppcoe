@@ -1,4 +1,3 @@
-// WHY BUILD FAILED??
 "use client"
 import React, { useState, useEffect } from "react"
 import { ChevronDown, Instagram } from "lucide-react"
@@ -12,7 +11,7 @@ const EventCard = ({ image, title, date, time, fhsh, instagramLink, report, desc
       <div className="bg-white border-2 border-solid border-color7 text-foreground rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl flex flex-col h-full">
         <img src={image} alt={title} className="w-full h-50 object-cover" />
         <div className="p-4 flex flex-col flex-grow">
-          <h3 className="text-xl font-semibold mb-2 text-gray-600">{title}</h3>
+          <h3 className="text-xl font-semibold mb-1 text-gray-600">{title}</h3>
           <p className="text-gray-600 font-semibold mb-2">
             {date} <span className="font-normal">({fhsh})</span>
           </p>
@@ -97,8 +96,8 @@ const EventsPage = () => {
   return (
     <div className="min-h-screen bg-transparent p-4 sm:p-8 bg-[url('/img/banner-bg-extended-vertical.png')]">
       <div className="max-w-6xl mx-auto pt-[4.5rem]">
-        <div className="flex flex-col space-y-4 sm:flex-row sm:justify-between sm:items-center mb-4">
-          <h1 className="text-2xl sm:text-4xl font-bold font-sans text-white">✨ITSA 2024-25✨: Events</h1>
+        <div className="flex flex-col space-y-2 sm:flex-row sm:justify-between sm:items-center mb-1 lg:mb-4">
+          <h1 className="text-2xl lg:text-4xl font-bold font-sans text-white">✨ITSA 2024-25✨: Events</h1>
           <div className="grid grid-cols-2 gap-2 lg:flex lg:flex-row lg:space-y-0 lg:space-x-4 text-white bg-backround">
             <button
               className={`lg:px-4 lg:py-2 p-2 rounded transition ${selectedFilter === "All" ? "bg-gray-300 text-gray-900 font-bold" : "bg-gray-200 text-gray-600 hover:bg-gray-300"}`}
