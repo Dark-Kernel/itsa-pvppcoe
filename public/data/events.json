@@ -1,6 +1,36 @@
 {
     "events": [
         {
+            "title": "TechCraft",
+            "date": "24 January 2025",
+            "image": "/posters/techcraft.jpg",
+            "time": "??",
+            "fhsh": "FH-2025",
+            "instagramLink": "https://www.instagram.com/reel/DFhQpjAoJOn/?igsh=MWduanVkN2lmOTVhYw==",
+            "report": "/reports/??.pdf",
+            "description": ""
+        },
+        {
+            "title": "Mastering UI/UX Design",
+            "date": "24 January 2025",
+            "image": "/posters/mastering_ui.jpg",
+            "time": "??",
+            "fhsh": "FH-2025",
+            "instagramLink": "https://www.instagram.com/reel/DFP-oy4IaDC/?igsh=cWc3a252M2k4MXk2",
+            "report": "/reports/??.pdf",
+            "description": ""
+        },
+        {
+            "title": "Shimla Industrial Visit",
+            "date": "??",
+            "image": "/posters/iv_shimla.jpg",
+            "time": "??",
+            "fhsh": "SH-2024",
+            "instagramLink": "https://www.instagram.com/reel/DFPRxzQom-t/?igsh=bW5rcHJkMXgwcXRs",
+            "report": "/reports/??.pdf",
+            "description": ""
+        },
+        {
             "title": "API:101 Postman Workshop",
             "date": "25 September 2024",
             "image": "/posters/api_101.jpg",
@@ -89,6 +119,16 @@
             "instagramLink": "https://www.instagram.com/reel/C-Nz5JVIbci/?igsh=MTFzeXE5Nms0NHVnNg==",
             "report": "/reports/idea_pitch.pdf",
             "description": ""
+        },
+        {
+            "title": "Unlocking Startup Success",
+            "date": "31 July 2024",
+            "image": "/posters/unlocking_startup.jpg",
+            "time": "02:00 PM",
+            "fhsh": "SH-2024",
+            "instagramLink": "https://www.instagram.com/p/C-HgMbiIoiU/?igsh=ZjgyOGQzNWFnOGJ1",
+            "report": "/reports/unlocking_startup.pdf",
+            "description": "Unlocking Startup Success: Insights on Accelerators & Incubators"
         },
         {
             "title": "Tech Salute",

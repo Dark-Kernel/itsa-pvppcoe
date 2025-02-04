@@ -75,7 +75,7 @@ const UpcomingEvents = () => {
                     🔹 Round 3: Find the flag
                         Gear up for the ultimate scavenger hunt! Put your problem-solving skills.
 `,    register: "https://tinyurl.com/cvkchdj3",
-      poster: "/posters/techcraft.jpg",
+      poster: "/posters/techcraft-poster.jpg",
     },
   ];
 
