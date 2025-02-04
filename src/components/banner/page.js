@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic';  // Use dynamic import for third-party libra
 import Image from 'next/image';       // Use Next.js Image component for optimized image loading
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
+// UPCOMING EVENTS COMPONENT
 import UpcomingEvents from '../../components/upcomingevent/page';
 
 const TrackVisibility = dynamic(() => import('react-on-screen'), { ssr: false });
@@ -17,11 +18,6 @@ const Banner = () => {
   const [index, setIndex] = useState(1);
   const toRotate = ["Team", "Dev"];
   const period = 2000;
-
-  // Get the current hour EVENT RENDERER
-  // const currentHour = new Date().getHours();
-  // // Check if the current hour is before 1 PM (13 in 24-hour format)
-  // const shouldRenderComponent = currentHour < 20;
 
   useEffect(() => {
     const ticker = setInterval(() => {
@@ -133,16 +129,11 @@ const Banner = () => {
           </div>
         </div>
       </div>
-      {/* <div>
-      {shouldRenderComponent ? (
-        <div> */}
-        {/* <hr /> */}
-        {/* <UpcomingEvents /> */}
-        {/* </div>
-      ) : (<div></div>
-      )}
-    </div> */}
-      
+
+        {/* UpcomingEvents component call */}
+        {/* <hr/>
+        <UpcomingEvents /> */}
+
     </section>
   );
 };

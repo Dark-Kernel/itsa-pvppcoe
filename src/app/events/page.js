@@ -121,6 +121,7 @@ const EventsPage = () => {
             >
               FH-2024
             </button>
+            {/* SORT BY MONTH UI CODE */}
             {/* <div className="relative">
               <select
                 className="w-full sm:w-auto appearance-none bg-gray-200 text-gray-600 rounded lg:px-4 lg:pr-6 lg:py-2 p-2 pr-8 hover:bg-gray-300 transition"
@@ -152,5 +153,4 @@ const EventsPage = () => {
   )
 }
 
-export default EventsPage
-
+export default EventsPage;
