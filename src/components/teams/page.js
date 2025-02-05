@@ -7,10 +7,10 @@ const MemberCard = ({ name, post, imageUrl }) => (
 
 
   // FUN CODE ONLY, TO BE REMOVED AFTER IMPLEMENT
-  <div className={`group text-foreground rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 w-full h-full flex flex-col ${name === "Girish Patil" ? "bg-background hover:bg-[linear-gradient(to_bottom,#ff0000,#ff7f00,#ffff00,#00ff00,#0000ff,#4b0082,#8b00ff)]" : "bg-background"}`}>
+  // <div className={`group text-foreground rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 w-full h-full flex flex-col ${name === "Girish Patil" ? "bg-background hover:bg-[linear-gradient(to_bottom,#ff0000,#ff7f00,#ffff00,#00ff00,#0000ff,#4b0082,#8b00ff)]" : "bg-background"}`}>
 
-  {/* ACTUAL CODE TO BE UNCOMMENT AT PRESENT */}
-  {/* <div className="bg-background text-foreground rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 w-full h-full flex flex-col"> */}
+  // ACTUAL CODE TO BE UNCOMMENT AT PRESENT 
+  <div className="bg-background text-foreground rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 w-full h-full flex flex-col">
     <div className="p-4 lg:p-6 flex-grow flex flex-col justify-between">
       <div>
         <img src={imageUrl || "/api/placeholder/150/150"}
@@ -43,7 +43,7 @@ const MemberCard = ({ name, post, imageUrl }) => (
 const TeamSection = ({ title, leader, members }) => {
   return (
     <div className="mb-8 sm:mb-12 lg:mb-16">
-      <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-white mb-4 sm:mb-6 lg:mb-8 text-center">
+      <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-white mb-4 sm:mb-6 lg:mb-4 text-center">
         {title}
       </h2>
       <div className="flex flex-wrap justify-center -mx-2 lg:-mx-4">
