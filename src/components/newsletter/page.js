@@ -1,49 +1,43 @@
-"use client";
-import { useState, useEffect } from "react";
-import { Col, Row, Alert } from "react-bootstrap";
+"use client"
+import React from 'react';
 
-const Newsletter = ({ status, message, onValidated }) => {
-  const [email, setEmail] = useState('');
-
-  useEffect(() => {
-    if (status === 'success') clearFields();
-  }, [status])
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    email &&
-    email.indexOf("@") > -1 &&
-    onValidated({
-      EMAIL: email
-    })
-  }
-
-  const clearFields = () => {
-    setEmail('');
-  }
-
+const Newsletter = () => {
   return (
-      <Col lg={12}>
-        <div className="newsletter-bx wow slideInUp">
-          <Row>
-            <Col lg={12} md={6} xl={5}>
-              <h3>Subscribe to our Newsletter<br></br> & Never miss latest updates</h3>
-              {status === 'sending' && <Alert>Sending...</Alert>}
-              {status === 'error' && <Alert variant="danger">{message}</Alert>}
-              {status === 'success' && <Alert variant="success">{message}</Alert>}
-            </Col>
-            <Col md={6} xl={7}>
-              <form onSubmit={handleSubmit}>
-                <div className="new-email-bx">
-                  <input value={email} type="email" onChange={(e) => setEmail(e.target.value)} placeholder="Email Address" />
-                  <button type="submit">Submit</button>
-                </div>
-              </form>
-            </Col>
-          </Row>
+    <div className="flex flex-col lg:flex-row bg-opacity-50 rounded-lg overflow-hidden w-full max-w-6xl mx-auto p-4 shadow-md">
+      <div className="grid md:grid-cols-2 gap-8 items-center">
+        {/* Left Column: Title and Description */}
+        <div className="space-y-4">
+          <h2 className="text-3xl text-center font-bold text-white">✨ IT उन्नती ✨</h2>
+          <p className="text-[#B8B8B8] tracking-wide text-md lg:text-lg leading-relaxed">
+          🔥 We're overjoyed to announce the grand success of the SH 2024 Newsletter inauguration by the IT Department, 
+          held on January 26, 2025. The event was a smashing hit, uniting our community for an unforgettable day brimming 
+          with inspiration and excitement! 💯
+          A massive thank you to our esteemed chief guest, distinguished dignitaries, dedicated faculty, the dynamic ITSA 
+          committee, and every participant who made this occasion extraordinary! 😇✨
+          Dive into the SH 2024 Newsletter by clicking here.
+          </p>
+          <div className='flex flex-col items-center'>
+          <a 
+          href='https://shorturl.at/qtgku'
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-6 py-3 bg-blue-600 text-md lg:text-lg text-white rounded-md hover:bg-blue-700 transition-colors duration-300">
+            Read Newsletter 📰
+          </a>
+          </div>
         </div>
-      </Col>
-  )
-}
+        
+        {/* Right Column: Poster and Button */}
+        <div className="flex flex-col items-center">
+          <img
+            src="/posters/newsletter.png" 
+            alt="Product Poster"
+            className="max-w-md rounded-lg shadow-lg mb-6 h-96"
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default Newsletter;

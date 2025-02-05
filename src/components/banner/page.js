@@ -7,6 +7,8 @@ import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 // UPCOMING EVENTS COMPONENT
 import UpcomingEvents from '../../components/upcomingevent/page';
+// NEWSLETTER COMPONENT
+import Newsletter from '../../components/newsletter/page';
 
 const TrackVisibility = dynamic(() => import('react-on-screen'), { ssr: false });
 
@@ -133,6 +135,10 @@ const Banner = () => {
         {/* UpcomingEvents component call */}
         {/* <hr/>
         <UpcomingEvents /> */}
+
+        {/* Newsletter component call */}
+        <hr />
+        <Newsletter />
 
     </section>
   );
