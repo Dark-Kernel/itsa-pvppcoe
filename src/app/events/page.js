@@ -28,7 +28,12 @@ const EventCard = ({ image, title, date, time, fhsh, instagramLink, report, desc
                 <Instagram size={20} />
               </a>
               <button
-                onClick={() => setIsModalOpen(true)}
+                onClick={() =>{
+                  if (report === "") {
+                    alert("No Report available for this Event!!");
+                    return;
+                  } 
+                  setIsModalOpen(true)}}
                 className="bg-blue-500 text-white px-3 py-2 text-sm rounded hover:bg-blue-600 transition"
               >
                 📄Read More

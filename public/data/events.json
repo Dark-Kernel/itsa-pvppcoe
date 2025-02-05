@@ -4,31 +4,31 @@
             "title": "TechCraft",
             "date": "24 January 2025",
             "image": "/posters/techcraft.jpg",
-            "time": "??",
+            "time": "02:00 PM",
             "fhsh": "FH-2025",
             "instagramLink": "https://www.instagram.com/reel/DFhQpjAoJOn/?igsh=MWduanVkN2lmOTVhYw==",
-            "report": "/reports/??.pdf",
-            "description": ""
+            "report": "/reports/techcraft.pdf",
+            "description": "Techcraft was nothing short of spectacular! 🚀⚡ With 39 powerhouse teams battling in HexGame, CSS Battle, and Find the Flag, the arena was filled with thrill, strategy, and cutting-edge tech! 🏆💻"
         },
         {
             "title": "Mastering UI/UX Design",
             "date": "24 January 2025",
             "image": "/posters/mastering_ui.jpg",
-            "time": "??",
+            "time": "12:00 PM",
             "fhsh": "FH-2025",
             "instagramLink": "https://www.instagram.com/reel/DFP-oy4IaDC/?igsh=cWc3a252M2k4MXk2",
-            "report": "/reports/??.pdf",
-            "description": ""
+            "report": "/reports/mastering_ui.pdf",
+            "description": "The 'From Concept to Click: Mastering UI/UX Design' seminar, organized by the ITSA Committee and held on January 24 with Mr. Rithesh Shete, was a transformative experience for design enthusiasts! 🎨✨"
         },
         {
-            "title": "Shimla Industrial Visit",
-            "date": "??",
-            "image": "/posters/iv_shimla.jpg",
-            "time": "??",
+            "title": "Network Bulls Industrial Visit",
+            "date": "28 December 2024",
+            "image": "/posters/iv_network.jpg",
+            "time": "05:00 PM",
             "fhsh": "SH-2024",
             "instagramLink": "https://www.instagram.com/reel/DFPRxzQom-t/?igsh=bW5rcHJkMXgwcXRs",
-            "report": "/reports/??.pdf",
-            "description": ""
+            "report": "/reports/iv_network.pdf",
+            "description": "The IT Department's industrial visit was an unforgettable experience, blending learning, exploration, and adventure! 😎 Students delved into the latest tech innovations in Delhi before embarking on a journey to the stunning destinations of Shimla, Manali, Solang Valley, and Kasol 🌄"
         },
         {
             "title": "API:101 Postman Workshop",
@@ -137,7 +137,7 @@
             "time": "1:00 PM",
             "fhsh": "FH-2024",
             "instagramLink": "https://www.instagram.com/p/C2cRoBcv6yG/",
-            "report": "/reports/api_101.pdf",
+            "report": "",
             "description": "A special Technical Event TechSalute ✨in celebration of Republic Day and to celebrate the spirit of innovation and collaboration.✨"
         },
         {
@@ -147,7 +147,7 @@
             "time": "1:00 PM",
             "fhsh": "FH-2024",
             "instagramLink": "https://www.instagram.com/itsa_vppcoe/p/Cwx7zCZvkrJ/",
-            "report": "/reports/api_101.pdf",
+            "report": "",
             "description": "✨📚 ITSA celebrated this Teacher's Day in the most unique way possible!✨📚"
         },
         {
@@ -157,7 +157,7 @@
             "time": "10:00 AM",
             "fhsh": "FH-2024",
             "instagramLink": "https://www.instagram.com/reel/C-Nz5JVIbci/?igsh=MTFzeXE5Nms0NHVnNg==",
-            "report": "/reports/api_101.pdf",
+            "report": "",
             "description": "✨🔍 Crack the Code, Claim the Crown: ITSA Committee welcome you to the Ultimate Tech Treasure Hunt! 🔍✨"
         },
         {
@@ -167,7 +167,7 @@
             "time": "2:00 PM",
             "fhsh": "FH-2024",
             "instagramLink": "https://www.instagram.com/reel/C-Nz5JVIbci/?igsh=MTFzeXE5Nms0NHVnNg==",
-            "report": "/reports/api_101.pdf",
+            "report": "",
             "description": "This is going to be an information-based puzzle hunt, where teams use their collective brainpower to solve clues."
         },
         {
@@ -177,7 +177,7 @@
             "time": "11:00 AM",
             "fhsh": "FH-2024",
             "instagramLink": "https://www.instagram.com/reel/C-Nz5JVIbci/?igsh=MTFzeXE5Nms0NHVnNg==",
-            "report": "/reports/api_101.pdf",
+            "report": "",
             "description": "🔥A great opportunity to present your article based on your projects and research🔥"
         },
         {
@@ -187,7 +187,7 @@
             "time": "9:00 AM",
             "fhsh": "FH-2024",
             "instagramLink": "https://www.instagram.com/p/CqQI-OdvSmN/",
-            "report": "/reports/api_101.pdf",
+            "report": "",
             "description": "Group of techical events held by ITSA committee"
         }
     ]
