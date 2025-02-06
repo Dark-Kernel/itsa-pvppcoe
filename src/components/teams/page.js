@@ -1,6 +1,7 @@
 // app/team/page.jsx
 "use client";
 
+import Image from 'next/image'
 import { useState, useEffect } from "react";
 
 const MemberCard = ({ name, post, imageUrl }) => (
@@ -13,7 +14,9 @@ const MemberCard = ({ name, post, imageUrl }) => (
   <div className="bg-background text-foreground rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 w-full h-full flex flex-col">
     <div className="p-4 lg:p-6 flex-grow flex flex-col justify-between">
       <div>
-        <img src={imageUrl || "/api/placeholder/150/150"}
+        <Image src={imageUrl || "/api/placeholder/150/150"}
+          width={500}
+      height={500}
           alt={name}
           className="w-20 h-20 sm:w-24 sm:h-24 lg:w-32 lg:h-32 xl:w-40 xl:h-40 mx-auto rounded-full object-cover object-top border-4 border-blue-500"
         />
