@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { X } from "lucide-react";
+import Image from "next/image";
 
 const PopupMessage = ({ imageUrl, message }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +22,9 @@ const PopupMessage = ({ imageUrl, message }) => {
       <div className="absolute inset-0 bg-black opacity-50 backdrop-blur-sm"></div>
       <div className="bg-white rounded-lg shadow-xl z-10 max-w-md w-full mx-4">
         <div className="relative">
-          <img
+          <Image
+            width={500}
+            height={500}
             src={imageUrl}
             alt="Popup"
             className="w-full h-auto rounded-t-lg"

@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react"
 import { ChevronDown, Instagram } from "lucide-react"
 import PDFModal from "../../components/PDFModal/page"
+import Image from "next/image"
 
 const EventCard = ({ image, title, date, time, fhsh, instagramLink, report, description }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -9,7 +10,7 @@ const EventCard = ({ image, title, date, time, fhsh, instagramLink, report, desc
   return (
     <>
       <div className="bg-white border-2 border-solid border-color7 text-foreground rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl flex flex-col h-full">
-        <img src={image} alt={title} className="w-full h-50 object-cover" />
+        <Image width={500} height={500} src={image} alt={title} className="w-full h-50 object-cover" />
         <div className="p-4 flex flex-col flex-grow">
           <h3 className="text-xl font-semibold mb-1 text-gray-600">{title}</h3>
           <p className="text-gray-600 font-semibold mb-2">

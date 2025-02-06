@@ -1,5 +1,6 @@
 "use client"
 import React from 'react';
+import Image from 'next/image';
 
 const Newsletter = () => {
   return (
@@ -29,7 +30,9 @@ const Newsletter = () => {
         
         {/* Right Column: Poster and Button */}
         <div className="flex flex-col items-center">
-          <img
+          <Image
+            width={280}
+            height={500}
             src="/posters/newsletter.png" 
             alt="Product Poster"
             className="max-w-md rounded-lg shadow-lg mb-6 h-96"
