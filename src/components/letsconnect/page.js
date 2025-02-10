@@ -1,31 +1,32 @@
 "use client";
 import React from 'react';
+import Image from 'next/image'
 
 const LetsConnect = () => {
     const data = [
-        { 
-            logo: '/img/itsa2.png', 
-            name: 'Information Technology Student Association', 
-            abbreviation: 'ITSA', 
-            coordinator: 'Prof. Nilesh Mali' 
+        {
+            logo: '/img/itsa2.png',
+            name: 'Information Technology Student Association',
+            abbreviation: 'ITSA',
+            coordinator: 'Prof. Nilesh Mali'
         },
-        { 
-            logo: '/img/CSI.jpg', 
-            name: 'Computer Society of India', 
-            abbreviation: 'CSI', 
-            coordinator: 'Prof. Priyanka Manke' 
+        {
+            logo: '/img/CSI.jpg',
+            name: 'Computer Society of India',
+            abbreviation: 'CSI',
+            coordinator: 'Prof. Priyanka Manke'
         },
-        { 
-            logo: '/img/ISTE.jpg', 
-            name: 'Indian Society for Technical Education', 
-            abbreviation: 'ISTE', 
-            coordinator: 'Prof. Pravin Patil' 
+        {
+            logo: '/img/ISTE.jpg',
+            name: 'Indian Society for Technical Education',
+            abbreviation: 'ISTE',
+            coordinator: 'Prof. Pravin Patil'
         },
-        { 
-            logo: '/img/IACC.jpg', 
-            name: 'International Advanced Computing Community', 
-            abbreviation: 'IACC', 
-            coordinator: 'Prof. Vedika Avhad' 
+        {
+            logo: '/img/IACC.jpg',
+            name: 'International Advanced Computing Community',
+            abbreviation: 'IACC',
+            coordinator: 'Prof. Vedika Avhad'
         },
     ];
 
@@ -40,7 +41,7 @@ const LetsConnect = () => {
                     {/* Email Card */}
                     <div className="rounded-lg p-4 flex flex-col items-center">
                         <div className="w-20 h-20 rounded-full mb-2 flex items-center justify-center">
-                            <span className="material-icons text-4xl"><img src="/img/mail.png" alt="Icon" /></span>
+                            <span className="material-icons text-4xl"><Image width={500} height={500} src="/img/mail.png" alt="Icon" /></span>
                         </div>
                         <h2 className="text-white text-xl font-semibold mb-2">Email Us</h2>
                         <p className="text-white text-center mb-4">Feel free to reach out via email anytime.</p>
@@ -56,7 +57,7 @@ const LetsConnect = () => {
                     {/* Instagram Card */}
                     <div className="rounded-lg p-4 flex flex-col items-center">
                         <div className="w-20 h-20 rounded-full mb-2 flex items-center justify-center">
-                            <span className="material-icons text-4xl"><img src="/img/instagram.png" alt="Icon" /></span>
+                            <span className="material-icons text-4xl"><Image width={500} height={500} src="/img/instagram.png" alt="Icon" /></span>
                         </div>
                         <h2 className="text-white text-xl font-semibold mb-2">Follow us on Instagram</h2>
                         <p className="text-white text-center mb-4">Stay updated with our latest events and posts.</p>
@@ -74,7 +75,7 @@ const LetsConnect = () => {
                     {/* LinkedIn Card */}
                     <div className="rounded-lg p-4 flex flex-col items-center">
                         <div className="w-20 h-20 rounded-full mb-2 flex items-center justify-center">
-                            <span className="material-icons text-4xl"><img src="/img/linkedin.png" alt="Icon" /></span>
+                            <span className="material-icons text-4xl"><Image width={500} height={500} src="/img/linkedin.png" alt="Icon" /></span>
                         </div>
                         <h2 className="text-white text-xl font-semibold mb-2">Connect on LinkedIn</h2>
                         <p className="text-white text-center mb-4">Join our professional network and connect with us.</p>
@@ -100,7 +101,9 @@ const LetsConnect = () => {
                             className="bg-gray-800 rounded-lg p-4 flex flex-col items-center shadow-md transition-transform duration-300 hover:scale-105"
                             key={index}
                         >
-                            <img
+                            <Image
+                                width={500}
+                                height={500}
                                 src={item.logo}
                                 alt={`${item.name} logo`}
                                 className="rounded-full w-20 h-20 object-cover mb-4"
