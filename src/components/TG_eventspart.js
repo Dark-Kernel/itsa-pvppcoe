@@ -48,7 +48,7 @@ const EventsPart = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white px-4 py-4 bg-[url('/img/banner-bg-extended-vertical.png')] bg-repeat bg-opacity-80">
+    <div className="min-h-screen text-white px-4 py-4 bg-[url('/img/banner-bg-extended-vertical.png')] bg-repeat">
       {/* Main Title */}
       <h1 className="text-2xl md:text-4xl font-bold text-center mb-2">
         Techgyanathon 2025
@@ -82,7 +82,7 @@ const EventsPart = () => {
           <div 
             id={`event-${event.id}`}
             key={event.id} 
-            className="flex flex-col md:flex-row bg-gray-800 bg-opacity-90 rounded-lg shadow-lg overflow-hidden m-4 md:m-6"
+            className="flex flex-col md:flex-row bg-gray-700 bg-opacity-40 rounded-lg shadow-lg overflow-hidden m-4 md:m-6"
           >
             {/* Event Poster */}
             <div className="w-full md:w-1/3 flex-shrink-0 relative h-[300px] md:h-auto">
@@ -120,7 +120,7 @@ const EventsPart = () => {
               </div>
 
               {/* Event Description */}
-              <div className="bg-gray-700 bg-opacity-80 p-2 rounded-lg text-gray-300 text-sm md:text-base mb-2 whitespace-pre-line">
+              <div className="bg-gray-800 bg-opacity-80 p-2 rounded-lg text-gray-300 text-sm md:text-base mb-2 whitespace-pre-line">
                 {event.details}
               </div>
               

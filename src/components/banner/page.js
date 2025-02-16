@@ -7,6 +7,7 @@ import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 // UPCOMING EVENTS COMPONENT
 import UpcomingEvents from '../../components/upcomingevent/page';
+import TG_banner from '../../components/techgyanathonbanner/page';
 // NEWSLETTER COMPONENT
 import Newsletter from '../../components/newsletter/page';
 
@@ -135,6 +136,10 @@ const Banner = () => {
         {/* UpcomingEvents component call */}
         {/* <hr/>
         <UpcomingEvents /> */}
+
+        {/* techgyanathon banner component call */}
+        <hr />
+        <TG_banner />
 
         {/* Newsletter component call */}
         <hr />
