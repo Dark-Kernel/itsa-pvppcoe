@@ -1,0 +1,48 @@
+{
+    "events": [
+      {
+        "id": 1,
+        "title": "Blind Coding",
+        "category": "Technical",
+        "description": "Code Without Sight. Debug with Might!",
+        "date": "18 March, 2025",
+        "time": "10:00 AM to 1:00 PM",
+        "venue": "Lab 102 & 103",
+        "teamSize": "2 members",
+        "registrationFees": "₹50 per team",
+        "firstPrize": "₹2500 + Winner Certificate",
+        "secondPrize": "₹1500 + Runner-up Certificate",
+        "registrationLink": "#",
+        "posterUrl": "/posters/api_101.jpg",
+        "details": "Join us for an exciting 24-hour hackathon where teams will compete to build innovative solutions to real-world problems. Prizes worth $5000 up for grabs!"
+      },
+      {
+        "id": 2,
+        "title": "Robotics Workshop",
+        "category": "Technical",
+        "description": "Hands-on workshop on building and programming robots",
+        "date": "March 16, 2025",
+        "time": "10:00 AM",
+        "venue": "Robotics Lab",
+        "teamSize": "Individual",
+        "registrationFees": "$30 per person",
+        "registrationLink": "#",
+        "posterUrl": "/posters/api_101.jpg",
+        "details": "Learn the basics of robotics, from assembly to programming. Perfect for beginners and intermediate learners."
+      },
+      {
+        "id": 3,
+        "title": "Cultural Night",
+        "category": "Cultural",
+        "description": "A night of music, dance, and theatrical performances",
+        "date": "March 17, 2025",
+        "time": "6:00 PM",
+        "venue": "College Auditorium",
+        "teamSize": "Individual/Group",
+        "registrationFees": "$20 per participant",
+        "registrationLink": "#",
+        "posterUrl": "/posters/api_101.jpg",
+        "details": "Showcase your talent in our annual cultural night. Multiple categories including singing, dancing, and drama."
+      }
+    ]
+}
