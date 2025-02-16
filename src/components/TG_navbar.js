@@ -39,7 +39,7 @@ const TG_navbar = () => {
           {/* Right side - Instagram icon */}
           <div className="flex items-center">
             <a
-              href="https://instagram.com/your-handle"
+              href="https://instagram.com/itsa_vppcoe"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-200 hover:text-white"

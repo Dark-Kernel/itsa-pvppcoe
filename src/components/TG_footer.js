@@ -3,10 +3,10 @@ import { Instagram, Whatsapp } from "lucide-react";
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-3">
-      <div className="flex items-center justify-center text-center space-x-3">
+      <div className="flex items-center justify-center text-center space-x-3 px-4">
         {/* Instagram Icon */}
         <a
-          href="https://www.instagram.com/YOUR_INSTAGRAM_PROFILE"
+          href="https://www.instagram.com/itsa_vppcoe"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:scale-110 transition-transform duration-300"
@@ -15,7 +15,7 @@ const Footer = () => {
         </a>
 
         {/* Footer Text */}
-        <p className="text-sm lg:text-xl">ITSA, Techgyanathon 2025 ©</p>
+        <p className="text-sm lg:text-xl">Techgyanathon 2025, ITSA-Technical Team, All rights reserved©.</p>
 
         {/* WhatsApp Icon (Uncomment if needed) */}
         {/* <a
