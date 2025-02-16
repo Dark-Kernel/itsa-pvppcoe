@@ -1,4 +1,3 @@
-"use client";
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
@@ -25,6 +24,13 @@ const EventsPart = () => {
     fetchEvents();
   }, []);
 
+  const scrollToEvent = (eventId) => {
+    const element = document.getElementById(`event-${eventId}`);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white text-lg md:text-2xl">
@@ -42,22 +48,51 @@ const EventsPart = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white px-4 py-8 bg-[url('/img/banner-bg-extended-vertical.png')] bg-cover bg-opacity-80">
-      <h2 className="text-2xl md:text-4xl font-bold text-center">Featured Events at Techgyanathon 2025</h2>
-      <div className="space-y-6">
+    <div className="min-h-screen bg-gray-900 text-white px-4 py-4 bg-[url('/img/banner-bg-extended-vertical.png')] bg-repeat bg-opacity-80">
+      {/* Main Title */}
+      <h1 className="text-2xl md:text-4xl font-bold text-center mb-2">
+        Techgyanathon 2025
+      </h1>
+      
+      {/* Subtitle */}
+      <p className="text-sm lg:text-xl text-center text-gray-300 mb-4 px-4 md:px-20">
+        Join us for an incredible journey of innovation, learning, and competition at the most anticipated technical festival of the year.
+      </p>
+
+      {/* Navigation Buttons - Using IDs */}
+      <div className="flex flex-wrap items-center justify-center gap-2 mb-6 px-4 max-w-full mx-auto">
+        <p className="text-base font-bold">Quick Navigate:</p>
+        <div className="flex flex-wrap gap-2">
+          {events.map((event) => (
+            <button
+              key={event.id}
+              onClick={() => scrollToEvent(event.id)}
+              className="px-4 py-2 bg-blue-600 rounded-lg hover:bg-blue-500 transition-colors text-sm md:text-base"
+            >
+              {event.title2}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <h2 className="text-2xl md:text-4xl font-bold text-center mb-2">Featured Events</h2>
+      
+      <div className="space-y-6 lg:mx-10">
         {events.map(event => (
           <div 
+            id={`event-${event.id}`}
             key={event.id} 
             className="flex flex-col md:flex-row bg-gray-800 bg-opacity-90 rounded-lg shadow-lg overflow-hidden m-4 md:m-6"
           >
             {/* Event Poster */}
             <div className="w-full md:w-1/3 flex-shrink-0 relative h-[300px] md:h-auto">
               <Image 
-                width={800} 
-                height={1131} 
+                width={707}
+                height={1000}
                 src={event.posterUrl} 
                 alt={event.title}
-                className="object-cover w-full h-full"
+                className="object-contain w-full h-full lg:max-h-[600px]"
+                priority
               />
             </div>
             
@@ -71,7 +106,7 @@ const EventsPart = () => {
                 {event.description}
               </p>
               
-              {/* Details Grid */}
+              {/* Details Grid - Reverted to original styling */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-4 mb-2">
                 <div className="text-sm md:text-base grid grid-cols-1 md:grid-cols-2 md:grid-rows-4 gap-1 lg:grid-flow-col">
                   <div className="flex items-center text-gray-300 whitespace-nowrap">📅 <span className="ml-1">{event.date}</span></div>
@@ -93,7 +128,7 @@ const EventsPart = () => {
                 <p className="text-xs md:text-sm text-gray-400 italic text-right mb-2">
                   For more details, visit the registration page*
                 </p>
-                {/* Registration Button */}
+                {/* Registration Button - Reverted to original styling */}
                 <a
                   target='_blank' 
                   href={event.registrationLink} 
