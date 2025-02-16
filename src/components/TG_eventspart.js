@@ -42,9 +42,9 @@ const EventsPart = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white px-4 py-8 bg-[url('/background.jpg')] bg-cover bg-opacity-80">
-      <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">Featured Events</h2>
-      <div className="space-y-8">
+    <div className="min-h-screen bg-gray-900 text-white px-4 py-8 bg-[url('/img/banner-bg-extended-vertical.png')] bg-cover bg-opacity-80">
+      <h2 className="text-2xl md:text-4xl font-bold text-center">Featured Events at Techgyanathon 2025</h2>
+      <div className="space-y-6">
         {events.map(event => (
           <div 
             key={event.id} 
@@ -63,35 +63,35 @@ const EventsPart = () => {
             
             {/* Event Details */}
             <div className="flex-1 flex flex-col p-4">
-              <h3 className="text-lg md:text-2xl font-semibold mb-2">{event.title}</h3>
+              <h3 className="text-xl md:text-3xl font-semibold mb-2">{event.title}</h3>
               <span className="inline-block px-3 py-1 text-xs md:text-sm bg-blue-600 rounded-full mb-2 max-w-max">
                 {event.category}
               </span>
-              <p className='text-base lg:text-lg font-semibold mb-3 text-gray-300'>
+              <p className='text-base lg:text-lg font-semibold mb-2 text-gray-300'>
                 {event.description}
               </p>
               
               {/* Details Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-4 mb-4 md:space-x-6">
-                <div className="text-sm md:text-base grid grid-cols-1 md:grid-cols-2 gap-1 md:grid-auto-flow-column">
-                  <div className="flex items-center text-gray-300 whitespace-nowrap">📅 <span className="ml-2">{event.date}</span></div>
-                  <div className="flex items-center text-gray-300 whitespace-nowrap">💰 <span className="ml-2">{event.registrationFees}</span></div>
-                  <div className="flex items-center text-gray-300 whitespace-nowrap">⏰ <span className="ml-2">{event.time}</span></div>
-                  <div className="flex items-center text-gray-300 whitespace-nowrap">🏆 <span className="ml-2">1st Prize: {event.firstPrize}</span></div>
-                  <div className="flex items-center text-gray-300 whitespace-nowrap">📍 <span className="ml-2">{event.venue}</span></div>
-                  <div className="flex items-center text-gray-300 whitespace-nowrap">🥈 <span className="ml-2">2nd Prize: {event.secondPrize}</span></div>
-                  <div className="flex items-center text-gray-300 whitespace-nowrap">👥 <span className="ml-2">{event.teamSize}</span></div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-4 mb-2">
+                <div className="text-sm md:text-base grid grid-cols-1 md:grid-cols-2 md:grid-rows-4 gap-1 lg:grid-flow-col">
+                  <div className="flex items-center text-gray-300 whitespace-nowrap">📅 <span className="ml-1">{event.date}</span></div>
+                  <div className="flex items-center text-gray-300 whitespace-nowrap">⏰ <span className="ml-1">{event.time}</span></div>
+                  <div className="flex items-center text-gray-300 whitespace-nowrap">📍 <span className="ml-1">{event.venue}</span></div>
+                  <div className="flex items-center text-gray-300 whitespace-nowrap">👥 <span className="ml-1">{event.teamSize}</span></div>
+                  <div className="flex items-center text-gray-300 whitespace-nowrap">💰 <span className="ml-1">{event.registrationFees}</span></div>
+                  <div className="flex items-center text-gray-300 lg:whitespace-nowrap">🏆 <span className="ml-1">1st Prize: {event.firstPrize}</span></div>
+                  <div className="flex items-center text-gray-300 lg:whitespace-nowrap">🥈 <span className="ml-1">2nd Prize: {event.secondPrize}</span></div>
                 </div>
               </div>
-              
+
               {/* Event Description */}
-              <div className="bg-gray-700 bg-opacity-80 p-4 rounded-lg text-gray-300 text-sm md:text-base mb-4">
+              <div className="bg-gray-700 bg-opacity-80 p-2 rounded-lg text-gray-300 text-sm md:text-base mb-2 whitespace-pre-line">
                 {event.details}
               </div>
               
               <div className="mt-auto">
                 <p className="text-xs md:text-sm text-gray-400 italic text-right mb-2">
-                  For more details, visit the registration page.
+                  For more details, visit the registration page*
                 </p>
                 {/* Registration Button */}
                 <a

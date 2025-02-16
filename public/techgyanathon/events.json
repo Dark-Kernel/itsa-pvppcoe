@@ -14,7 +14,7 @@
         "secondPrize": "₹1500 + Runner-up Certificate",
         "registrationLink": "#",
         "posterUrl": "/posters/api_101.jpg",
-        "details": "Join us for an exciting 24-hour hackathon where teams will compete to build innovative solutions to real-world problems. Prizes worth $5000 up for grabs!"
+        "details": "🕹️ Event Stages:\n📝 Blind Coding Challenge:\n- One participant types with their screen off.\n- The other guides them via voice call.\n- Accuracy and teamwork are key!\n🛠️ Debugging Duel:\n- Fix the code from Round 1 with 20-second switch turns.\n- No explanations, just quick debugging!\n- Fewer switches = higher points!"
       },
       {
         "id": 2,
