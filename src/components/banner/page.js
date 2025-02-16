@@ -59,7 +59,7 @@ const Banner = () => {
 
   return (
     <section
-      className="pt-[140px] bg-[url('/img/banner-bg-extended-vertical.png')] bg-top bg-cover bg-no-repeat"
+      className="pt-[100px] lg:pt-[120px] bg-[url('/img/banner-bg-extended-vertical.png')] bg-top bg-cover bg-no-repeat"
       id="home"
     >
       <div className="container mx-auto px-4">
@@ -87,7 +87,7 @@ const Banner = () => {
                       </span>
                     </span>
                   </h1>
-                  <p className="text-[#B8B8B8] text-lg tracking-wide leading-relaxed w-[96%]">
+                  <p className="text-gray-200 text-sm lg:text-lg tracking-wide leading-relaxed w-[96%]">
                     We are thrilled to introduce the Information Technology Students Association (ITSA), a vibrant student 
                     organization dedicated to fostering collaboration, creativity, and professional growth within the Information 
                     Technology department. Our diverse teams—Technical, Documentation, Creativity, Publicity, and Infrastructure—work 
@@ -97,7 +97,7 @@ const Banner = () => {
                   </p>
                   <button
                     onClick={() => (window.location.href = "/letsconnect")}
-                    className="text-white font-bold text-xl mt-[60px] tracking-wide flex items-center mb-6"
+                    className="text-white font-bold text-xl mt-[20px] tracking-wide flex items-center mb-6"
                   >
                     Let's Connect{" "}
                     <ArrowRightCircle
