@@ -78,7 +78,7 @@ const EventsPart = () => {
                   <div className="flex items-center text-gray-300 whitespace-nowrap">⏰ <span className="ml-1">{event.time}</span></div>
                   <div className="flex items-center text-gray-300 whitespace-nowrap">📍 <span className="ml-1">{event.venue}</span></div>
                   <div className="flex items-center text-gray-300 whitespace-nowrap">👥 <span className="ml-1">{event.teamSize}</span></div>
-                  <div className="flex items-center text-gray-300 whitespace-nowrap">💰 <span className="ml-1">{event.registrationFees}</span></div>
+                  <div className="flex items-center text-gray-300 lg:whitespace-nowrap">💰 <span className="ml-1">{event.registrationFees}</span></div>
                   <div className="flex items-center text-gray-300 lg:whitespace-nowrap">🏆 <span className="ml-1">1st Prize: {event.firstPrize}</span></div>
                   <div className="flex items-center text-gray-300 lg:whitespace-nowrap">🥈 <span className="ml-1">2nd Prize: {event.secondPrize}</span></div>
                 </div>
