@@ -12,7 +12,7 @@ const TG_banner = () => {
           <Image
             width={280}
             height={500}
-            src="/techgyanathon/main_poster.png" 
+            src="/techgyanathon/main_poster.jpg" 
             alt="Product Poster"
             className="max-w-md rounded-lg shadow-lg mb-2 h-96"
           />
@@ -22,12 +22,9 @@ const TG_banner = () => {
         <div className="space-y-2">
           <h2 className="text-2xl lg:text-3xl text-center font-bold text-white">🖥️Techgyanathon 2025💻</h2>
           <p className="text-[#B8B8B8] tracking-wide text-sm lg:text-lg leading-relaxed">
-          🔥 We're overjoyed to announce the grand success of the SH 2024 Newsletter inauguration by the IT Department, 
-          held on January 26, 2025. The event was a smashing hit, uniting our community for an unforgettable day brimming 
-          with inspiration and excitement! 💯
-          A massive thank you to our esteemed chief guest, distinguished dignitaries, dedicated faculty, the dynamic ITSA 
-          committee, and every participant who made this occasion extraordinary! 😇✨
-          Dive into the SH 2024 Newsletter by clicking here.
+            The Biggest event of VPPCOE, Techgyanathon 2025 is here. Get ready to be a part of the event and win exciting prizes.
+            It's since 2022 that VPPCOE has been organizing Techgyanathon and it's time to make it bigger and better with the help of you.
+            Whether you want technical or non-technical events, we have got you covered. See you there!
           </p>
           <div className='flex flex-col items-center'>
             <Link href='/techgyanathon' className="px-6 py-2 bg-blue-600 text-md lg:text-lg text-white rounded-md hover:bg-blue-700 transition-colors duration-300">
