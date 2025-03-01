@@ -50,7 +50,7 @@ const EventsPart = () => {
   return (
     <div className="min-h-screen text-white px-4 py-4 bg-[url('/img/banner-bg-extended-vertical.png')] bg-repeat">
       {/* Main Title */}
-      <h1 className="text-2xl md:text-4xl font-bold text-center mb-2">
+      <h1 className="text-2xl md:text-5xl font-bold text-center mb-2">
         Techgyanathon 2025
       </h1>
       
@@ -61,7 +61,7 @@ const EventsPart = () => {
 
       {/* Navigation Buttons - Using IDs */}
       <div className="flex flex-wrap items-center justify-center gap-2 mb-6 px-4 max-w-full mx-auto">
-        <p className="text-base font-bold">Quick Navigate:</p>
+        <p className="text-lg font-bold">Quick Navigate:</p>
         <div className="flex flex-wrap gap-2">
           {events.map((event) => (
             <button
@@ -75,7 +75,7 @@ const EventsPart = () => {
         </div>
       </div>
 
-      <h2 className="text-2xl md:text-4xl font-bold text-center mb-2">Featured Events</h2>
+      <h2 className="text-2xl md:text-4xl font-bold text-center">Featured Events</h2>
       
       <div className="space-y-6 lg:mx-10">
         {events.map(event => (
@@ -97,7 +97,7 @@ const EventsPart = () => {
             </div>
             
             {/* Event Details */}
-            <div className="flex-1 flex flex-col p-4">
+            <div className="flex-1 flex flex-col p-2 lg:p-4">
               <h3 className="text-xl md:text-3xl font-semibold mb-2">{event.title}</h3>
               <span className="inline-block px-3 py-1 text-xs md:text-sm bg-blue-600 rounded-full mb-2 max-w-max">
                 {event.category}
@@ -115,7 +115,7 @@ const EventsPart = () => {
                   <div className="flex items-center text-gray-300 whitespace-nowrap">👥 <span className="ml-1">{event.teamSize}</span></div>
                   <div className="flex items-center text-gray-300 lg:whitespace-nowrap">💰 <span className="ml-1">{event.registrationFees}</span></div>
                   <div className="flex items-center text-gray-300 lg:whitespace-nowrap">🏆 Prize Pool: <span className="ml-1">{event.prizepool}</span></div>
-                  <div className="flex items-center text-gray-300 lg:whitespace-nowrap"><span className="ml-1">🎟 All participants will receive certificates. 📜</span></div>
+                  <div className="flex items-center text-gray-300 lg:whitespace-nowrap"><span className="ml-1">🎟 All participants will receive certificates📜</span></div>
                   {/* <div className="flex items-center text-gray-300 lg:whitespace-nowrap">🏆 <span className="ml-1">1st Prize: {event.firstPrize}</span></div>
                   <div className="flex items-center text-gray-300 lg:whitespace-nowrap">🥈 <span className="ml-1">2nd Prize: {event.secondPrize}</span></div> */}
                 </div>
