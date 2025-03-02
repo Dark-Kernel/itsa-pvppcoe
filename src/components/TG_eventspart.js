@@ -67,7 +67,7 @@ const EventsPart = () => {
                         <button
                             key={event.id}
                             onClick={() => scrollToEvent(event.id)}
-                            className="px-4 py-2 bg-blue-600 rounded-lg hover:bg-blue-500 transition-colors text-sm md:text-base"
+                            className="px-3 py-2 bg-blue-600 rounded-lg hover:bg-blue-500 transition-colors text-sm md:text-base"
                         >
                             {event.title2}
                         </button>
@@ -114,25 +114,24 @@ const EventsPart = () => {
                         {/* Event Details */}
                         <div className="flex-1 flex flex-col p-2 lg:p-4">
                             <h3 className="text-xl md:text-3xl font-semibold mb-2">{event.title}</h3>
-                            {/* <span className="inline-block px-3 py-1 text-xs md:text-sm bg-blue-600 rounded-full mb-2 max-w-max">
-                {event.category}
-              </span>
-            */}
+                            <span className="hidden lg:inline-block px-3 py-1 text-xs md:text-sm bg-blue-600 rounded-full mb-2 max-w-max">
+                                {event.category}
+                            </span>
                             <p className='text-base lg:text-lg font-semibold mb-2 text-gray-300'>
                                 {event.description}
                             </p>
 
                             {/* Details Grid */}
+                            <div className="grid grid-cols-2 md:grid-cols-3 gap-1 md:gap-2 mb-2 text-sm lg:text-lg">
+                                <div className="flex items-center text-gray-300 whitespace-nowrap">📅 <span className="ml-1">{event.date}</span></div>
+                                <div className="flex items-center text-gray-300 whitespace-nowrap">⏰ <span className="ml-1">{event.time}</span></div>
+                                <div className="flex items-center text-gray-300 whitespace-nowrap">📍 <span className="ml-1">{event.venue}</span></div>
+                                <div className="flex items-center text-gray-300 whitespace-nowrap">👥 <span className="ml-1">{event.teamSize}</span></div>
+                                <div className="flex items-center text-gray-300 lg:whitespace-nowrap">💰 <span className="ml-1">{event.registrationFees}</span></div>
+                                <div className="flex items-center text-gray-300 lg:whitespace-nowrap">🏆 <span className="ml-1">{event.prizepool} Prizepool</span></div>
+                                <div className="col-span-2 md:col-span-3 flex items-center text-gray-300">🎟 <span className="ml-1">Participation Certificates for all 📜</span></div>
+                            </div>
 
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-1 md:gap-2 mb-2">
-  <div className="flex items-center text-gray-300 whitespace-nowrap">📅 <span className="ml-1">{event.date}</span></div>
-  <div className="flex items-center text-gray-300 whitespace-nowrap">⏰ <span className="ml-1">{event.time}</span></div>
-  <div className="flex items-center text-gray-300 whitespace-nowrap">📍 <span className="ml-1">{event.venue}</span></div>
-  <div className="flex items-center text-gray-300 whitespace-nowrap">👥 <span className="ml-1">{event.teamSize}</span></div>
-  <div className="flex items-center text-gray-300 lg:whitespace-nowrap">💰 <span className="ml-1">{event.registrationFees}</span></div>
-  <div className="flex items-center text-gray-300 lg:whitespace-nowrap">🏆 <span className="ml-1">{event.prizepool}</span></div>
-  <div className="col-span-2 md:col-span-3 flex items-center text-gray-300">🎟 <span className="ml-1">Certificates for all 📜</span></div>
-</div>
                             {/* Event Description */}
                             <div className="bg-gray-800 bg-opacity-80 p-2 rounded-lg text-gray-300 text-sm md:text-base mb-2 whitespace-pre-line">
                                 {event.details}
