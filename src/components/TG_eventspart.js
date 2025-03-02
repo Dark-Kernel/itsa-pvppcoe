@@ -87,14 +87,14 @@ const EventsPart = () => {
                         {/* Event Poster - Improved for both mobile and desktop */}
                         <div className="w-full md:w-1/3 flex-shrink-0 relative">
                             {/* Mobile View (cropped image from top) */}
-                            <div className="block md:hidden w-full h-64 overflow-hidden">
+                            <div className="block md:hidden w-full h-80 overflow-hidden">
                                 <Image
                                     width={707}
                                     height={1000}
                                     src={event.posterUrl}
                                     alt={event.title}
                                     className="object-cover w-full h-full object-center"
-                                    style={{ objectPosition: '25% 65%' }} // Move focus down to crop more from top
+                                    style={{ objectPosition: '25% 95%' }} // Move focus down to crop more from top
                                     priority
                                 />
                             </div>
