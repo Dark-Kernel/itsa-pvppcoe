@@ -60,14 +60,14 @@ const EventsPart = () => {
             </p>
 
             {/* Navigation Buttons - Using IDs */}
-            <div className="flex flex-wrap items-center justify-center gap-2 mb-6 px-4 max-w-full mx-auto">
+            <div className="flex flex-wrap items-center justify-center gap-2 mb-6 px-3 max-w-full mx-auto">
                 <p className="text-lg font-bold">Quick Navigate:</p>
                 <div className="flex flex-wrap gap-2">
                     {events.map((event) => (
                         <button
                             key={event.id}
                             onClick={() => scrollToEvent(event.id)}
-                            className="px-3 py-2 bg-blue-600 rounded-lg hover:bg-blue-500 transition-colors text-sm md:text-base"
+                            className="px-2 py-2 bg-blue-600 rounded-lg hover:bg-blue-500 transition-colors text-sm md:text-base"
                         >
                             {event.title2}
                         </button>
@@ -113,10 +113,14 @@ const EventsPart = () => {
 
                         {/* Event Details */}
                         <div className="flex-1 flex flex-col p-2 lg:p-4">
-                            <h3 className="text-xl md:text-3xl font-semibold mb-2">{event.title}</h3>
-                            <span className="hidden lg:inline-block px-3 py-1 text-xs md:text-sm bg-blue-600 rounded-full mb-2 max-w-max">
-                                {event.category}
-                            </span>
+                            <div className='flex justify-between w-full'>
+                                <h3 className="text-xl md:text-3xl font-semibold mb-2">{event.title}</h3>
+                                <span className="hidden lg:inline-block px-3 py-2 text-xs md:text-sm bg-blue-600 rounded-full mb-2 max-w-max">
+                                    {event.category}
+                                </span>
+                            </div>
+
+                            
                             <p className='text-base lg:text-lg font-semibold mb-2 text-gray-300'>
                                 {event.description}
                             </p>
