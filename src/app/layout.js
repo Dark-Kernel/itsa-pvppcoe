@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
     const pathname = usePathname();
-    const hideHeaderFooter = pathname === "/hexgame" || pathname === "/password" || pathname === "/techgyanathon" || pathname === "/vote" || pathname === "/admin/vote";
+    const hideHeaderFooter = pathname === "/hexgame" || pathname === "/password" || pathname === "/techgyanathon" || pathname === "/vote" || pathname === "/admin/vote" || pathname === "/bgmi";
   return (
     <html lang="en">
       <link rel="icon" href="/img/itsa2.ico" sizes="any" />

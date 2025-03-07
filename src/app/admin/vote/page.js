@@ -246,7 +246,7 @@ export default function AdminVotePage() {
       {/* Footer */}
       <footer className="bg-black border-t border-blue-600 mt-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 text-center">
-          <p className="text-gray-400 text-sm sm:text-base">© 2025 Tic-Tac-Toe. Techgyanathon 2025, ITSA - Technical Team. All rights reserved.</p>
+          <p className="text-gray-400 text-sm sm:text-base">© 2025 Tech-Debate Vote System. Techgyanathon 2025, ITSA - Technical Team. All rights reserved.</p>
         </div>
       </footer>
     </div>
