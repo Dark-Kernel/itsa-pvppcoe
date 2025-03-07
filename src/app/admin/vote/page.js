@@ -9,7 +9,24 @@ export default function AdminVotePage() {
   const [newSession, setNewSession] = useState({
     title: '',
     description: '',
-    candidates: [{ name: '', description: '' }]
+    teams: [
+      {
+        name: 'Team A',
+        candidates: [
+          { name: '' },
+          { name: '' },
+          { name: '' }
+        ]
+      },
+      {
+        name: 'Team B',
+        candidates: [
+          { name: '' },
+          { name: '' },
+          { name: '' }
+        ]
+      }
+    ]
   });
 
   useEffect(() => {
@@ -27,17 +44,16 @@ export default function AdminVotePage() {
     }
   };
 
-  const handleAddCandidate = () => {
-    setNewSession({
-      ...newSession,
-      candidates: [...newSession.candidates, { name: '', description: '' }]
-    });
+  const handleCandidateChange = (teamIndex, candidateIndex, value) => {
+    const updatedTeams = [...newSession.teams];
+    updatedTeams[teamIndex].candidates[candidateIndex].name = value;
+    setNewSession({ ...newSession, teams: updatedTeams });
   };
 
-  const handleCandidateChange = (index, field, value) => {
-    const updatedCandidates = [...newSession.candidates];
-    updatedCandidates[index][field] = value;
-    setNewSession({ ...newSession, candidates: updatedCandidates });
+  const handleTeamChange = (teamIndex, value) => {
+    const updatedTeams = [...newSession.teams];
+    updatedTeams[teamIndex].name = value;
+    setNewSession({ ...newSession, teams: updatedTeams });
   };
 
   const handleSubmit = async (e) => {
@@ -47,7 +63,24 @@ export default function AdminVotePage() {
       setNewSession({
         title: '',
         description: '',
-        candidates: [{ name: '', description: '' }]
+        teams: [
+          {
+            name: 'Team A',
+            candidates: [
+              { name: '' },
+              { name: '' },
+              { name: '' }
+            ]
+          },
+          {
+            name: 'Team B',
+            candidates: [
+              { name: '' },
+              { name: '' },
+              { name: '' }
+            ]
+          }
+        ]
       });
       fetchSessions();
     } catch (err) {
@@ -101,34 +134,38 @@ export default function AdminVotePage() {
               />
             </div>
 
-            <div>
-              <label className="block mb-2">Candidates</label>
-              {newSession.candidates.map((candidate, index) => (
-                <div key={index} className="flex gap-4 mb-4">
-                  <input
-                    type="text"
-                    placeholder="Name"
-                    value={candidate.name}
-                    onChange={(e) => handleCandidateChange(index, 'name', e.target.value)}
-                    className="flex-1 p-2 border rounded"
-                    required
-                  />
-                  <input
-                    type="text"
-                    placeholder="Description"
-                    value={candidate.description}
-                    onChange={(e) => handleCandidateChange(index, 'description', e.target.value)}
-                    className="flex-1 p-2 border rounded"
-                  />
+            <div className="space-y-6">
+              {newSession.teams.map((team, teamIndex) => (
+                <div key={teamIndex} className="border p-4 rounded">
+                  <div className="space-y-4">
+                    <div>
+                      <label className="block mb-2">Team Name</label>
+                      <input
+                        type="text"
+                        value={team.name}
+                        onChange={(e) => handleTeamChange(teamIndex, e.target.value)}
+                        className="w-full p-2 border rounded"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label className="block mb-2">Team Members</label>
+                      {team.candidates.map((candidate, candidateIndex) => (
+                        <div key={candidateIndex} className="mb-4">
+                          <input
+                            type="text"
+                            placeholder={`Member ${candidateIndex + 1}`}
+                            value={candidate.name}
+                            onChange={(e) => handleCandidateChange(teamIndex, candidateIndex, e.target.value)}
+                            className="w-full p-2 border rounded"
+                            required
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               ))}
-              <button
-                type="button"
-                onClick={handleAddCandidate}
-                className="mt-2 px-4 py-2 bg-gray-200 rounded hover:bg-gray-300"
-              >
-                Add Candidate
-              </button>
             </div>
 
             <button
@@ -164,15 +201,20 @@ export default function AdminVotePage() {
                     </button>
                   )}
                 </div>
-                <div className="mt-4">
-                  <h4 className="font-medium mb-2">Results:</h4>
-                  <ul className="list-disc list-inside">
-                    {session.candidates.map((candidate) => (
-                      <li key={candidate._id}>
-                        {candidate.name}: {candidate.voteCount} votes
-                      </li>
-                    ))}
-                  </ul>
+                <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {session.teams.map((team) => (
+                    <div key={team._id} className="border p-4 rounded">
+                      <h4 className="font-medium mb-4">{team.name}</h4>
+                      <p className="font-medium mb-2">Total Votes: {team.totalVotes}</p>
+                      <ul className="list-disc list-inside">
+                        {team.candidates.map((candidate) => (
+                          <li key={candidate._id}>
+                            {candidate.name}: {candidate.voteCount} votes
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
                 </div>
               </div>
             ))}
