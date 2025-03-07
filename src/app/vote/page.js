@@ -41,28 +41,52 @@ export default function VotePage() {
   if (!session) return <div className="min-h-screen flex items-center justify-center">No active voting session</div>;
 
   return (
-    <div className="min-h-screen p-8 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bold mb-6 text-center">{session.title}</h1>
-        <p className="text-gray-600 mb-8 text-center text-lg">{session.description}</p>
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800">
+      {/* Header Section */}
+      <header className="bg-black border-b border-blue-600 sticky top-0 z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2">
+          <div className="flex items-center space-x-3">
+            <img 
+              src="/img/itsa2.png" 
+              alt="Tech Debate Logo" 
+              className="w-12 h-12 sm:w-16 sm:h-16 object-contain"
+            />
+            <div>
+              <h1 className="text-xl sm:text-2xl font-bold text-white">Techgyanathon 2025 🎯</h1>
+              <p className="text-blue-400 text-sm sm:text-base">Tech Debate Voting Poll</p>
+            </div>
+          </div>
+        </div>
+      </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {/* Main Content */}
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
+        <div className="text-center mb-3 sm:mb-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white sm:mb-2">🎙️ {session.title} 🎙️</h2>
+          <p className="text-gray-300 text-sm sm:text-base">
+            {session.teams.length >= 2 ? 
+              `👥 ${session.teams[0].name} vs ${session.teams[1].name} 👥` : 
+              session.description}
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           {session.teams.map((team) => (
-            <div key={team._id} className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="p-6 space-y-4">
+            <div key={team._id} className="bg-gray-800 rounded-lg shadow-lg overflow-hidden border border-blue-600 hover:border-red-500 transition-all duration-300">
+              <div className="p-4 sm:p-6 space-y-3 sm:space-y-4">
                 <div className="text-center">
-                  <h2 className="text-3xl font-bold mb-2">{team.name}</h2>
-                  <p className="text-2xl font-semibold text-blue-600">
-                    {team.voteCount} {team.voteCount === 1 ? 'Vote' : 'Votes'}
-                  </p>
+                  <h2 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2 text-white">{team.name}</h2>
+                  {/* <p className="text-lg sm:text-xl font-semibold text-blue-400">
+                    {team.voteCount} {team.voteCount === 1 ? 'Vote' : 'Votes'} 🗳️
+                  </p> */}
                 </div>
 
-                <div className="border-t border-gray-200 pt-4">
-                  <h3 className="text-xl font-semibold mb-3">Team Members:</h3>
+                <div className="border-t border-gray-700 pt-3 sm:pt-4">
+                  <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3 text-white">Team Members 👥: </h3>
                   <div className="grid grid-cols-1 gap-2">
                     {team.candidates.map((candidate, index) => (
-                      <div key={index} className="bg-gray-50 p-3 rounded-lg">
-                        <p className="text-lg font-medium">{candidate.name}</p>
+                      <div key={index} className="bg-gray-700 p-2 sm:p-3 rounded-lg">
+                        <p className="text-base sm:text-lg font-medium text-gray-200">{candidate.name}</p>
                       </div>
                     ))}
                   </div>
@@ -71,13 +95,13 @@ export default function VotePage() {
                 <button
                   onClick={() => handleVote(team._id)}
                   disabled={voted}
-                  className={`w-full py-3 px-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 ${
+                  className={`w-full py-2.5 sm:py-3 px-5 rounded-lg text-base sm:text-lg font-semibold transition-all transform hover:scale-105 ${
                     voted
-                      ? 'bg-gray-300 cursor-not-allowed'
-                      : 'bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl'
+                      ? 'bg-gray-600 cursor-not-allowed text-gray-400'
+                      : 'bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl hover:bg-red-600'
                   }`}
                 >
-                  {voted ? 'Already Voted' : `Vote for ${team.name}`}
+                  {voted ? 'Already Voted' : `Vote for ${team.name} 🎯`}
                 </button>
               </div>
             </div>
@@ -85,11 +109,18 @@ export default function VotePage() {
         </div>
 
         {voted && (
-          <div className="mt-8 p-4 bg-green-100 text-green-700 rounded-lg text-center text-lg font-medium">
-            Thank you for voting! Your vote has been recorded.
+          <div className="mt-3 sm:mt-4 p-2 sm:p-3 bg-green-900 text-green-300 rounded-lg text-center text-base sm:text-lg font-medium border border-green-500">
+            Thank you for voting! Your vote has been recorded. ✅
           </div>
         )}
-      </div>
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-black border-t border-blue-600 mt-auto">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 text-center">
+          <p className="text-gray-400 text-sm sm:text-base">© 2025 Tic-Tac-Toe. Techgyanathon 2025, ITSA - Technical Team. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
   );
 }
