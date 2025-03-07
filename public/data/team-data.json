@@ -38,8 +38,7 @@
       { "name": "Pratik Bhuvad", "post": "Documentation Member", "imageUrl": "/team/DOCUMENTATION/Pratik[DM].png" },
       { "name": "Girish Patil", "post": "Documentation Member", "imageUrl": "/team/DOCUMENTATION/Girish[DM].png" },
       { "name": "Kunal Gadekar", "post": "Documentation Member", "imageUrl": "/team/DOCUMENTATION/Kunal[DM].png" },
-      { "name": "Siddhi Bhuvad", "post": "Documentation Member", "imageUrl": "/team/CREATIVITY/Siddhi[CM].png" },
-      { "name": "Namdev Shinde", "post": "Documentation Member", "imageUrl": "/team/DOCUMENTATION/Namdev[DM].png" }
+      { "name": "Siddhi Bhuvad", "post": "Documentation Member", "imageUrl": "/team/CREATIVITY/Siddhi[CM].png" }
     ]
   },
   {
@@ -70,7 +69,8 @@
     "leader": { "name": "Prachi Pokhare", "post": "Publicity Head", "imageUrl": "/team/PUBLICITY/Prachi[PH].png" },
     "members": [
       { "name": "Sayali Nimbalkar", "post": "Publicity Member", "imageUrl": "/team/PUBLICITY/Sayali[PM].png" },
-      { "name": "Tanvee Waikar", "post": "Publicity Member", "imageUrl": "/team/PUBLICITY/Tanvee[PM].png" }
+      { "name": "Tanvee Waikar", "post": "Publicity Member", "imageUrl": "/team/PUBLICITY/Tanvee[PM].png" },
+      { "name": "Manan Wankhedkar", "post": "Publicity Member", "imageUrl": "/team/PUBLICITY/Manan[PM].png" }
     ]
   }
 ]
