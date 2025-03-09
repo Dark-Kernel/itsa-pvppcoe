@@ -27,14 +27,14 @@
         "date": "18 Mar, 2025",
         "time": "12 PM - 2 PM",
         "venue": "Library",
-        "teamSize": "4 Members",
+        "teamSize": "2-4 Members",
         "registrationFees": "₹50 per Team",
         "firstPrize": "Certificate",
         "secondPrize": "Certificate",
         "prizepool": "₹2500",
         "registrationLink": "https://forms.gle/oQvQYwgEXCCSsgXv5",
         "posterUrl": "/techgyanathon/pitch_point.jpg",
-        "details": "🕹️ Event Round:\n🎯 Design a digital poster based on your chosen theme, showcasing your creativity and innovation"
+        "details": "🕹️ Event Round:\n🔹 Choose your idea/topic for the banner.\n🔹 Topic selection is on a first-come, first-serve basis.\n🔹 No duplicate topics are allowed.\n🔹 If your topic is already taken, you will be informed to choose a new one.\n🔹 Design a banner based on your chosen idea, showcasing creativity and innovation.\n🔹 Banner dimensions: 2 feet (height) x 3 feet (width).\n🔹 Participants must bring a printed copy of their banner for presentation and evaluation.\n🔹 Present your design to the judges, explaining your concept and creativity."
       },
       {
         "id": 3,
@@ -46,7 +46,7 @@
         "time": "2 PM - 4 PM",
         "venue": "Lab 105 & 107",
         "teamSize": "Solo",
-        "registrationFees": "₹80 per Team",
+        "registrationFees": "₹80 per Person",
         "firstPrize": "₹2500 + Winner Certificate",
         "secondPrize": "₹1000 + Runner-up Certificate",
         "prizepool": "₹3000",
@@ -100,13 +100,13 @@
         "time": "10 AM - 1 PM",
         "venue": "Seminar Hall",
         "teamSize": "1 to 4 Members",
-        "registrationFees": "₹80 per Person",
+        "registrationFees": "₹80 per Team",
         "firstPrize": "Prizes",
         "secondPrize": "Certificates",
         "prizepool": "₹3500",
         "registrationLink": "https://forms.gle/uAbNMnyM9VGE2xqL9",
         "posterUrl": "/techgyanathon/vpp_got_talent.jpg",
-        "details": "*Registeration fee is refundable if not shortlisted \n\n🔹 Marking Criteria:\n🎭 Personality – Stage presence & confidence\n🎤 Presentation – Clarity & engagement\n💡 Uniqueness – Creativity & originality\n🔥 Confidence – Own the stage like a PRO!"
+        "details": "🕹️ Event Rounds:\n🎭 Round 1: Showcase your first act with confidence and creativity! Top scorers will qualify for the next round based on the judging criteria.\n🔥 Final Round: Perform your second act and give your best shot! The winner will be determined through audience voting."
       },
       {
         "id": 7,
@@ -178,7 +178,7 @@
         "prizepool": "₹4000",
         "registrationLink": "https://forms.gle/rDVYuiNrtJpWwtYP8",
         "posterUrl": "/techgyanathon/mastermind_arena.jpg",
-        "details": "🕹️ Event Rounds:\n❌ Tic-Tac-Toe Knowledge Battle 🎲\n- Answer questions to earn a move on the Tic-Tac-Toe board.\n- The first team to complete a row, column, or diagonal wins and advances!\n\n💻 Hacker’s Ladder 🐍🎲\n- Move forward by rolling a digital dice and solving coding challenges!\n- Correct answers = points | Wrong answers = penalties\n- Landing on a snake drops your points – stay sharp!\n- The first two teams to reach 100+ points get bonus points for the final ranking!"
+        "details": "🕹️ Event Rounds:\n❌ Tic-Tac-Toe Knowledge Battle 🎲\n- Answer questions to earn a move on the Tic-Tac-Toe board.\n\n💻 Hacker’s Ladder 🐍🎲\n- Move forward by rolling a digital dice and solving coding challenges!!"
       }
     ]
 }
