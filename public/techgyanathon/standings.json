@@ -1,0 +1,34 @@
+{
+  "teams": [
+    { "id": 1, "name": "Team Soul", "standingPoints": 42, "killPoints": 38, "totalPoints": 80, "wins": 3 },
+    { "id": 2, "name": "GodLike Esports", "standingPoints": 35, "killPoints": 41, "totalPoints": 76, "wins": 2 },
+    { "id": 3, "name": "Team XSpark", "standingPoints": 30, "killPoints": 45, "totalPoints": 75, "wins": 2 },
+    { "id": 4, "name": "Orangutan Gaming", "standingPoints": 38, "killPoints": 35, "totalPoints": 73, "wins": 1 },
+    { "id": 5, "name": "Team 8Bit", "standingPoints": 33, "killPoints": 37, "totalPoints": 70, "wins": 1 },
+    { "id": 6, "name": "Enigma Gaming", "standingPoints": 29, "killPoints": 39, "totalPoints": 68, "wins": 1 },
+    { "id": 7, "name": "Team IND", "standingPoints": 27, "killPoints": 38, "totalPoints": 65, "wins": 1 },
+    { "id": 8, "name": "Revenant Esports", "standingPoints": 25, "killPoints": 35, "totalPoints": 60, "wins": 0 },
+    { "id": 9, "name": "Global Esports", "standingPoints": 28, "killPoints": 30, "totalPoints": 58, "wins": 1 },
+    { "id": 10, "name": "Hyderabad Hydras", "standingPoints": 24, "killPoints": 32, "totalPoints": 56, "wins": 0 },
+    { "id": 11, "name": "Team Insane", "standingPoints": 22, "killPoints": 28, "totalPoints": 50, "wins": 0 },
+    { "id": 12, "name": "Entity Gaming", "standingPoints": 20, "killPoints": 29, "totalPoints": 49, "wins": 0 },
+    { "id": 13, "name": "Team Tamilas", "standingPoints": 18, "killPoints": 30, "totalPoints": 48, "wins": 0 },
+    { "id": 14, "name": "Chemin Esports", "standingPoints": 19, "killPoints": 28, "totalPoints": 47, "wins": 0 },
+    { "id": 15, "name": "Team Celsius", "standingPoints": 17, "killPoints": 29, "totalPoints": 46, "wins": 0 },
+    { "id": 16, "name": "Rivalry Esports", "standingPoints": 16, "killPoints": 27, "totalPoints": 43, "wins": 0 },
+    { "id": 17, "name": "Team Mayhem", "standingPoints": 15, "killPoints": 26, "totalPoints": 41, "wins": 0 },
+    { "id": 18, "name": "Reckoning Esports", "standingPoints": 14, "killPoints": 25, "totalPoints": 39, "wins": 0 },
+    { "id": 19, "name": "Team Astra", "standingPoints": 13, "killPoints": 24, "totalPoints": 37, "wins": 0 },
+    { "id": 20, "name": "Blind Esports", "standingPoints": 12, "killPoints": 23, "totalPoints": 35, "wins": 0 },
+    { "id": 21, "name": "Team Phantom", "standingPoints": 11, "killPoints": 22, "totalPoints": 33, "wins": 0 },
+    { "id": 22, "name": "Marcos Gaming", "standingPoints": 10, "killPoints": 21, "totalPoints": 31, "wins": 0 },
+    { "id": 23, "name": "Team Valor", "standingPoints": 9, "killPoints": 20, "totalPoints": 29, "wins": 0 },
+    { "id": 24, "name": "Skylightz Gaming", "standingPoints": 8, "killPoints": 19, "totalPoints": 27, "wins": 0 }
+  ],
+  "tournamentStats": {
+    "totalMatches": 12,
+    "totalKills": 427,
+    "totalPoints": 780,
+    "totalWins": 12
+  }
+} 
