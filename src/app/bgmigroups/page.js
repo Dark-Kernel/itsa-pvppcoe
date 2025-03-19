@@ -115,14 +115,12 @@ const RankingTable = () => {
               <div className="relative z-10">
                 <div className="flex items-center justify-center mb-1">
                   <span className="text-red-500 text-xl mr-1">🎯</span>
-                  <h3 className="text-xl font-bold text-center text-orange-500 uppercase tracking-wider">GROUP 1</h3>
+                  <h3 className="text-xl font-bold text-center text-orange-500 uppercase tracking-wider">Our Teams</h3>
                   <span className="text-red-500 text-xl ml-1">🎯</span>
                 </div>
                 
                 <div className="text-center mb-2">
                   <div className="inline-block bg-orange-950 px-3 py-1 rounded-lg border border-orange-600">
-                    <span className="text-orange-300 font-semibold text-sm">ROOM CODE: </span>
-                    <span className="text-white font-bold text-sm">{roomCodes.group1}</span>
                   </div>
                 </div>
                 
