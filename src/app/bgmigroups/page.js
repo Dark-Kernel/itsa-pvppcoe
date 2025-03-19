@@ -104,7 +104,6 @@ const RankingTable = () => {
           </div>
           
           {/* Tables Container - This will allow 2 tables per row on larger screens */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
             {/* Group 1 Table Card */}
             <div className="bg-gray-900 rounded-lg shadow-lg p-2 border-2 border-orange-800 relative overflow-hidden">
               {/* Background pattern for BGMI theme */}
@@ -149,7 +148,6 @@ const RankingTable = () => {
                   </table>
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </main>
