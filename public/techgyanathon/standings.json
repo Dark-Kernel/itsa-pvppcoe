@@ -1,7 +1,7 @@
 {
   "teams": [
     { "id": 1, "name": "Team Soul", "standingPoints": 42, "killPoints": 38, "wins": 3 },
-    { "id": 2, "name": "GodLike Esports", "standingPoints": 35, "killPoints": 41, "wins": 2 },
+    { "id": 2, "name": "GodLike Esports", "standingPoints": 350, "killPoints": 41, "wins": 2 },
     { "id": 3, "name": "Team XSpark", "standingPoints": 30, "killPoints": 45, "wins": 2 },
     { "id": 4, "name": "Orangutan Gaming", "standingPoints": 38, "killPoints": 35, "wins": 1 },
     { "id": 5, "name": "Team 8Bit", "standingPoints": 33, "killPoints": 37, "wins": 1 },
