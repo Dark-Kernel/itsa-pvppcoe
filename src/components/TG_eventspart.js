@@ -63,7 +63,7 @@ const EventsPart = () => {
             <div className="flex flex-wrap items-center justify-center gap-2 mb-6 px-3 max-w-full mx-auto">
                 <p className="text-lg font-bold">Quick Navigate:</p>
                 <div className="flex flex-wrap gap-2">
-                    {events.map((event) => (
+                    {events.filter(event => event.title2 !== "VPP Got Talent" && event.title2 !== "Business Mania").map((event) => (
                         <button
                             key={event.id}
                             onClick={() => scrollToEvent(event.id)}
@@ -78,7 +78,7 @@ const EventsPart = () => {
             <h2 className="text-2xl md:text-4xl font-bold text-center">Featured Events</h2>
 
             <div className="space-y-6 lg:mx-10">
-                {events.map(event => (
+                {events.filter(event => event.title2 !== "VPP Got Talent" && event.title2 !== "Business Mania").map(event => (
                     <div
                         id={`event-${event.id}`}
                         key={event.id}
@@ -140,11 +140,13 @@ const EventsPart = () => {
                             <div className="bg-gray-800 bg-opacity-80 p-2 rounded-lg text-gray-300 text-sm md:text-base mb-2 whitespace-pre-line">
                                 {event.details}
                             </div>
-                            <div className="mt-auto flex flex-wrap items-center justify-between gap-2">
+
+                            {/* Registration Button */}
+                            {/* <div className="mt-auto flex flex-wrap items-center justify-between gap-2">
                                 <p className="text-xs md:text-sm text-gray-400 italic order-2 md:order-1 w-full md:w-auto">
                                     For more details, visit the registration page*
                                 </p>
-                                {/* Registration Button */}
+
                                 <a
                                     target='_blank'
                                     href={event.registrationLink}
@@ -152,7 +154,7 @@ const EventsPart = () => {
                                 >
                                     Register 📝
                                 </a>
-                            </div>
+                            </div> */}
 
                         </div>
                     </div>
