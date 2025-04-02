@@ -1,6 +1,96 @@
 {
     "events": [
         {
+            "title": "25 Years of IT Excellence",
+            "date": "21 March 2025",
+            "image": "/posters/it_excellence.jpg",
+            "time": "05:00 PM",
+            "fhsh": "FH-2025",
+            "instagramLink": "https://www.instagram.com/reel/DHjMOmhIPcd/?igsh=ZDZybnpiYzRzZ2sz",
+            "report": "/reports/.pdf",
+            "description": ""
+        },
+        {
+            "title": "Blind Coding",
+            "date": "20 March 2025",
+            "image": "/posters/blind_coding.jpg",
+            "time": "02:00 PM",
+            "fhsh": "FH-2025",
+            "instagramLink": "https://www.instagram.com/reel/DHhyzkbo4cK/?igsh=N3h3dGgzd2JjMW5k",
+            "report": "/reports/.pdf",
+            "description": ""
+        },
+        {
+            "title": "Tech Hunt",
+            "date": "20 March 2025",
+            "image": "/posters/tech_hunt.jpg",
+            "time": "10:00 AM",
+            "fhsh": "FH-2025",
+            "instagramLink": "https://www.instagram.com/reel/DHg2DH4zA86/?igsh=MWFpd2l1bzZvdHhnOA==",
+            "report": "/reports/.pdf",
+            "description": ""
+        },
+        {
+            "title": "BGMI Arena",
+            "date": "19 March 2025",
+            "image": "/posters/bgmi_arena.jpg",
+            "time": "02:00 PM",
+            "fhsh": "FH-2025",
+            "instagramLink": "https://www.instagram.com/reel/DHgK3iXImz6/?igsh=MW1rbzgzZXJoY200Nw==",
+            "report": "/reports/.pdf",
+            "description": ""
+        },
+        {
+            "title": "Tech Debate",
+            "date": "19 March 2025",
+            "image": "/posters/tech_debate.jpg",
+            "time": "02:00 PM",
+            "fhsh": "FH-2025",
+            "instagramLink": "https://www.instagram.com/reel/DHgK3iXImz6/?igsh=MW1rbzgzZXJoY200Nw==",
+            "report": "/reports/.pdf",
+            "description": ""
+        },
+        {
+            "title": "Squid Game",
+            "date": "19 March 2025",
+            "image": "/posters/squid_game.jpg",
+            "time": "10:00 AM",
+            "fhsh": "FH-2025",
+            "instagramLink": "https://www.instagram.com/reel/DHfwBUaIasY/?igsh=dGl2ZWY5eDFwZGRy",
+            "report": "/reports/.pdf",
+            "description": ""
+        },
+        {
+            "title": "Pitch Point & UI/UX Showdown",
+            "date": "18 March 2025",
+            "image": "/posters/pp_uiux.jpg",
+            "time": "02:00 PM",
+            "fhsh": "FH-2025",
+            "instagramLink": "https://www.instagram.com/reel/DHePd2UI1AZ/?igsh=cDhrcGtuYnJneW8y",
+            "report": "/reports/.pdf",
+            "description": ""
+        },
+        {
+            "title": "Techgyanothon Inauguration",
+            "date": "18 March 2025",
+            "image": "/posters/techgyanathon_inauguration.jpg",
+            "time": "10:00 AM",
+            "fhsh": "FH-2025",
+            "instagramLink": "https://www.instagram.com/reel/DHbVK9YoxWY/?igsh=dHNyanMxamNxcTJn",
+            "report": "/reports/.pdf",
+            "description": ""
+        },
+        {
+            "title": "Techgyanothon",
+            "date": "18 to 20 March 2025",
+            "image": "/posters/techgyanathon.jpg",
+            "time": "10:00 AM",
+            "fhsh": "FH-2025",
+            "instagramLink": "",
+            "report": "/reports/.pdf",
+            "description": ""
+        },
+        {
             "title": "TechCraft",
             "date": "24 January 2025",
             "image": "/posters/techcraft.jpg",
