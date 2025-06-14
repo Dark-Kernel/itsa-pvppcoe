@@ -37,7 +37,7 @@ https://itsa-pvppcoe.vercel.app/
 
 ## 📦 Installation
 ```bash
-git clone https://github.com/your-username/itsa-pvppcoe-website.git
+git clone https://github.com/Dark-Kernel/itsa-pvppcoe.git
 cd itsa-pvppcoe-website
 npm install
 npm run dev
