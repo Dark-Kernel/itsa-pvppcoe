@@ -26,11 +26,11 @@ const TG_banner = () => {
             It's since 2022 that VPPCOE has been organizing Techgyanathon and it's time to make it bigger and better with the help of you.
             Whether you want technical or non-technical events, we have got you covered. See you there!
           </p>
-          {/* <div className='flex flex-col items-center'>
+          <div className='flex flex-col items-center'>
             <Link href='/techgyanathon' className="px-6 py-2 bg-blue-600 text-md lg:text-lg text-white rounded-md hover:bg-blue-700 transition-colors duration-300">
               <span>Explore Events 📣</span>
             </Link>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>

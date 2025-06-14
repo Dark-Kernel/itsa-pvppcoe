@@ -15,8 +15,10 @@ const Newsletter = () => {
           with inspiration and excitement! 💯
           A massive thank you to our esteemed chief guest, distinguished dignitaries, dedicated faculty, the dynamic ITSA 
           committee, and every participant who made this occasion extraordinary! 😇✨
-          Dive into the SH 2024 Newsletter by clicking here.
+          Dive into the SH 2024 Newsletter.
           </p>
+
+          {/* NEWSLETTER UNAVAIALBE
           <div className='flex flex-col items-center'>
           <a 
           href='https://shorturl.at/qtgku'
@@ -25,7 +27,8 @@ const Newsletter = () => {
           className="px-6 py-2 bg-blue-600 text-md lg:text-lg text-white rounded-md hover:bg-blue-700 transition-colors duration-300">
             Read Newsletter 📰
           </a>
-          </div>
+          </div> */}
+
         </div>
         
         {/* Right Column: Poster and Button */}
