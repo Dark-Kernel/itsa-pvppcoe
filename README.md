@@ -24,14 +24,14 @@ The **ITSA-PVPPCOE 2024-25** website is built using **Next.js** and **React.js**
 ---
 
 ## 👥 Collaborators
-- [your-github-username](https://github.com/your-github-username)  
-- [collaborator1](https://github.com/collaborator1)  
-- [collaborator2](https://github.com/collaborator2)   
+- [Sumit Patel](https://github.com/Dark-Kernel)  
+- [Yash Dhavde](https://github.com/YashD15)  
+- [Varad Khandare](https://github.com/Varad11220)   
 
 ---
 
 ## 🌎 Deployment
-(https://itsa-pvppcoe.vercel.app/)
+https://itsa-pvppcoe.vercel.app/
 
 ---
 
@@ -41,5 +41,5 @@ git clone https://github.com/your-username/itsa-pvppcoe-website.git
 cd itsa-pvppcoe-website
 npm install
 npm run dev
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 with your browser to see the result.
 ```
