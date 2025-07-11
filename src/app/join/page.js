@@ -166,7 +166,7 @@ const ITSAJoin = () => {
                         <span className="text-xl md:text-2xl mr-3">👨‍💼</span>
                         <div>
                           <p className="font-semibold text-gray-900 text-sm md:text-base">Aniket Paste</p>
-                          <p className="text-blue-600 font-medium text-xs md:text-sm">+919819631434</p>
+                          <p className="text-blue-600 font-medium text-xs md:text-sm">+91 8692959631</p>
                         </div>
                       </div>
                     </div>
