@@ -134,7 +134,7 @@ const ITSAJoin = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Not Sure Section */}
             <div className="bg-yellow-50 rounded-lg p-3 border border-yellow-200">
-              <h4 className="sm:text-base text-xl font-semibold text-gray-900 mb-2 flex items-center">
+              <h4 className="text-base md:text-lg font-semibold text-gray-900 mb-2 flex items-center">
                 <span className="mr-2">❓</span>
                 Not Sure Which Team to Choose?
               </h4>
