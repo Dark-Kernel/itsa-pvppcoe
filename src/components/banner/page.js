@@ -10,6 +10,8 @@ import UpcomingEvents from '../../components/upcomingevent/page';
 import TG_banner from '../../components/techgyanathonbanner/page';
 // NEWSLETTER COMPONENT
 import Newsletter from '../../components/newsletter/page';
+// REGISTRATION BANNER
+import ITSAregistration from "../registerBanner/page";
 
 const TrackVisibility = dynamic(() => import('react-on-screen'), { ssr: false });
 
@@ -58,11 +60,10 @@ const Banner = () => {
   };
 
   return (
-    <section
-      className="pt-[100px] lg:pt-[120px] bg-[url('/img/banner-bg-extended-vertical.png')] bg-top bg-cover bg-no-repeat"
-      id="home"
-    >
+    <section className="pt-[100px] lg:pt-[120px] bg-[url('/img/banner-bg-extended-vertical.png')] bg-top bg-cover bg-no-repeat" id="home">
+      <ITSAregistration />
       <div className="container mx-auto px-4">
+        
         <div className="flex flex-wrap items-center">
           <div className="w-full md:w-1/2 xl:w-7/12">
             <TrackVisibility>
@@ -72,6 +73,7 @@ const Banner = () => {
                     isVisible ? "animate__animated animate__fadeIn" : ""
                   }
                 >
+                  
                   <span className="text-white inline-block font-bold text-xl tracking-wide py-2 px-2.5 mb-4 bg-gradient-to-r from-[rgba(170,54,124,0.5)] to-[rgba(74,47,189,0.5)] border border-white border-opacity-50">
                     Welcome to ITSA website
                   </span>
