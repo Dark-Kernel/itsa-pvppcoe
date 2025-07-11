@@ -19,7 +19,7 @@ const ITSAregistration = () => {
           <div className="flex-shrink-0">
             <Link href="/join" passHref>
               <div className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-lg">
-                Register Now
+                🚀 Click Here to Register Now
               </div>
             </Link>
           </div>
