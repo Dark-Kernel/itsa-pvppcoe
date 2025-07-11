@@ -27,7 +27,7 @@ const ITSAJoin = () => {
     {
       title: "Infrastructure & Security Team Member",
       icon: "🛠️",
-      description: "Event Setup | Tech Support | Logistics | Cybersecurity"
+      description: "Event Setup | Tech Support | Logistics"
     },
     {
       title: "Social Media & Content Team Member",
@@ -121,7 +121,7 @@ const ITSAJoin = () => {
               <div className="text-white text-center">
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSeAxhb3mYwdtR_V5CYeUxeMxPKm-Xe3DC-5xYPmGcA8E991QA/viewform?usp=sharing&ouid=117893936743333140284" target="_blank" rel="noopener noreferrer">
                     <button className="text-white bg-gradient-to-r from-blue-600 to-purple-600 font-bold py-2 px-4 rounded-full text-sm lg:text-lg hover:bg-gray-100 transition-colors duration-300 shadow-lg hover:shadow-2xl transform hover:scale-110 w-fit">
-                        Register Now - Join ITSA!
+                        🚀 Click here to Register Now
                     </button>
                 </a>
                 </div>
