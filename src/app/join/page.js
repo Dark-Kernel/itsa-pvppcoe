@@ -133,13 +133,13 @@ const ITSAJoin = () => {
                 ))}
               </div>
               
-              <div className="text-center">
+            {/*<div className="text-center">
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSeAxhb3mYwdtR_V5CYeUxeMxPKm-Xe3DC-5xYPmGcA8E991QA/viewform?usp=sharing&ouid=117893936743333140284" target="_blank" rel="noopener noreferrer">
                   <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-purple-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg hover:shadow-2xl transform hover:scale-110 transition-all duration-300">
                     🚀 Register Now
                   </button>
                 </a>
-              </div>
+              </div>*/}
             </div>
           </div>
         </div>
