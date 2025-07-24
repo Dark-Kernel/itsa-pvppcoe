@@ -1,5 +1,13 @@
 {
     "events": [
+             {
+            "title": "Techvolution",
+            "date": "29 july 2025",
+            "image": "/posters/techvolution.png",
+            "time": "5:00 PM",
+            "fhsh": "SH-2025",
+            "description": "Group of technical events held by ITSA committee"
+                        },
         {
             "title": "25 Years of IT Excellence",
             "date": "21 March 2025",
@@ -280,13 +288,6 @@
             "report": "",
             "description": "Group of techical events held by ITSA committee"
         },
-        {
-            "title": "Techvolution",
-            "date": "29 july 2025",
-            "image": "/posters/techvolution.png",
-            "time": "5:00 PM",
-            "fhsh": "SH-2025",
-            "description": "Group of technical events held by ITSA committee"
         }
     ]
 }
