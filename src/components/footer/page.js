@@ -29,7 +29,7 @@ const Footer = () => {
               </a>
             </div> */}
             <p className="font-normal text-sm text-[#B8B8B8] tracking-wider mt-5">
-              Copyright 2024. All Rights Reserved
+              Copyright 2025. All Rights Reserved
             </p>
           </div>
         </div>
