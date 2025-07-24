@@ -279,6 +279,14 @@
             "instagramLink": "https://www.instagram.com/p/CqQI-OdvSmN/",
             "report": "",
             "description": "Group of techical events held by ITSA committee"
+        },
+        {
+            "title": "Techvolution",
+            "date": "29 july 2025",
+            "image": "/posters/techvolution.png",
+            "time": "5:00 PM",
+            "fhsh": "SH-2025",
+            "description": "Group of technical events held by ITSA committee"
         }
     ]
 }
