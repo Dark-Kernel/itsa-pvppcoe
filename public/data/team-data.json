@@ -9,68 +9,66 @@
   {
     "title": "President & Vice President",
     "members": [
-      { "name": "Aniket Paste", "post": "President", "imageUrl": "public/NewTeam/PRESIDENT VP GS/Aniket Paste.jpg" },
-      { "name": "Prachi Pokhare", "post": "Vice President", "imageUrl": "public/NewTeam/PRESIDENT VP GS/Prachi Pokhare.jpg" },
-      { "name": "Devesh Naik", "post": "Vice President", "imageUrl": "public/NewTeam/PRESIDENT VP GS/Devesh Naik.jpg" }
+      { "name": "Aniket Paste", "post": "President", "imageUrl": "/NewTeam/PRESIDENT VP GS/Aniket Paste.jpg" },
+      { "name": "Prachi Pokhare", "post": "Vice President", "imageUrl": "/NewTeam/PRESIDENT VP GS/Prachi Pokhare.jpg" },
+      { "name": "Devesh Naik", "post": "Vice President", "imageUrl": "/NewTeam/PRESIDENT VP GS/Devesh Naik.jpg" }
     ]
   },
   {
     "title": "General Secretary & Treasurer",
     "members": [
-      { "name": "Anurag Dharmadhikari", "post": "General Secretary", "imageUrl": "public/NewTeam/PRESIDENT VP GS/Anurag Dharmadhikari.jpg" },
-      { "name": "Megha Mahajan", "post": "Treasurer", "imageUrl": "/team/TREASURER/Megha[T].png" }
+      { "name": "Anurag Dharmadhikari", "post": "General Secretary", "imageUrl": "/NewTeam/PRESIDENT VP GS/Anurag Dharmadhikari.jpg" },
+      { "name": "Kunal Gadekar", "post": "Treasurer", "imageUrl": "/NewTeam/TREASURER/Kunal Gadekar.jpg" }
     ]
   },
   {
     "title": "TECHNICAL Team",
-    "leader": { "name": "Sumit Patel", "post": "Technical Head", "imageUrl": "/team/TECHNICAL/Sumit[TH].png" },
+    "leader": { "name": "Vedant Yadav", "post": "Technical Head", "imageUrl": "/NewTeam/TECHNICAL/Vedant Yadav.jpg" },
     "members": [
-      { "name": "Varad Khandare", "post": "Technical Member", "imageUrl": "/team/TECHNICAL/Varad[TM].png" },
-      { "name": "Yash Dhavde", "post": "Technical Member", "imageUrl": "/team/TECHNICAL/Yash[TM].png" },
-      { "name": "Vedant Yadav", "post": "Technical Member", "imageUrl": "/team/TECHNICAL/Vedant[TM].png" },
-      { "name": "Harsh Alkar", "post": "Technical Member", "imageUrl": "/team/TECHNICAL/Harsh[TM].png" }
-    ]
+  { "name": "Krish Patel", "post": "Technical Member", "imageUrl": "/NewTeam/TECHNICAL/Krish Patel.png" },
+  { "name": "Lokesh Konka", "post": "Technical Member", "imageUrl": "/NewTeam/TECHNICAL/lokesh konka.png" },
+  { "name": "Mihir Sawant", "post": "Technical Member", "imageUrl": "/NewTeam/TECHNICAL/Mihir Sawant.jpg" }
+]
+
   },
   {
     "title": "DOCUMENTATION Team",
-    "leader": { "name": "Devesh Naik", "post": "Documentation Head", "imageUrl": "/team/DOCUMENTATION/Devesh[DH3].png" },
+    "leader": { "name": "Kunal Gadekar", "post": "Documentation Head", "imageUrl": "/NewTeam/TREASURER/Kunal Gadekar.jpg" },
     "members": [
-      { "name": "Pratik Bhuvad", "post": "Documentation Member", "imageUrl": "/team/DOCUMENTATION/Pratik[DM].png" },
-      { "name": "Girish Patil", "post": "Documentation Member", "imageUrl": "/team/DOCUMENTATION/Girish[DM].png" },
-      { "name": "Kunal Gadekar", "post": "Documentation Member", "imageUrl": "/team/DOCUMENTATION/Kunal[DM].png" },
-      { "name": "Siddhi Bhuvad", "post": "Documentation Member", "imageUrl": "/team/CREATIVITY/Siddhi[CM].png" }
+      { "name": "Aditya Ambure", "post": "Documentation Member", "imageUrl": "/NewTeam/DOCUMENTATION/Aditya Ambure.jpg" },
+      { "name": "Pranita Dhandre", "post": "Documentation Member", "imageUrl": "/NewTeam/DOCUMENTATION/Pranita Dhandrejpg.jpg" },
+      { "name": "Saima Qadri", "post": "Documentation Member", "imageUrl": "/NewTeam/DOCUMENTATION/Saima Qadri.jpg" }
     ]
   },
   {
-    "title": "INFRA & SECURITY Team",
-    "leader": { "name": "Sahil Deshmukh", "post": "Infra & Security Head", "imageUrl": "/team/INFRA & SECURITY/Sahil[IH].png" },
-    "members": [
-      { "name": "Avanish Kamble", "post": "Infra & Security Member", "imageUrl": "/team/INFRA & SECURITY/Avanish[IM].png" },
-      { "name": "Atharva Khule", "post": "Infra & Security Member", "imageUrl": "/team/INFRA & SECURITY/Atharva[IM].png" },
-      { "name": "Anurag Dharmadhikari", "post": "Infra & Security Member", "imageUrl": "/team/INFRA & SECURITY/Anurag[IM].png" },
-      { "name": "Om Kandalgaonkar", "post": "Infra & Security Member", "imageUrl": "/team/INFRA & SECURITY/Om[IM].png" },
-      { "name": "Vinay Panvelkar", "post": "Infra & Security Member", "imageUrl": "/team/INFRA & SECURITY/Vinay[IM].png" }
-    ]
+  "title": "INFRA & SECURITY Team",
+  "leader": { "name": "Om Kandalgaonkar", "post": "Infra & Security Head", "imageUrl": "/NewTeam/INFRA_SECURITY/Om Kandhalgaonkar.jpg" },
+  "members": [
+    { "name": "Gaurav Singh", "post": "Infra & Security Member", "imageUrl": "/NewTeam/INFRA_SECURITY/Gaurav Singh.jpg" },
+    { "name": "Shreyas Singh", "post": "Infra & Security Member", "imageUrl": "/NewTeam/INFRA_SECURITY/Shreyas Singh.jpg" },
+    { "name": "Suraj Londhe", "post": "Infra & Security Member", "imageUrl": "/NewTeam/INFRA_SECURITY/Suraj Londhe.jpg" }
+  ]
   },
   {
     "title": "CREATIVITY Team",
-    "leader": { "name": "Aniket Paste", "post": "Creativity Head", "imageUrl": "/team/CREATIVITY/Aniket[CH].png" },
+    "leader": { "name": "Khushi Jain", "post": "Creativity Head", "imageUrl": "/NewTeam/CREATIVITY/Khushi Jain.jpg" },
     "members": [
-      { "name": "Dhruv Dodia", "post": "Creativity Member", "imageUrl": "/team/CREATIVITY/Dhruv[CM].png" },
-      { "name": "Khushi Jain", "post": "Creativity Member", "imageUrl": "/team/CREATIVITY/Khushi[CM].png" },
-      { "name": "KumariPriya Prasad", "post": "Creativity Member", "imageUrl": "/team/CREATIVITY/KumariPriya[CM].png" },
-      { "name": "Ritisha Shinde", "post": "Creativity Member", "imageUrl": "/team/CREATIVITY/Ritisha[CM].png" },
-      { "name": "Sanika Shinde", "post": "Creativity Member", "imageUrl": "/team/CREATIVITY/Sanika[CM].png" },
-      { "name": "Suhani Arjun", "post": "Creativity Member", "imageUrl": "/team/CREATIVITY/Suhani[CM].png" }
+      { "name": "Priya Prasad", "post": "Creativity Member", "imageUrl": "/NewTeam/CREATIVITY/Priya Prasad.jpg" },
+      { "name": "Anushka Patil", "post": "Creativity Member", "imageUrl": "/NewTeam/CREATIVITY/Anushka Patil.jpg" },
+      { "name": "Varsha Patil", "post": "Creativity Member", "imageUrl": "/NewTeam/CREATIVITY/Varsha Patil.jpg" },
+      { "name": "Ritisha Shinde", "post": "Creativity Member", "imageUrl": "/NewTeam/CREATIVITY/Ritisha shinde.jpg" },
+      { "name": "Srushti Yadav", "post": "Creativity Member", "imageUrl": "/NewTeam/CREATIVITY/Srushti Yadav.jpg" },
+      { "name": "Suhani Arjun", "post": "Creativity Member", "imageUrl": "/NewTeam/CREATIVITY/Suhani Arjun .jpg" }
     ]
   },
   {
     "title": "PUBLICITY Team",
-    "leader": { "name": "Prachi Pokhare", "post": "Publicity Head", "imageUrl": "/team/PUBLICITY/Prachi[PH].png" },
+    "leader": { "name": "Manan Wankhedkar", "post": "Publicity Head", "imageUrl": "/NewTeam/PUBLICITY/Manan Wankhedkar.jpg" },
     "members": [
-      { "name": "Sayali Nimbalkar", "post": "Publicity Member", "imageUrl": "/team/PUBLICITY/Sayali[PM].png" },
-      { "name": "Tanvee Waikar", "post": "Publicity Member", "imageUrl": "/team/PUBLICITY/Tanvee[PM].png" },
-      { "name": "Manan Wankhedkar", "post": "Publicity Member", "imageUrl": "/team/PUBLICITY/Manan[PM].png" }
+      { "name": "Sairaj Sakpal", "post": "Publicity Member", "imageUrl": "/NewTeam/PUBLICITY/Sairaj Sakpal.jpg" },
+      { "name": "Lavanya More", "post": "Publicity Member", "imageUrl": "/NewTeam/PUBLICITY/Lavanya More.jpg" },
+      { "name": "Vrunda Pawar", "post": "Publicity Member", "imageUrl": "/NewTeam/PUBLICITY/Vrunda Pawar.jpg" },
+      { "name": "Avanish Kamble", "post": "Publicity Member", "imageUrl": "/NewTeam/PUBLICITY/Avanish Kamble.jpg" }
     ]
   }
 ]
