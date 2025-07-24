@@ -15,10 +15,11 @@
     ]
   },
   {
-    "title": "General Secretary ,Treasurer  & Ladies Representative",
+    "title": "General Secretary Treasurer Techincal Mentor LR",
     "members": [
       { "name": "Anurag Dharmadhikari", "post": "General Secretary", "imageUrl": "/NewTeam/PRESIDENT VP GS/Anurag Dharmadhikari.jpg" },
       { "name": "Kunal Gadekar", "post": "Treasurer", "imageUrl": "/NewTeam/TREASURER/Kunal Gadekar.jpg" },
+      { "name": "Sumit Patel", "post": "Technical Mentor", "imageUrl": "/NewTeam/TECHNICAL MENTOR/Sumit Patel.jpg" },
       { "name": "Sanika Shinde", "post": "Ladies Representative", "imageUrl": "/NewTeam/LR/Sanika Shinde.jpg" }
     ]
   },
