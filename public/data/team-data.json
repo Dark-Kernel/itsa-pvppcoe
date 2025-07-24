@@ -9,15 +9,15 @@
   {
     "title": "President & Vice President",
     "members": [
-      { "name": "Mitul Chauhan", "post": "President", "imageUrl": "/team/PRESIDENT VP GS/Mithul[P].png" },
-      { "name": "Ramdas Chaugale", "post": "Vice President", "imageUrl": "/team/PRESIDENT VP GS/Ramdas[VP].png" },
-      { "name": "Aniket Patil", "post": "Vice President", "imageUrl": "/team/PRESIDENT VP GS/AniketPatil.png" }
+      { "name": "Aniket Paste", "post": "President", "imageUrl": "public/NewTeam/PRESIDENT VP GS/Aniket Paste.jpg" },
+      { "name": "Prachi Pokhare", "post": "Vice President", "imageUrl": "public/NewTeam/PRESIDENT VP GS/Prachi Pokhare.jpg" },
+      { "name": "Devesh Naik", "post": "Vice President", "imageUrl": "public/NewTeam/PRESIDENT VP GS/Devesh Naik.jpg" }
     ]
   },
   {
     "title": "General Secretary & Treasurer",
     "members": [
-      { "name": "Swaranjith Gudelli", "post": "General Secretary", "imageUrl": "/team/PRESIDENT VP GS/Swaranjith[GS].png" },
+      { "name": "Anurag Dharmadhikari", "post": "General Secretary", "imageUrl": "public/NewTeam/PRESIDENT VP GS/Anurag Dharmadhikari.jpg" },
       { "name": "Megha Mahajan", "post": "Treasurer", "imageUrl": "/team/TREASURER/Megha[T].png" }
     ]
   },
