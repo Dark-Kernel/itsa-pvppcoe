@@ -15,10 +15,11 @@
     ]
   },
   {
-    "title": "General Secretary & Treasurer",
+    "title": "General Secretary ,Treasurer  & Ladies Representative",
     "members": [
       { "name": "Anurag Dharmadhikari", "post": "General Secretary", "imageUrl": "/NewTeam/PRESIDENT VP GS/Anurag Dharmadhikari.jpg" },
-      { "name": "Kunal Gadekar", "post": "Treasurer", "imageUrl": "/NewTeam/TREASURER/Kunal Gadekar.jpg" }
+      { "name": "Kunal Gadekar", "post": "Treasurer", "imageUrl": "/NewTeam/TREASURER/Kunal Gadekar.jpg" },
+      { "name": "Sanika Shinde", "post": "Ladies Representative", "imageUrl": "/NewTeam/LR/Sanika Shinde.jpg" }
     ]
   },
   {
@@ -37,7 +38,8 @@
     "members": [
       { "name": "Aditya Ambure", "post": "Documentation Member", "imageUrl": "/NewTeam/DOCUMENTATION/Aditya Ambure.jpg" },
       { "name": "Pranita Dhandre", "post": "Documentation Member", "imageUrl": "/NewTeam/DOCUMENTATION/Pranita Dhandrejpg.jpg" },
-      { "name": "Saima Qadri", "post": "Documentation Member", "imageUrl": "/NewTeam/DOCUMENTATION/Saima Qadri.jpg" }
+      { "name": "Saima Qadri", "post": "Documentation Member", "imageUrl": "/NewTeam/DOCUMENTATION/Saima Qadri.jpg" },
+      { "name": "Riddhi Chavan", "post": "Documentation Member", "imageUrl": "/NewTeam/DOCUMENTATION/Riddhi Chavan.jpg" }
     ]
   },
   {
@@ -46,7 +48,8 @@
   "members": [
     { "name": "Gaurav Singh", "post": "Infra & Security Member", "imageUrl": "/NewTeam/INFRA_SECURITY/Gaurav Singh.jpg" },
     { "name": "Shreyas Singh", "post": "Infra & Security Member", "imageUrl": "/NewTeam/INFRA_SECURITY/Shreyas Singh.jpg" },
-    { "name": "Suraj Londhe", "post": "Infra & Security Member", "imageUrl": "/NewTeam/INFRA_SECURITY/Suraj Londhe.jpg" }
+    { "name": "Suraj Londhe", "post": "Infra & Security Member", "imageUrl": "/NewTeam/INFRA_SECURITY/Suraj Londhe.jpg" },
+    { "name": "Kartik Vengurlekar", "post": "Infra & Security Member", "imageUrl": "/NewTeam/INFRA_SECURITY/Kartik Vengurlekar.jpg" }
   ]
   },
   {
@@ -69,6 +72,23 @@
       { "name": "Lavanya More", "post": "Publicity Member", "imageUrl": "/NewTeam/PUBLICITY/Lavanya More.jpg" },
       { "name": "Vrunda Pawar", "post": "Publicity Member", "imageUrl": "/NewTeam/PUBLICITY/Vrunda Pawar.jpg" },
       { "name": "Avanish Kamble", "post": "Publicity Member", "imageUrl": "/NewTeam/PUBLICITY/Avanish Kamble.jpg" }
+    ]
+  },
+  {
+    "title": "Social Media  Team",
+    "leader": { "name": "Shruti Ozarkar", "post": "Social Media Head", "imageUrl": "/NewTeam/SOCIALMEDIA/Shruti Ozarkar.jpg" },
+    "members": [
+      { "name": "Sahil Khadekar", "post": "Social Media Member", "imageUrl": "/NewTeam/SOCIALMEDIA/Sahil Khadekar.jpg" },
+      { "name": "Harshal Khutwad", "post": "Social Media Member", "imageUrl": "/NewTeam/SOCIALMEDIA/Harshal Khutwad.jpg" },
+      { "name": "Shraddha Alibade", "post": "Social Media Member", "imageUrl": "/NewTeam/SOCIALMEDIA/Shraddha Alibade.jpg" }
+    ]
+  },
+  {
+    "title": "PRO  Team",
+    "leader": { "name": "Athrav Borate", "post": "PRO Head", "imageUrl": "/NewTeam/PRO/Athrav Borate.jpg" },
+    "members": [
+      { "name": "Girish Patil", "post": "Sponsorship Member", "imageUrl": "/NewTeam/PRO/Girish Patil.jpg" },
+      { "name": "Unmani Galande", "post": "Sponsorship Member", "imageUrl": "/NewTeam/PRO/Unmani Galande.jpg" }
     ]
   }
 ]
