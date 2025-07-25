@@ -15,14 +15,19 @@
     ]
   },
   {
-    "title": "General Secretary  , Treasurer ,  Techincal Mentor  &  LR",
+    "title": "General Secretary    &    Treasurer ",
     "members": [
       { "name": "Anurag Dharmadhikari", "post": "General Secretary", "imageUrl": "/NewTeam/PRESIDENT VP GS/Anurag Dharmadhikari.jpg" },
-      { "name": "Kunal Gadekar", "post": "Treasurer", "imageUrl": "/NewTeam/TREASURER/Kunal Gadekar.jpg" },
+      { "name": "Kunal Gadekar", "post": "Treasurer", "imageUrl": "/NewTeam/TREASURER/Kunal Gadekar.jpg" }
+    ]
+  },
+  {
+    "title": "  Techincal Mentor       &       Ladies Representative ",
+    "members": [
       { "name": "Sumit Patel", "post": "Technical Mentor", "imageUrl": "/NewTeam/TECHNICAL MENTOR/Sumit Patel.jpg" },
       { "name": "Sanika Shinde", "post": "Ladies Representative", "imageUrl": "/NewTeam/LR/Sanika Shinde.jpg" }
     ]
-  },
+  }, 
   {
     "title": "TECHNICAL Team",
     "leader": { "name": "Vedant Yadav", "post": "Technical Head", "imageUrl": "/NewTeam/TECHNICAL/Vedant Yadav.jpg" },
@@ -79,17 +84,17 @@
     "title": "Social Media  Team",
     "leader": { "name": "Shruti Ozarkar", "post": "Social Media Head", "imageUrl": "/NewTeam/SOCIALMEDIA/Shruti Ozarkar.jpg" },
     "members": [
-      { "name": "Sahil Khadekar", "post": "Social Media Member", "imageUrl": "/NewTeam/SOCIALMEDIA/Sahil Khadekar.jpg" },
+      { "name": "Sahil Khedekar", "post": "Social Media Member", "imageUrl": "/NewTeam/SOCIALMEDIA/Sahil Khadekar.jpg" },
       { "name": "Harshal Khutwad", "post": "Social Media Member", "imageUrl": "/NewTeam/SOCIALMEDIA/Harshal Khutwad.jpg" },
       { "name": "Shraddha Alibade", "post": "Social Media Member", "imageUrl": "/NewTeam/SOCIALMEDIA/Shraddha Alibade.jpg" }
     ]
   },
   {
     "title": "PRO  Team",
-    "leader": { "name": "Athrav Borate", "post": "PRO Head", "imageUrl": "/NewTeam/PRO/Athrav Borate.jpg" },
+    "leader": { "name": "Atharv Borate", "post": "P.R.O ", "imageUrl": "/NewTeam/PRO/Athrav Borate.jpg" },
     "members": [
-      { "name": "Girish Patil", "post": "Sponsorship Member", "imageUrl": "/NewTeam/PRO/Girish Patil.jpg" },
-      { "name": "Unmani Galande", "post": "Sponsorship Member", "imageUrl": "/NewTeam/PRO/Unmani Galande.jpg" }
+      { "name": "Girish Patil", "post": "P.R.O Member", "imageUrl": "/NewTeam/PRO/Girish Patil.jpg" },
+      { "name": "Unmani Galande", "post": "P.R.O Member", "imageUrl": "/NewTeam/PRO/Unmani Galande.jpg" }
     ]
   }
 ]
