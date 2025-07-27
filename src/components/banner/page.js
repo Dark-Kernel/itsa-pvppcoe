@@ -141,7 +141,7 @@ const Banner = () => {
 
         {/* techgyanathon banner component call */}
         <hr />
-        <TG_banner />
+      {/* <TG_banner /> */}
 
         {/* Newsletter component call */}
         <hr />
