@@ -61,7 +61,7 @@ const Banner = () => {
 
   return (
     <section className="pt-[100px] lg:pt-[120px] bg-[url('/img/banner-bg-extended-vertical.png')] bg-top bg-cover bg-no-repeat" id="home">
-      <ITSAregistration />
+      {/* <ITSAregistration /> */}
       <div className="container mx-auto px-4">
         
         <div className="flex flex-wrap items-center">

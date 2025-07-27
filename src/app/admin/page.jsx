@@ -8,20 +8,25 @@ export default function AdminPage() {
   const [checkValue, setCheckValue] = useState('');
   const [checkResult, setCheckResult] = useState(null);
 
-  const handleGenerate = async () => {
-    const res = await axios.post('/api/admin/createCode');
-    setNewCode(res.data.code);
-  };
-
   const handleCheck = async () => {
-    const res = await axios.post('/api/admin/checkCode', { value: checkValue });
-    setCheckResult(res.data.valid ? '✅ Valid Code' : '❌ Invalid Code');
+    const res = await axios.post('/api/certificateValidator', {
+      key: checkValue,
+    });
+    let data = res.data.data
+      console.log(res)
+    if(res.data.valid) {
+        setCheckResult('✅ Valid Code: ' + data.name);
+    }
+    else {
+        setCheckResult('❌ Invalid Code');
+    }
   };
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-[#0e0e0e] text-white p-6">
-      <h1 className="text-3xl font-bold mb-6">Admin Panel</h1>
+      <h1 className="text-3xl font-bold mb-6">Certificates Validator</h1>
 
+      {/*
       <button
         onClick={handleGenerate}
         className="bg-green-600 px-4 py-2 rounded hover:bg-green-500 transition"
@@ -34,6 +39,7 @@ export default function AdminPage() {
           Generated Code: <span className="underline">{newCode}</span>
         </div>
       )}
+      */}
 
       <div className="mt-10 w-full max-w-sm">
         <input
@@ -52,6 +58,13 @@ export default function AdminPage() {
           <p className="mt-2 text-center font-semibold">{checkResult}</p>
         )}
       </div>
+
+
+
+
+
+
+
     </div>
   );
 }
