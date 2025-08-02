@@ -32,9 +32,10 @@
     "title": "TECHNICAL Team",
     "leader": { "name": "Vedant Yadav", "post": "Technical Head", "imageUrl": "/NewTeam/TECHNICAL/Vedant Yadav.jpg" },
     "members": [
-  { "name": "Lokesh Konka", "post": "Technical Member", "imageUrl": "/NewTeam/TECHNICAL/lokesh konka.png" },
-  { "name": "Mihir Sawant", "post": "Technical Member", "imageUrl": "/NewTeam/TECHNICAL/Mihir Sawant.jpg" }
-]
+      { "name": "Mihir Sawant", "post": "Technical Member", "imageUrl": "/NewTeam/TECHNICAL/Mihir Sawant.jpg" },
+      { "name": "Lokesh Konka", "post": "Technical Member", "imageUrl": "/NewTeam/TECHNICAL/lokesh konka.png" },
+      { "name": "Laksh Singh", "post": "Technical Member", "imageUrl": "/NewTeam/TECHNICAL/laksh Singh.jpg" }
+    ]
 
   },
   {
