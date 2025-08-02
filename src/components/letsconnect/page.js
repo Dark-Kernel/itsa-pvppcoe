@@ -20,7 +20,7 @@ const LetsConnect = () => {
             logo: '/img/ISTE.jpg',
             name: 'Indian Society for Technical Education',
             abbreviation: 'ISTE',
-            coordinator: 'Prof. Pravin Patil'
+            coordinator: 'Dr. Sonali Pakhmode'
         },
         {
             logo: '/img/IACC.jpg',
