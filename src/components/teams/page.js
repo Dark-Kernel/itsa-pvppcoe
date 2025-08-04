@@ -11,7 +11,7 @@ const MemberCard = ({ name, post, imageUrl }) => (
   <div className={`group text-foreground rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 w-full h-full flex flex-col ${name === "Girish Patil" ? "bg-background hover:bg-[linear-gradient(to_bottom,#ff0000,#ff7f00,#ffff00,#00ff00,#0000ff,#4b0082,#8b00ff)]" : "bg-background"}`}>
 
   // ACTUAL CODE TO BE UNCOMMENT AT PRESENT 
-  // <div className="bg-background text-foreground rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 w-full h-full flex flex-col">
+{/*<div className="bg-background text-foreground rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 w-full h-full flex flex-col">*/}
     <div className="p-4 lg:p-6 flex-grow flex flex-col justify-between">
       <div>
         <Image src={imageUrl || "/api/placeholder/150/150"}
