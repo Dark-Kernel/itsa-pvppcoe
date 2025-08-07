@@ -1,6 +1,6 @@
-# 💡 ITSA-PVPPCOE 2024-25 Website  
+# 💡 ITSA-PVPPCOE 2025-26 Website  
 🚀 *Official Website of the Information Technology Students’ Association 2024-25*  
-The **ITSA-PVPPCOE 2024-25** website is built using **Next.js** and **React.js**, designed to showcase upcoming and past events conducted by the Information Technology Students’ Association at **PVPPCOE**. It provides a platform for students to stay informed about all technical and non-technical activities hosted throughout the academic year.
+The **ITSA-PVPPCOE 2025-26** website is built using **Next.js** and **React.js**, designed to showcase upcoming and past events conducted by the Information Technology Students’ Association at **PVPPCOE**. It provides a platform for students to stay informed about all technical and non-technical activities hosted throughout the academic year.
 
 ---
 
@@ -24,9 +24,7 @@ The **ITSA-PVPPCOE 2024-25** website is built using **Next.js** and **React.js**
 ---
 
 ## 👥 Collaborators
-- [Sumit Patel](https://github.com/Dark-Kernel)  
-- [Yash Dhavde](https://github.com/YashD15)  
-- [Varad Khandare](https://github.com/Varad11220)   
+- [Sumit Patel](https://github.com/Dark-Kernel)   
 
 ---
 
