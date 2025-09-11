@@ -10,6 +10,7 @@ import UpcomingEvents from '../../components/upcomingevent/page';
 import TG_banner from '../../components/techgyanathonbanner/page';
 // NEWSLETTER COMPONENT
 import Newsletter from '../../components/newsletter/page';
+import UttarakhandIv from '../../components/uttarakhandIv/page';
 // REGISTRATION BANNER
 import ITSAregistration from "../registerBanner/page";
 
@@ -145,7 +146,9 @@ const Banner = () => {
 
         {/* Newsletter component call */}
         <hr />
-        <Newsletter />
+      {/* <Newsletter /> */}
+      <UttarakhandIv/>
+
 
     </section>
   );
