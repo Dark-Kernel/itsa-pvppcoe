@@ -1,5 +1,27 @@
 {
     "events": [
+         {
+            "title": "Query Jaal",
+            "date": "26 Sept 2025",
+            "image": "/posters/QueryJaal.jpg",
+            "time": "2:00 PM",
+            "fhsh": "SH-2025",
+            "description": "Group of technical events held by ITSA committee",
+            "instagramLink": "https://www.instagram.com/reel/DOwAsiJiJT3/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+            "report": "",
+            "registerLink": "https://query-jaal.vercel.app"
+        },
+           {
+            "title": "Ideathon",
+            "date": "13 Sept 2025",
+            "image": "/posters/Ideathon.jpg",
+            "time": "9:00 AM",
+            "fhsh": "SH-2025",
+            "description": "Group of technical events held by ITSA committee",
+            "instagramLink": "https://www.instagram.com/reel/DOpzakJCDV6/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+            "report": "",
+            "registerLink": "https://itsa-ideathon.vercel.app"
+        },
         {
             "title": "Techvolution",
             "date": "1 August 2025",
