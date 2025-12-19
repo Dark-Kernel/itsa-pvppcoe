@@ -1,6 +1,6 @@
 "use client"
 import React, { useState, useEffect } from "react"
-import { ChevronDown, Instagram } from "lucide-react"
+import { Calendar, Clock, Instagram, FileText, BoxArrowUpRight, Filter, Terminal } from "react-bootstrap-icons"
 import PDFModal from "../../components/PDFModal/page"
 import Image from "next/image"
 
@@ -9,25 +9,62 @@ const EventCard = ({ image, title, date, time, fhsh, instagramLink, report, desc
 
     return (
         <>
-            <div className="bg-white border-2 border-solid border-color7 text-foreground rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl flex flex-col h-full">
-                <Image width={500} height={500} src={image} alt={title} className="w-full h-50 object-cover" />
-                <div className="p-4 flex flex-col flex-grow">
-                    <h3 className="text-xl font-semibold mb-1 text-gray-600">{title}</h3>
-                    <p className="text-gray-600 font-semibold mb-2">
-                        {date} <span className="font-normal">({fhsh})</span>
-                    </p>
-                    <div className="mt-auto flex justify-between items-center">
-                        <span className="text-gray-500 font-semibold text-sm">{time}</span>
-                        <div className="flex items-center space-x-2">
+            <div className="tech-card group relative overflow-hidden h-full flex flex-col">
+                {/* Event Image with Overlay */}
+                <div className="relative h-48 overflow-hidden">
+                    <Image 
+                        width={500} 
+                        height={500} 
+                        src={image} 
+                        alt={title} 
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" 
+                    />
+                    {/* Dark overlay with gradient */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-tech-black/80 via-transparent to-transparent"></div>
+                    
+                    {/* Event Badge */}
+                    <div className="absolute top-4 right-4 px-3 py-1 bg-tech-blue/90 backdrop-blur-sm rounded-full">
+                        <span className="text-white font-mono text-xs">{fhsh}</span>
+                    </div>
+                    
+                    {/* Tech corner accent */}
+                    <div className="absolute bottom-0 left-0 w-8 h-8 bg-tech-gradient-primary opacity-70"></div>
+                </div>
+
+                {/* Content */}
+                <div className="p-6 flex flex-col flex-grow">
+                    {/* Title */}
+                    <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-tech-blue transition-colors duration-300">
+                        {title}
+                    </h3>
+
+                    {/* Event Details */}
+                    <div className="space-y-2 mb-6">
+                        <div className="flex items-center text-gray-400">
+                            <Calendar size={16} className="mr-2 text-tech-green" />
+                            <span className="text-sm">{date}</span>
+                        </div>
+                        <div className="flex items-center text-gray-400">
+                            <Clock size={16} className="mr-2 text-tech-purple" />
+                            <span className="text-sm">{time}</span>
+                        </div>
+                    </div>
+
+                    {/* Action Buttons */}
+                    <div className="mt-auto space-y-3">
+                        <div className="flex items-center justify-between">
+                            {/* Social Link */}
                             <a
                                 href={instagramLink}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center justify-center bg-pink-500 text-white w-8 h-8 rounded-lg hover:bg-pink-600 transition"
+                                className="flex items-center justify-center w-10 h-10 bg-tech-dark border border-pink-500/30 rounded-lg hover:border-pink-500 transition-all duration-300 hover:shadow-glow-purple group/social"
                                 aria-label="Instagram"
                             >
-                                <Instagram size={20} />
+                                <Instagram size={18} className="text-gray-400 group-hover/social:text-pink-500 transition-colors duration-300" />
                             </a>
+
+                            {/* Read More Button */}
                             <button
                                 onClick={() => {
                                     if (report === "") {
@@ -36,23 +73,25 @@ const EventCard = ({ image, title, date, time, fhsh, instagramLink, report, desc
                                     }
                                     setIsModalOpen(true)
                                 }}
-                                className="bg-blue-500 text-white px-3 py-2 text-sm rounded hover:bg-blue-600 transition"
+                                className="flex items-center space-x-2 bg-tech-dark border border-tech-blue/30 text-white px-4 py-2 text-sm rounded-lg hover:border-tech-blue transition-all duration-300 hover:shadow-glow-blue"
                             >
-                                📄Read More
+                                <FileText size={16} />
+                                <span>Report</span>
                             </button>
+                        </div>
 
-                            {registerLink &&
+                        {/* Register Button */}
+                        {registerLink && (
                             <a
                                 href={registerLink}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="bg-green-500 text-white px-3 py-2 text-sm rounded hover:bg-green-600 transition"
+                                className="w-full flex items-center justify-center space-x-2 bg-tech-green/20 border border-tech-green/30 text-tech-green px-4 py-2 text-sm rounded-lg hover:border-tech-green hover:bg-tech-green hover:text-tech-black transition-all duration-300 font-semibold"
                             >
-                                Register
+                                <span>Register Now</span>
+                                <BoxArrowUpRight size={14} />
                             </a>
-                            }
-
-                        </div>
+                        )}
                     </div>
                 </div>
             </div>
@@ -86,86 +125,105 @@ const EventsPage = () => {
         fetchEvents()
     }, [])
 
-    const months = [
-        "Sort By",
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December",
-    ]
-
     const filteredEvents = events.filter((event) => {
         if (selectedFilter === "All") return true
-        if (selectedFilter === "Sort By") return true
         if (selectedFilter === "FH-2024" || selectedFilter === "SH-2024" || selectedFilter === "FH-2025") {
             return event.fhsh === selectedFilter
         }
-        const eventMonth = new Date(event.date).toLocaleString("default", { month: "long" })
-        return eventMonth === selectedFilter
+        return true
     })
 
+    const filterOptions = [
+        { key: "All", label: "All Events" },
+        { key: "FH-2025", label: "FH-2025" },
+        { key: "SH-2024", label: "SH-2024" },
+        { key: "FH-2024", label: "FH-2024" }
+    ];
+
     return (
-        <div className="min-h-screen bg-transparent p-4 sm:p-8 bg-[url('/img/banner-bg-extended-vertical.png')]">
-            <div className="max-w-6xl mx-auto pt-[4.5rem]">
-                <div className="flex flex-col space-y-2 sm:flex-row sm:justify-between sm:items-center mb-1 lg:mb-4">
-                    <h1 className="text-2xl lg:text-4xl font-bold font-sans text-white">✨ITSA 2024-25✨: Events</h1>
-                    <div className="grid grid-cols-2 gap-2 lg:flex lg:flex-row lg:space-y-0 lg:space-x-4 text-white bg-backround">
-                        <button
-                            className={`lg:px-4 lg:py-2 p-2 rounded transition ${selectedFilter === "All" ? "bg-gray-300 text-gray-900 font-bold" : "bg-gray-200 text-gray-600 hover:bg-gray-300"}`}
-                            onClick={() => setSelectedFilter("All")}
-                        >All</button>
-                        <button
-                            className={`lg:px-4 lg:py-2 p-2 rounded transition ${selectedFilter === "FH-2025" ? "bg-gray-300 text-gray-900 font-bold" : "bg-gray-200 text-gray-600 hover:bg-gray-300"}`}
-                            onClick={() => setSelectedFilter("FH-2025")}
-                        >
-                            FH-2025
-                        </button>
-                        <button
-                            className={`lg:px-4 lg:py-2 p-2 rounded transition ${selectedFilter === "SH-2024" ? "bg-gray-300 text-gray-900 font-bold" : "bg-gray-200 text-gray-600 hover:bg-gray-300"}`}
-                            onClick={() => setSelectedFilter("SH-2024")}
-                        >
-                            SH-2024
-                        </button>
-                        <button
-                            className={`lg:px-4 lg:py-2 p-2 rounded transition ${selectedFilter === "FH-2024" ? "bg-gray-300 text-gray-900 font-bold" : "bg-gray-200 text-gray-600 hover:bg-gray-300"}`}
-                            onClick={() => setSelectedFilter("FH-2024")}
-                        >
-                            FH-2024
-                        </button>
-                        {/* SORT BY MONTH UI CODE */}
-                        {/* <div className="relative">
-              <select
-                className="w-full sm:w-auto appearance-none bg-gray-200 text-gray-600 rounded lg:px-4 lg:pr-6 lg:py-2 p-2 pr-8 hover:bg-gray-300 transition"
-                value={selectedFilter}
-                onChange={(e) => setSelectedFilter(e.target.value)}
-              >
-                {months.map((month) => (
-                  <option key={month} value={month}>
-                    {month}
-                  </option>
-                ))}
-              </select>
-              <ChevronDown
-                className="absolute text-black right-2 top-1/2 transform -translate-y-1/2 pointer-events-none"
-                size={20}
-              />
-            </div> */}
+        <div className="min-h-screen bg-gradient-to-br from-tech-black via-tech-dark to-tech-gray pt-24 lg:pt-32 py-16 px-4">
+            {/* Background Pattern */}
+            <div 
+                className="absolute inset-0 opacity-5"
+                style={{
+                    backgroundImage: `
+                        linear-gradient(rgba(0, 210, 255, 0.1) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(0, 210, 255, 0.1) 1px, transparent 1px)
+                    `,
+                    backgroundSize: '100px 100px'
+                }}
+            ></div>
+
+            <div className="max-w-7xl mx-auto relative z-10">
+                {/* Page Header */}
+                <div className="text-center mb-12">
+                    <div className="inline-flex items-center space-x-2 mb-6 px-4 py-2 rounded-lg bg-tech-dark/50 border border-tech-blue/30 backdrop-blur-sm">
+                        <Terminal className="text-tech-green" size={16} />
+                        <span className="font-mono text-tech-green text-sm">itsa@events:</span>
+                        <span className="font-mono text-white text-sm">$ ls -la events_2024-25/</span>
+                    </div>
+
+                    <h1 className="text-4xl md:text-6xl font-bold mb-4">
+                        <span className="text-white">ITSA </span>
+                        <span className="tech-text-gradient">Events</span>
+                    </h1>
+                    <p className="text-gray-400 text-lg">2024-25 Event Archive</p>
+                </div>
+
+                {/* Filter Section */}
+                <div className="mb-12">
+                    <div className="flex items-center justify-center mb-6">
+                        <div className="inline-flex items-center space-x-2 px-3 py-2 rounded-lg bg-tech-dark/30 border border-tech-purple/30">
+                            <Filter className="text-tech-purple" size={16} />
+                            <span className="font-mono text-tech-purple text-sm">Filter Events</span>
+                        </div>
+                    </div>
+
+                    <div className="flex flex-wrap justify-center gap-4">
+                        {filterOptions.map((option) => (
+                            <button
+                                key={option.key}
+                                className={`px-6 py-2 rounded-lg font-semibold transition-all duration-300 ${
+                                    selectedFilter === option.key
+                                        ? "bg-tech-blue text-tech-black border border-tech-blue shadow-glow-blue"
+                                        : "bg-tech-dark/50 text-gray-400 border border-tech-blue/30 hover:border-tech-blue hover:text-tech-blue"
+                                }`}
+                                onClick={() => setSelectedFilter(option.key)}
+                            >
+                                {option.label}
+                            </button>
+                        ))}
                     </div>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+
+                {/* Events Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {filteredEvents.map((event, index) => (
-                        <div key={index} className="p-2 sm:p-0">
-                            <EventCard {...event} />
-                        </div>
+                        <EventCard key={index} {...event} />
                     ))}
+                </div>
+
+                {/* Empty State */}
+                {filteredEvents.length === 0 && (
+                    <div className="text-center py-16">
+                        <div className="tech-card max-w-md mx-auto">
+                            <Terminal className="text-gray-500 mx-auto mb-4" size={48} />
+                            <h3 className="text-xl font-semibold text-white mb-2">No Events Found</h3>
+                            <p className="text-gray-400">Try adjusting your filter criteria.</p>
+                        </div>
+                    </div>
+                )}
+
+                {/* Stats Footer */}
+                <div className="mt-16 text-center">
+                    <div className="inline-flex items-center space-x-4 px-6 py-3 rounded-lg bg-tech-dark/30 border border-tech-green/30">
+                        <span className="font-mono text-tech-green text-sm">
+                            Total Events: {events.length}
+                        </span>
+                        <span className="font-mono text-tech-blue text-sm">
+                            Filtered: {filteredEvents.length}
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>

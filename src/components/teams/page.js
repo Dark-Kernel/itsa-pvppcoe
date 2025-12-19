@@ -3,37 +3,61 @@
 
 import Image from 'next/image'
 import { useState, useEffect } from "react";
+import { Terminal, Github, Linkedin, Twitter, People, Star } from 'react-bootstrap-icons';
 
 const MemberCard = ({ name, post, imageUrl }) => (
-
-  // ACTUAL CODE TO BE UNCOMMENT AT PRESENT 
-<div className="bg-background text-foreground rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 w-full h-full flex flex-col">
-    <div className="p-4 lg:p-6 flex-grow flex flex-col justify-between">
-      <div>
-        <Image src={imageUrl || "/api/placeholder/150/150"}
-          width={500}
-      height={500}
-          alt={name}
-          className="w-20 h-20 sm:w-24 sm:h-24 lg:w-32 lg:h-32 xl:w-40 xl:h-40 mx-auto rounded-full object-cover object-top border-4 border-blue-500"
-        />
-        <h3 className="mt-2 sm:mt-4 lg:mt-6 text-base sm:text-lg lg:text-xl xl:text-2xl font-semibold text-white text-center line-clamp-2">
-          {name}
-        </h3>
+  <div className="tech-card group relative overflow-hidden">
+    {/* Glowing border effect */}
+    <div className="absolute inset-0 bg-tech-gradient-primary opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-lg"></div>
+    
+    <div className="relative p-6 flex flex-col h-full">
+      {/* Profile Image with tech styling */}
+      <div className="relative mb-4">
+        <div className="relative w-24 h-24 lg:w-32 lg:h-32 mx-auto">
+          <Image 
+            src={imageUrl || "/api/placeholder/150/150"}
+            width={150}
+            height={150}
+            alt={name}
+            className="w-full h-full rounded-full object-cover object-top border-2 border-tech-blue/50 group-hover:border-tech-blue transition-colors duration-300"
+          />
+          {/* Tech ring around image */}
+          <div className="absolute inset-0 rounded-full border-2 border-transparent group-hover:border-tech-cyan animate-pulse"></div>
+        </div>
+        
+        {/* Online indicator */}
+        <div className="absolute bottom-2 right-1/2 transform translate-x-6 lg:translate-x-8">
+          <div className="w-4 h-4 bg-tech-green rounded-full border-2 border-tech-dark animate-pulse"></div>
+        </div>
       </div>
-      <p className="text-blue-400 text-center text-xs sm:text-sm lg:text-base xl:text-lg mt-2 lg:mt-4">
-        {post}
-      </p>
-    </div>
-    <div className="bg-blue-500 p-2 lg:p-3 mt-auto">
-      <div className="flex justify-center space-x-2 lg:space-x-4">
-        {["github", "linkedin", "twitter"].map((social) => (
-          <span
-            key={social}
-            className="text-white hover:text-gray-200 cursor-pointer text-xs sm:text-sm lg:text-base xl:text-lg"
-          >
-            <i className={`fab fa-${social}`}></i>
-          </span>
-        ))}
+
+      {/* Member Info */}
+      <div className="text-center flex-grow flex flex-col justify-between">
+        <div>
+          <h3 className="text-lg lg:text-xl font-semibold text-white mb-2 group-hover:text-tech-blue transition-colors duration-300">
+            {name}
+          </h3>
+          <p className="text-tech-cyan text-sm lg:text-base font-mono mb-4">
+            {post}
+          </p>
+        </div>
+
+        {/* Social Links */}
+        <div className="flex justify-center space-x-3 mt-auto pt-4">
+          {[
+            { icon: Github, href: "#", color: "tech-blue" },
+            { icon: Linkedin, href: "#", color: "tech-purple" },
+            { icon: Twitter, href: "#", color: "tech-green" }
+          ].map((social, index) => (
+            <a
+              key={index}
+              href={social.href}
+              className="w-8 h-8 bg-tech-dark border border-tech-blue/30 rounded-lg flex items-center justify-center hover:border-tech-blue transition-all duration-300 hover:shadow-glow-blue"
+            >
+              <social.icon size={14} className="text-gray-400 hover:text-tech-blue transition-colors duration-300" />
+            </a>
+          ))}
+        </div>
       </div>
     </div>
   </div>
@@ -41,23 +65,40 @@ const MemberCard = ({ name, post, imageUrl }) => (
 
 const TeamSection = ({ title, leader, members }) => {
   return (
-    <div className="mb-8 sm:mb-12 lg:mb-16">
-      <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-white mb-4 sm:mb-6 lg:mb-4 text-center">
-        {title}
-      </h2>
-      <div className="flex flex-wrap justify-center -mx-2 lg:-mx-4">
-        {leader && (
-          <div className="w-full px-2 lg:px-4 mb-4 lg:mb-8">
-            <div className="max-w-xs sm:max-w-sm lg:max-w-md xl:max-w-lg mx-auto">
-              <MemberCard {...leader} />
+    <div className="mb-12 lg:mb-16">
+      {/* Section Header */}
+      <div className="text-center mb-8">
+        <div className="inline-flex items-center space-x-2 mb-4 px-4 py-2 rounded-lg bg-tech-dark/50 border border-tech-blue/30 backdrop-blur-sm">
+          <People className="text-tech-green" size={16} />
+          <span className="font-mono text-tech-green text-sm">[TEAM]</span>
+          <span className="font-mono text-white text-sm">{title.toUpperCase()}</span>
+        </div>
+        
+        <h2 className="text-2xl lg:text-4xl font-bold tech-text-gradient mb-2">
+          {title}
+        </h2>
+        <div className="w-20 h-1 bg-tech-gradient-primary mx-auto"></div>
+      </div>
+
+      {/* Team Leader */}
+      {leader && (
+        <div className="mb-8">
+          <div className="text-center mb-6">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-tech-blue/20 border border-tech-blue/50">
+              <Star className="text-tech-yellow" size={14} />
+              <span className="text-tech-yellow font-mono text-xs">TEAM LEAD</span>
             </div>
           </div>
-        )}
+          <div className="max-w-xs mx-auto">
+            <MemberCard {...leader} />
+          </div>
+        </div>
+      )}
+
+      {/* Team Members Grid */}
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
         {members.map((member, index) => (
-          <div
-            key={index}
-            className="w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 px-2 lg:px-4 mb-4 lg:mb-8"
-          >
+          <div key={index}>
             <MemberCard {...member} />
           </div>
         ))}
@@ -68,14 +109,45 @@ const TeamSection = ({ title, leader, members }) => {
 
 const TeamGrid = ({ teams }) => {
   return (
-    <div className="min-h-screen bg-gray-900 py-4 sm:py-8 lg:py-16 px-4 sm:px-6 lg:px-8 pt-[100px] bg-[url('/img/banner-bg-extended-vertical.png')]">
-      <div className="max-w-7xl mx-auto lg:pt-[3rem]">
-        <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-white text-center mb-2 sm:mb-2 lg:mb-4">
-          ITSA Team 2025-26
-        </h1>
-        <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-extrabold text-white text-center mb-4 sm:mb-8 lg:mb-8">
-          Meet our Team
-        </h2>
+    <div className="min-h-screen bg-gradient-to-br from-tech-black via-tech-dark to-tech-gray pt-24 lg:pt-32 py-16 px-4">
+      {/* Background Pattern */}
+      <div 
+        className="absolute inset-0 opacity-5"
+        style={{
+          backgroundImage: `
+            linear-gradient(rgba(0, 210, 255, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0, 210, 255, 0.1) 1px, transparent 1px)
+          `,
+          backgroundSize: '100px 100px'
+        }}
+      ></div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
+        {/* Page Header */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center space-x-2 mb-6 px-4 py-2 rounded-lg bg-tech-dark/50 border border-tech-blue/30 backdrop-blur-sm">
+            <Terminal className="text-tech-green" size={16} />
+            <span className="font-mono text-tech-green text-sm">itsa@teams:</span>
+            <span className="font-mono text-white text-sm">$ ls -la team_2025-26/</span>
+          </div>
+
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+            <span className="text-white">ITSA </span>
+            <span className="tech-text-gradient">Team</span>
+          </h1>
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-400 mb-6">
+            2025-26
+          </h2>
+          
+          <div className="max-w-2xl mx-auto">
+            <p className="text-gray-300 text-lg leading-relaxed">
+              <span className="text-tech-blue font-mono">{'//'} </span>
+              Meet our exceptional team of innovators, developers, and leaders who drive ITSA forward.
+            </p>
+          </div>
+        </div>
+
+        {/* Teams Sections */}
         {teams.map((team, index) => (
           <TeamSection key={index} {...team} />
         ))}
@@ -98,9 +170,9 @@ const TeamPage = () => {
         }
         const data = await response.json();
         setTeams(data);
-        setLoading(false);
-      } catch (error) {
-        setError(error.message);
+      } catch (err) {
+        setError(err.message);
+      } finally {
         setLoading(false);
       }
     };
@@ -109,11 +181,29 @@ const TeamPage = () => {
   }, []);
 
   if (loading) {
-    return <div className="text-white text-center">Loading...</div>;
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-tech-black via-tech-dark to-tech-gray flex items-center justify-center">
+        <div className="text-center">
+          <div className="inline-flex items-center space-x-2 mb-4 px-4 py-2 rounded-lg bg-tech-dark/50 border border-tech-blue/30 backdrop-blur-sm">
+            <Terminal className="text-tech-green animate-pulse" size={16} />
+            <span className="font-mono text-tech-green text-sm">Loading teams...</span>
+          </div>
+          <div className="w-12 h-1 bg-tech-gradient-primary rounded-full animate-pulse"></div>
+        </div>
+      </div>
+    );
   }
 
   if (error) {
-    return <div className="text-red-500 text-center">Error: {error}</div>;
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-tech-black via-tech-dark to-tech-gray flex items-center justify-center">
+        <div className="text-center tech-card max-w-md mx-4">
+          <Terminal className="text-red-500 mx-auto mb-4" size={48} />
+          <h2 className="text-xl font-semibold text-white mb-2">Error Loading Teams</h2>
+          <p className="text-gray-400">{error}</p>
+        </div>
+      </div>
+    );
   }
 
   return <TeamGrid teams={teams} />;
