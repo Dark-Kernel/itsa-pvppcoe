@@ -25,36 +25,33 @@ const Banner = () => {
   const period = 2000;
 
 
-  const tick = () => {
-    let i = loopNum % toRotate.length;
-    let fullText = toRotate[i];
-    let updatedText = isDeleting
-      ? fullText.substring(0, text.length - 1)
-      : fullText.substring(0, text.length + 1);
-
-    setText(updatedText);
-
-    if (isDeleting) {
-      setDelta((prevDelta) => prevDelta / 2);
-    }
-
-    if (!isDeleting && updatedText === fullText) {
-      setIsDeleting(true);
-      setDelta(period);
-    } else if (isDeleting && updatedText === '') {
-      setIsDeleting(false);
-      setLoopNum(loopNum + 1);
-      setDelta(500);
-    }
-  };
-
   useEffect(() => {
-    const ticker = setInterval(() => {
-      tick();
-    }, delta);
+    const tick = () => {
+      let i = loopNum % toRotate.length;
+      let fullText = toRotate[i];
+      let updatedText = isDeleting
+        ? fullText.substring(0, text.length - 1)
+        : fullText.substring(0, text.length + 1);
 
+      setText(updatedText);
+
+      if (isDeleting) {
+        setDelta((prevDelta) => prevDelta / 2);
+      }
+
+      if (!isDeleting && updatedText === fullText) {
+        setIsDeleting(true);
+        setDelta(period);
+      } else if (isDeleting && updatedText === '') {
+        setIsDeleting(false);
+        setLoopNum(loopNum + 1);
+        setDelta(500);
+      }
+    };
+
+    const ticker = setInterval(tick, delta);
     return () => clearInterval(ticker);
-  }, [text, delta, tick]);
+  }, [text, delta, loopNum, isDeleting, toRotate, period]);
   return (
     <section 
       className="relative min-h-screen pt-24 lg:pt-32 overflow-hidden bg-gradient-to-br from-tech-black via-tech-dark to-tech-gray" 
@@ -114,12 +111,15 @@ const Banner = () => {
                     <span className="tech-text-gradient">ITSA</span>
                     <br />
                     <div className="flex items-center">
-                      <span className="text-white">Tech </span>
-                      <span
-                        className="ml-4 text-tech-cyan border-r-2 border-tech-cyan animate-pulse"
-                        style={{ minWidth: '200px' }}
-                      >
-                        {text}
+                      <span className="text-white font-normal">Tech </span>
+                      <span className="ml-4 text-tech-cyan font-normal relative inline-block" style={{ width: '220px', height: '1.2em' }}>
+                        <span className="absolute left-0 top-0 font-normal">{text}</span>
+                        <span 
+                          className="text-tech-cyan absolute font-normal animate-pulse" 
+                          style={{ left: `${text.length * 0.6}em`, top: '0' }}
+                        >
+                          |
+                        </span>
                       </span>
                     </div>
                   </h1>

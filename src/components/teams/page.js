@@ -6,7 +6,9 @@ import { useState, useEffect } from "react";
 import { Terminal, Github, Linkedin, Twitter, People, Star } from 'react-bootstrap-icons';
 
 const MemberCard = ({ name, post, imageUrl }) => (
-  <div className="tech-card group relative overflow-hidden">
+  // <div className="tech-card group relative overflow-hidden">
+    <div className="tech-card group relative overflow-hidden mx-auto w-full max-w-xs">
+
     {/* Glowing border effect */}
     <div className="absolute inset-0 bg-tech-gradient-primary opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-lg"></div>
     
@@ -83,7 +85,7 @@ const TeamSection = ({ title, leader, members }) => {
       {/* Team Leader */}
       {leader && (
         <div className="mb-8">
-          <div className="text-center mb-6">
+          <div className="text-center mb-6 justify-center">
             <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-tech-blue/20 border border-tech-blue/50">
               <Star className="text-tech-yellow" size={14} />
               <span className="text-tech-yellow font-mono text-xs">TEAM LEAD</span>
@@ -96,12 +98,14 @@ const TeamSection = ({ title, leader, members }) => {
       )}
 
       {/* Team Members Grid */}
+      <div className="flex justify-center">
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
         {members.map((member, index) => (
           <div key={index}>
             <MemberCard {...member} />
           </div>
         ))}
+      </div>
       </div>
     </div>
   );

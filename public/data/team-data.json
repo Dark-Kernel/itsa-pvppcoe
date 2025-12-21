@@ -11,21 +11,21 @@
     "members": [
       { "name": "Aniket Paste", "post": "President", "imageUrl": "/NewTeam/PRESIDENT VP GS/Aniket Paste.jpg" },
       { "name": "Prachi Pokhare", "post": "Vice President", "imageUrl": "/NewTeam/PRESIDENT VP GS/Prachi Pokhare.jpg" },
-      { "name": "Devesh Naik", "post": "Vice President", "imageUrl": "/NewTeam/PRESIDENT VP GS/Devesh Naik.jpg" }
+      { "name": "Devesh Naik", "post": "Vice President", "imageUrl": "/NewTeam/PRESIDENT VP GS/Devesh Naik.jpg" },
+      { "name": "Anurag Dharmadhikari", "post": "General Secretary", "imageUrl": "/NewTeam/PRESIDENT VP GS/Anurag Dharmadhikari.jpg" }
     ]
   },
   {
     "title": "General Secretary    &    Treasurer ",
     "members": [
-      { "name": "Anurag Dharmadhikari", "post": "General Secretary", "imageUrl": "/NewTeam/PRESIDENT VP GS/Anurag Dharmadhikari.jpg" },
+      { "name": "Sanika Shinde", "post": "Ladies Representative", "imageUrl": "/NewTeam/LR/Sanika Shinde.jpg" },
       { "name": "Kunal Gadekar", "post": "Treasurer", "imageUrl": "/NewTeam/TREASURER/Kunal Gadekar.jpg" }
     ]
   },
   {
-    "title": "  Techincal Mentor       &       Ladies Representative ",
+    "title": "  Techincal Mentor",
     "members": [
-      { "name": "Sumit Patel", "post": "Technical Mentor", "imageUrl": "/NewTeam/TECHNICAL MENTOR/Sumit Patel.jpg" },
-      { "name": "Sanika Shinde", "post": "Ladies Representative", "imageUrl": "/NewTeam/LR/Sanika Shinde.jpg" }
+      { "name": "Sumit Patel", "post": "Technical Mentor", "imageUrl": "/NewTeam/TECHNICAL MENTOR/Sumit Patel.jpg" }
     ]
   }, 
   {
