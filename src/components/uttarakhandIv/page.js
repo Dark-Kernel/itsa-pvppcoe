@@ -8,23 +8,19 @@ const UttarakhandIv = () => {
             <div className="grid md:grid-cols-2 gap-8 items-center">
                 {/* Left Column: Title and Description */}
                 <div className="space-y-4">
-                    <h2 className="text-2xl lg:text-3xl text-center font-bold text-white">✨ UTTARAKHAND IV ✨</h2>
+                    <h2 className="text-2xl lg:text-3xl text-center font-bold text-white">✨ CODE HEIST ✨</h2>
                     <p className="text-[#B8B8B8] tracking-wide text-sm lg:text-lg leading-relaxed">
-                        🌄✨ Take a break, book your seat, fall in love with the place, and return with endless memories of this once-in-a-lifetime college trip! 👭👬
+                        CODE HEIST – The Ultimate AI Showdown
 
-                        We are taking you to the divine land of gods and mountains, where every corner whispers spirituality, adventure, and beauty. 🏔️
-                        A land known as Devbhoomi — where rivers bless the earth and the Himalayas touch the sky. 🌌
-
-                        Any guesses?
-                        So buckle up your bags & shoes up for UTTARAKHAND – the true land of serenity, adventure, and devotion. ❤️
+Gear up for the most high-stakes coding challenge of the year! CODE HEIST is not your average hackathon; it’s a race against time where your greatest weapon is Artificial Intelligence. Hosted by the ITSA , this competition challenges you to stop coding from scratch and start "prompt-engineering" your way to victory.
 
                     </p>
                     <div className='flex flex-col items-center'>
                         <a
-                            href='/uttarakhand-iv'
+                            href='https://codeheist-psi.vercel.app/'
                             rel="noopener noreferrer"
                             className="px-6 py-2 bg-blue-600 text-md lg:text-lg text-white rounded-md hover:bg-blue-700 transition-colors duration-300">
-                                                        Read More
+                                                        Register Now
                                                     </a>
                     </div>
 
@@ -35,7 +31,7 @@ const UttarakhandIv = () => {
                     <Image
                         width={280}
                         height={500}
-                        src="/uttarakhand-iv-2025-01.png"
+                        src="/Code_Heist.jpg"
                         alt="Product Poster"
                         className="max-w-md rounded-lg shadow-lg mb-6 h-96"
                     />

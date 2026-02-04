@@ -1,5 +1,15 @@
 {
     "events": [
+        {
+            "title": "UTTARAKHAND IV",
+            "date": "21st - 30th December 2025",
+            "image": "/posters/Uttrakhand_iv.jpeg",
+            "fhsh": "SH-2025",
+            "description": "Group of technical events held by ITSA committee",
+            "instagramLink": "https://www.instagram.com/reel/DOwAsiJiJT3/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+            "report": "",
+            "registerLink": "https://query-jaal.vercel.app"
+        },
          {
             "title": "Query Jaal",
             "date": "26 Sept 2025",
@@ -18,7 +28,7 @@
             "time": "9:00 AM",
             "fhsh": "SH-2025",
             "description": "Group of technical events held by ITSA committee",
-            "instagramLink": "https://www.instagram.com/reel/DOpzakJCDV6/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+            "instagramLink": "https://www.instagram.com/reel/DSsxnnOk59_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
             "report": "",
             "registerLink": "https://itsa-ideathon.vercel.app"
         },
