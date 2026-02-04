@@ -1,6 +1,6 @@
 "use client"
 import React, { useState, useEffect } from "react"
-import { ChevronDown, Instagram } from "lucide-react"
+import { Instagram } from "lucide-react"
 import PDFModal from "../../components/PDFModal/page"
 import Image from "next/image"
 
@@ -42,16 +42,15 @@ const EventCard = ({ image, title, date, time, fhsh, instagramLink, report, desc
                             </button>
 
                             {registerLink &&
-                            <a
-                                href={registerLink}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="bg-green-500 text-white px-3 py-2 text-sm rounded hover:bg-green-600 transition"
-                            >
-                                Register
-                            </a>
+                                <a
+                                    href={registerLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="bg-green-500 text-white px-3 py-2 text-sm rounded hover:bg-green-600 transition"
+                                >
+                                    Register
+                                </a>
                             }
-
                         </div>
                     </div>
                 </div>
@@ -82,90 +81,61 @@ const EventsPage = () => {
                 console.error("Error fetching events:", error)
             }
         }
-
         fetchEvents()
     }, [])
 
-    const months = [
-        "Sort By",
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December",
-    ]
-
     const filteredEvents = events.filter((event) => {
-        if (selectedFilter === "All") return true
-        if (selectedFilter === "Sort By") return true
-        if (selectedFilter === "FH-2024" || selectedFilter === "SH-2024" || selectedFilter === "FH-2025") {
-            return event.fhsh === selectedFilter
+        if (selectedFilter === "All" || selectedFilter === "Sort By") return true;
+
+        // Dynamic check for Semester filters (FH-XXXX or SH-XXXX)
+        const isSemesterFilter = /^(FH|SH)-\d{4}$/.test(selectedFilter);
+
+        if (isSemesterFilter) {
+            return event.fhsh === selectedFilter;
         }
-        const eventMonth = new Date(event.date).toLocaleString("default", { month: "long" })
-        return eventMonth === selectedFilter
+
+        // Default to Month filtering
+        const eventMonth = new Date(event.date).toLocaleString("default", { month: "long" });
+        return eventMonth === selectedFilter;
     })
+
+    const filterButtons = ["All", "SH-2025", "FH-2025", "SH-2024", "FH-2024"];
 
     return (
         <div className="min-h-screen bg-transparent p-4 sm:p-8 bg-[url('/img/banner-bg-extended-vertical.png')]">
             <div className="max-w-6xl mx-auto pt-[4.5rem]">
                 <div className="flex flex-col space-y-2 sm:flex-row sm:justify-between sm:items-center mb-1 lg:mb-4">
                     <h1 className="text-2xl lg:text-4xl font-bold font-sans text-white">✨ITSA 2025-26✨: Events</h1>
-                    <div className="grid grid-cols-2 gap-2 lg:flex lg:flex-row lg:space-y-0 lg:space-x-4 text-white bg-backround">
-                        <button
-                            className={`lg:px-4 lg:py-2 p-2 rounded transition ${selectedFilter === "All" ? "bg-gray-300 text-gray-900 font-bold" : "bg-gray-200 text-gray-600 hover:bg-gray-300"}`}
-                            onClick={() => setSelectedFilter("All")}
-                        >All</button>
-                        <button
-                            className={`lg:px-4 lg:py-2 p-2 rounded transition ${selectedFilter === "FH-2025" ? "bg-gray-300 text-gray-900 font-bold" : "bg-gray-200 text-gray-600 hover:bg-gray-300"}`}
-                            onClick={() => setSelectedFilter("FH-2025")}
-                        >
-                            FH-2025
-                        </button>
-                        <button
-                            className={`lg:px-4 lg:py-2 p-2 rounded transition ${selectedFilter === "SH-2024" ? "bg-gray-300 text-gray-900 font-bold" : "bg-gray-200 text-gray-600 hover:bg-gray-300"}`}
-                            onClick={() => setSelectedFilter("SH-2024")}
-                        >
-                            SH-2024
-                        </button>
-                        <button
-                            className={`lg:px-4 lg:py-2 p-2 rounded transition ${selectedFilter === "FH-2024" ? "bg-gray-300 text-gray-900 font-bold" : "bg-gray-200 text-gray-600 hover:bg-gray-300"}`}
-                            onClick={() => setSelectedFilter("FH-2024")}
-                        >
-                            FH-2024
-                        </button>
-                        {/* SORT BY MONTH UI CODE */}
-                        {/* <div className="relative">
-              <select
-                className="w-full sm:w-auto appearance-none bg-gray-200 text-gray-600 rounded lg:px-4 lg:pr-6 lg:py-2 p-2 pr-8 hover:bg-gray-300 transition"
-                value={selectedFilter}
-                onChange={(e) => setSelectedFilter(e.target.value)}
-              >
-                {months.map((month) => (
-                  <option key={month} value={month}>
-                    {month}
-                  </option>
-                ))}
-              </select>
-              <ChevronDown
-                className="absolute text-black right-2 top-1/2 transform -translate-y-1/2 pointer-events-none"
-                size={20}
-              />
-            </div> */}
+                    
+                    <div className="grid grid-cols-2 gap-2 lg:flex lg:flex-row lg:space-y-0 lg:space-x-4 text-white">
+                        {filterButtons.map((filter) => (
+                            <button
+                                key={filter}
+                                className={`lg:px-4 lg:py-2 p-2 rounded transition ${
+                                    selectedFilter === filter 
+                                    ? "bg-gray-300 text-gray-900 font-bold" 
+                                    : "bg-gray-200 text-gray-600 hover:bg-gray-300"
+                                }`}
+                                onClick={() => setSelectedFilter(filter)}
+                            >
+                                {filter}
+                            </button>
+                        ))}
                     </div>
                 </div>
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                    {filteredEvents.map((event, index) => (
-                        <div key={index} className="p-2 sm:p-0">
-                            <EventCard {...event} />
+                    {filteredEvents.length > 0 ? (
+                        filteredEvents.map((event, index) => (
+                            <div key={index} className="p-2 sm:p-0">
+                                <EventCard {...event} />
+                            </div>
+                        ))
+                    ) : (
+                        <div className="col-span-full text-center py-10 text-white text-xl">
+                            No events found for this selection.
                         </div>
-                    ))}
+                    )}
                 </div>
             </div>
         </div>
