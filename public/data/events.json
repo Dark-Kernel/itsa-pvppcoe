@@ -1,5 +1,15 @@
 {
     "events": [
+             {
+            "title": "Code Heist",
+            "date": "13th - February 2026",
+            "image": "/posters/Code_Heist.jpg",
+            "fhsh": "FH - 2026",
+            "description": "Group of technical events held by ITSA committee",
+            "instagramLink": "https://www.instagram.com/reel/DU-0lhfiGZw/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==",
+            "report": "",
+            "registerLink": "https://codeheist-psi.vercel.app"
+        },
         {
             "title": "UTTARAKHAND IV",
             "date": "21st - 30th December 2025",
@@ -8,7 +18,7 @@
             "description": "Group of technical events held by ITSA committee",
             "instagramLink": "https://www.instagram.com/reel/DOwAsiJiJT3/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
             "report": "",
-            "registerLink": "https://query-jaal.vercel.app"
+            "registerLink": "https://itsa-pvppcoe.vercel.app/"
         },
          {
             "title": "Query Jaal",
