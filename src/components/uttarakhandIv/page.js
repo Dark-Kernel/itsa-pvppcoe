@@ -22,7 +22,7 @@ const UttarakhandIv = () => {
                         {/* Header with date tag */}
                         <div className="text-center space-y-2">
                             <p className="text-purple-300 text-xs lg:text-sm tracking-[0.3em] uppercase font-mono">
-                                // 16 - 18 MARCH 2026 //
+                                {`// 16 - 18 MARCH 2026 //`}
                             </p>
                             <h2 className="text-4xl lg:text-5xl font-bold text-white tracking-wide uppercase" style={{ fontFamily: 'Centra, sans-serif' }}>
                                 TECHGYANATHON
